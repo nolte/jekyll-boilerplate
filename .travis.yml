@@ -3,3 +3,14 @@ dist: trusty
 sudo: false # route your build to the container-based infrastructure for a faster build
 rvm:
 - 2.3.3
+jdk:
+  - oraclejdk8
+  - oraclejdk8
+
+before_install:
+  - gem update --system
+  - gem --version
+
+install: gem install jekyll html-proofer
+
+script: jekyll build && htmlproofer ./_site
