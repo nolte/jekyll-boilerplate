@@ -1,5 +1,6 @@
 language: ruby
 dist: trusty
+sudo: false
 rvm:
 - 2.3.3
 jdk:
@@ -7,7 +8,7 @@ jdk:
   - oraclejdk8
 
 before_install:
-  - gem install
+  - gem install jekyll bundler
 
 #install: gem install jekyll html-proofer
 
