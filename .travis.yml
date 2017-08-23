@@ -1,6 +1,6 @@
 language: ruby
 dist: trusty
-sudo: false # route your build to the container-based infrastructure for a faster build
+sudo: yes # route your build to the container-based infrastructure for a faster build
 rvm:
 - 2.3.3
 jdk:
