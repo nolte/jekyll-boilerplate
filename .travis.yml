@@ -4,11 +4,11 @@ sudo: false
 rvm:
 - 2.3.1
 jdk:
-  - oraclejdk8
+  - openjdk8
   - oraclejdk8
 
 before_install:
-  - gem bundler
+  - gem install bundler
 
 install:
   - bundle install
