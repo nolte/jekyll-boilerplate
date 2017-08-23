@@ -11,6 +11,6 @@ before_install:
   - gem update --system
   - gem --version
 
-install: gem install jekyll html-proofer
+#install: gem install jekyll html-proofer
 
 script: jekyll build && htmlproofer ./_site
