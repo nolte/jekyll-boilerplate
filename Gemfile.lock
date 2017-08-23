@@ -51,11 +51,9 @@ PLATFORMS
 DEPENDENCIES
   jekyll (= 3.4.3)
   jekyll-feed (~> 0.6)
+  liquid (~> 3.0, >= 3.0.6)
   minima (~> 2.0)
   tzinfo-data
-
-RUBY VERSION
-   ruby 2.3.1p112
 
 BUNDLED WITH
    1.15.1
