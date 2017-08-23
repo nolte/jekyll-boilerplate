@@ -9,7 +9,23 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "3.5.2"
+gem "jekyll"
+gem 'rake'
+gem 'jekyll-mentions'
+gem 'jemoji'
+gem 'jekyll-redirect-from'
+gem 'jekyll-sitemap'
+gem 'jekyll-paginate'
+gem 'jekyll-time-to-read'
+gem 'jekyll-watch'
+gem 'colorize'
+gem 'rubocop'
+gem 'rake'
+gem 'activesupport'
+gem 'business'
+gem 'html-proofer'
+gem 'stringex'
+gem 'colorator'
 #gem 'liquid', '~> 3.0', '>= 3.0.6'
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", "~> 2.0"
