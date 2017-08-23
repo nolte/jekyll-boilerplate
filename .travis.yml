@@ -2,7 +2,7 @@ language: ruby
 dist: trusty
 sudo: false
 rvm:
-- 2.3.3
+- 2.4.1
 jdk:
   - oraclejdk8
   - oraclejdk8
