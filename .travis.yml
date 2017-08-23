@@ -8,7 +8,7 @@ jdk:
   - oraclejdk8
 
 before_install:
-  - gem install jekyll bundler
+  - gem install jekyll bundler sanitize crochet kramdown
 
 #install: gem install jekyll html-proofer
 
