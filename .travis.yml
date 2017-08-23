@@ -2,16 +2,17 @@ language: ruby
 dist: trusty
 sudo: false
 rvm:
-- 2.4.1
+- 2.3.1
 jdk:
   - oraclejdk8
   - oraclejdk8
 
 before_install:
-  - gem install jekyll bundler sanitize crochet kramdown
+  - gem bundler
 
-#install: gem install jekyll html-proofer
+install:
+  - bundle install
 
 script:
-  - jekyll build
+  - bundle exec rake
   - htmlproofer ./_site
