@@ -14,5 +14,5 @@ install:
   - bundle install
 
 script:
-  - bundle exec rake
+  - bundle exec rake build
   - htmlproofer ./_site
