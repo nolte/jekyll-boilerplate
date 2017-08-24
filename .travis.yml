@@ -15,4 +15,4 @@ install:
 
 script:
   - bundle exec rake build
-  - htmlproofer ./_site
+  - bundle exec rake htmlproofer
