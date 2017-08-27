@@ -46,15 +46,21 @@ task :html_proofer do
   url_swap = { %r{^\/jekyll-site\/} => '/' }
   url_ignore = []
 
-  url_ignore.push 'https://jekyllrb.com' # ssl check fail on travisci
+  url_ignore.push 'jekyllrb.com' # ssl check fail on travisci
   opts = { log_level: ':debug',
            url_ignore: url_ignore,
-           url_swap: url_swap
+           url_swap: url_swap,
+           :check_sri => false,
+           :check_external_hash => true,
+           :check_html => true,
+           :check_img_http => true,
+           :check_opengraph => true,
+           :enforce_https => true,
+           :cache => {
+           :timeframe => '6w'
+           }
           }
   #HTMLProofer.check_directory(ENV['JEKYLL_DESTINATION'], opts).run
-  HTMLProofer.check_directory(ENV['JEKYLL_DESTINATION'], {
-  :typhoeus => {
-    :ssl_verifypeer => false,
-    :ssl_verifyhost => 0}
-}).run
+  HTMLProofer.check_directory(ENV['JEKYLL_DESTINATION'], opts
+  ).run
 end
