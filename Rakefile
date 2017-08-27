@@ -56,9 +56,7 @@ task :html_proofer do
            :check_img_http => true,
            :check_opengraph => true,
            :enforce_https => true,
-           :cache => {
-           :timeframe => '6w'
-           }
+           :typhoeus => { :verbose => true, :ssl_verifyhost => 2 }
           }
   #HTMLProofer.check_directory(ENV['JEKYLL_DESTINATION'], opts).run
   HTMLProofer.check_directory(ENV['JEKYLL_DESTINATION'], opts
