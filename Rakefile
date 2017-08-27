@@ -51,6 +51,8 @@ task :html_proofer do
            url_ignore: url_ignore,
            url_swap: url_swap,
            :typhoeus => {
+             :ssl_verifypeer => false,
+             :ssl_verifyhost => 0,
              :timeout => 10,
              :verbose => true }
           }
