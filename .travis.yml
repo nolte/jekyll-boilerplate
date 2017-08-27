@@ -1,6 +1,6 @@
 language: ruby
 dist: trusty
-sudo: false
+sudo: required
 rvm:
 - 2.3.1
 jdk:
@@ -15,6 +15,7 @@ before_install:
   - gem install bundler
   - sudo apt-get -qq update
   - sudo apt-get install -y curl dirmngr build-essential
+  - sudo update-ca-certificates
 
 
 install:
