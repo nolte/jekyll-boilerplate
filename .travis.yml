@@ -16,6 +16,7 @@ before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y curl dirmngr build-essential openssl
   - sudo update-ca-certificates
+  - sudo apt-get remove --purge libgnutls-deb0-28
 
 
 install:
