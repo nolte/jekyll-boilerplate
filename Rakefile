@@ -46,7 +46,7 @@ task :html_proofer do
   url_swap = { %r{^\/jekyll-site\/} => '/' }
   url_ignore = []
 
-  url_ignore.push 'armbian.com' # offline on 30.08.2016
+  url_ignore.push 'jekyll.com' # ssl check fail on travisci
   opts = { log_level: ':debug',
            url_ignore: url_ignore,
            url_swap: url_swap,
