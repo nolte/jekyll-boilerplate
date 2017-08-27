@@ -26,7 +26,11 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-gems: [bootstrap, autoprefixer-rails, jekyll-assets]
+gems:
+  - bootstrap
+  - autoprefixer-rails
+  - jekyll-assets
+  - jekyll-feed
 theme: minima
 plugins:
   - jekyll-feed
