@@ -45,6 +45,7 @@ task :html_proofer do
   puts 'Running html proofer...'.yellow.bold
   url_swap = { %r{^\/jekyll-site\/} => '/' }
   url_ignore = []
+ typhoeus = 
   url_ignore.push 'armbian.com' # offline on 30.08.2016
   opts = { log_level: ':debug',
            url_ignore: url_ignore,
