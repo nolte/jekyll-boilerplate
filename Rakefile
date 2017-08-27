@@ -14,7 +14,7 @@ Encoding.default_internal = Encoding::UTF_8
 
 # Do not touch below this line
 # RuboCop::RakeTask.new
-
+ENV['JEKYLL_DESTINATION'] = '_site'
 # Extend string to allow for bold text.
 class String
   def bold
