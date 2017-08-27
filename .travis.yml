@@ -13,6 +13,9 @@ env:
 
 before_install:
   - gem install bundler
+  - sudo apt-get -qq update
+  - sudo apt-get install -y curl dirmngr build-essential
+
 
 install:
   - bundle install
