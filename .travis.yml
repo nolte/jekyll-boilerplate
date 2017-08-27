@@ -1,6 +1,6 @@
 language: ruby
 dist: trusty
-sudo: true
+sudo: false
 rvm:
 - 2.3.1
 jdk:
@@ -9,7 +9,6 @@ jdk:
 
 before_install:
   - gem install bundler
-  - sudo update-ca-certificates
 
 install:
   - bundle install
