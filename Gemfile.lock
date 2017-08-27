@@ -11,9 +11,8 @@ GEM
     ast (2.3.0)
     autoprefixer-rails (7.1.2.6)
       execjs
-    bootstrap (4.0.0.beta)
+    bootstrap (4.0.0.alpha6)
       autoprefixer-rails (>= 6.0.3)
-      popper_js (~> 1.11.1)
       sass (>= 3.4.19)
     business (1.9.0)
     colorator (1.1.0)
@@ -63,6 +62,9 @@ GEM
       sprockets (~> 3.3, < 3.8)
     jekyll-feed (0.9.2)
       jekyll (~> 3.3)
+    jekyll-last-modified-at (1.0.1)
+      jekyll (~> 3.3)
+      posix-spawn (~> 0.3.9)
     jekyll-mentions (1.2.0)
       activesupport (~> 4.0)
       html-pipeline (~> 2.3)
@@ -100,7 +102,7 @@ GEM
       ast (~> 2.2)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
-    popper_js (1.11.1)
+    posix-spawn (0.3.13)
     powerpack (0.1.1)
     public_suffix (3.0.0)
     rack (1.6.8)
@@ -143,7 +145,7 @@ PLATFORMS
 DEPENDENCIES
   activesupport
   autoprefixer-rails
-  bootstrap (~> 4.0.0.alpha6)
+  bootstrap (= 4.0.0.alpha6)
   business
   colorator
   colorize
@@ -151,6 +153,7 @@ DEPENDENCIES
   jekyll
   jekyll-assets
   jekyll-feed (~> 0.6)
+  jekyll-last-modified-at
   jekyll-mentions
   jekyll-paginate
   jekyll-redirect-from
