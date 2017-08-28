@@ -10,8 +10,9 @@ rvm:
 
 before_install:
   - gem install bundler
-#http://repo1.maven.org/maven2/net/sourceforge/plantuml/plantuml/1.2017.15/plantuml-1.2017.15.jar
-
+  - wget http://repo1.maven.org/maven2/net/sourceforge/plantuml/plantuml/1.2017.15/plantuml-1.2017.15.jar /tmp/plantuml.jar
+  
+  
 install:
   - bundle install
 
