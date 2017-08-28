@@ -11,13 +11,7 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll"
 gem 'rake'
-gem 'jekyll-mentions'
-gem 'jemoji'
-gem 'jekyll-redirect-from'
-gem 'jekyll-sitemap'
-gem 'jekyll-paginate'
-gem 'jekyll-time-to-read'
-gem 'jekyll-watch'
+
 gem 'colorize'
 gem 'rubocop'
 gem 'rake'
@@ -36,12 +30,19 @@ gem "minima", "~> 2.0"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
+   gem 'jemoji'
    gem "jekyll-feed", "~> 0.6"
    gem 'bootstrap', '4.0.0.alpha6'
    gem 'autoprefixer-rails'
    gem 'jekyll-assets'
    gem 'jekyll-last-modified-at'
    gem 'jekyll-plantuml'
+   gem 'jekyll-mentions'
+   gem 'jekyll-redirect-from'
+   gem 'jekyll-sitemap'
+   gem 'jekyll-paginate'
+   gem 'jekyll-time-to-read'
+   gem 'jekyll-watch'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
