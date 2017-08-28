@@ -1,6 +1,6 @@
 language: ruby
 dist: trusty
-sudo: false
+sudo: required
 rvm:
 - 2.4.1
 #- 2.3.1
@@ -11,8 +11,8 @@ jdk:
 before_install:
   - gem install bundler
   - wget http://repo1.maven.org/maven2/net/sourceforge/plantuml/plantuml/1.2017.15/plantuml-1.2017.15.jar -O /tmp/plantuml.jar
-  - echo "#!/bin/bash" > /usr/bin/plantuml
-  - echo "java -jar /tmp/plantuml.jar \"$1\" \"$2\"" > /usr/bin/plantuml
+  - sudo echo "#!/bin/bash" > /usr/bin/plantuml
+  -  echo "java -jar /tmp/plantuml.jar \"$1\" \"$2\"" > /usr/bin/plantuml
   - chmod +x /usr/bin/plantuml
 
 
