@@ -11,7 +11,9 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll"
 gem 'rake'
-
+gem 'kramdown'
+gem 'rack-jekyll'
+gem 'puma'
 gem 'colorize'
 gem 'rubocop'
 gem 'rake'
