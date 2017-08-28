@@ -16,7 +16,7 @@ before_install:
   - sudo mv /tmp/plantuml  /usr/bin/plantuml
   - sudo chmod +x /usr/bin/plantuml
   - sudo apt-get -qq update
-  - sudo apt-get install -y ditaa
+  - sudo apt-get install -y ditaa graphviz
 
   
 
