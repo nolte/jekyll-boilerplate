@@ -27,8 +27,17 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 theme: minima
-gems:
+plugins:
   - jekyll-feed
+  - bootstrap
+  - autoprefixer-rails
+  - jekyll-assets
+  - jekyll-feed
+  - jekyll-last-modified-at
+  - jekyll-plantuml
 exclude:
   - Gemfile
+  - Rakefile
   - Gemfile.lock
+#sass:
+#    sass_dir: _sass
