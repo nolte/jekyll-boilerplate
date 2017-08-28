@@ -14,7 +14,8 @@ before_install:
   - echo "#!/bin/bash" > /tmp/plantuml
   - echo "java -jar /tmp/plantuml.jar \"$1\" \"$2\"" >> /tmp/plantuml
   - sudo mv /tmp/plantuml  /usr/bin/plantuml
-  - sudo chmod +x /usr/bin/plantuml
+  - sudo chmod u+x /usr/bin/plantuml
+  - cat /usr/bin/plantuml
   - sudo apt-get -qq update
   - sudo apt-get install -y ditaa graphviz
 
@@ -29,6 +30,6 @@ install:
   - bundle install
 
 script:
-  - plantuml -v
+  - sudo /usr/bin/plantuml -v
   - bundle exec rake build
   - bundle exec rake html_proofer
