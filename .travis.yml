@@ -40,5 +40,4 @@ script:
 
 after_success:
   - git add _site -f --all
-  - git add uml --all
   - git commit -m "travisBuild"
