@@ -58,13 +58,13 @@ task :html_proofer do
            :enforce_https => true,
            :typhoeus => { :verbose => false, :ssl_verifyhost => 2 }
           }
-  
+
   HTMLProofer.check_directory(ENV['JEKYLL_DESTINATION'], opts
   ).run
 end
 
 namespace :assets do
    task :precompile do
-       puts `bundle exec jekyll build`
-   end 
+       # puts `bundle exec jekyll build`
+   end
 end

@@ -39,6 +39,6 @@ script:
   - bundle exec rake html_proofer
 
 after_success:
-  - git add _site --all
+  - git add _site -f --all
   - git add uml --all
   - git commit -m "travisBuild"
