@@ -62,3 +62,9 @@ task :html_proofer do
   HTMLProofer.check_directory(ENV['JEKYLL_DESTINATION'], opts
   ).run
 end
+
+namespace :assets do
+   task :precompile do
+       puts `bundle exec jekyll build`
+   end 
+end
