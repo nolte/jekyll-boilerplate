@@ -6,15 +6,13 @@ rvm:
 #- 2.3.1
 jdk:
   - openjdk8
-  - oraclejdk8
+#  - oraclejdk8
 deploy:
   provider: heroku
   app: noltarium-blog-test
   api_key:
     secure: "owiTv9tnGaKp0Wk/t/yLE4krwQsER2ivL0YILaSQUomNG8/4Kj4GN0wdcTdm+S42psXSi6xAIOeDt3q5WM/hrxHorhOSLUWClN2pIXHy+xtRcAIO/VdPQMjNB8jJsr3uFiew0OwZqA03KtNCaGRpmzIDAtTZy4rTo/DOn9fuDvv4gcBWenXxyouRNc4cLBgpW596rFFcaF0ohdaCNV5HCEDZbXfcM2/T5iMO5Om8D82Tt6/UfobwLVCBDnfIrVAtWbWmu5sCGgLQEeX/kMNrwSJsik+8tCYPcQcltf3BI3TbHAPptzOCQIUbJImK8TrCoah1J7+G0b7CqR1VHmGKkUu1cDzGd3PgnoNFgKsSW0zGEaXI7G9r6y2ZvBwKrEPaQqpbmctD9Abp/khYZiDFuUsRUfM+YA+qQgYHOjzIgPo0YBGQrPW3OUXZeLQFhW3RsN+vxz+u42Z4e+3jyYJBvd2pkzvwUKDo+RpgPqC9eMib0VewXV1CTGpPDhs9uPfDdMHX4DAJkScgbpWwolgDy0OQZI/D0DG2IfrwEyz1u2qT4BS8xqvBjmZt0UpMDpo0FRJ8KD6yddjQRwh5ZymGgUqkZ9isQIkeP8Xo2YhdwmQVMHC7qb4eMV+xtxKI6UqX6kI6enMOmpJas0kd3ErJNkRdPu3+7SfuhdmZe/Uvymk="
-  on:
-    repo: nolte/noltarium-blog-test
-    branch: master
+ 
 
 env:
   - PLANTUML_VERSION=1.2017.15
