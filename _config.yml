@@ -23,16 +23,21 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
-categories: [jekyll,element]
+#categories: [jekyll,element]
 collections:
   jekyll:
     output: true
+  posts:
+    output:   true
 
 defaults:
   - scope:
-      path: "jekyll/elements"
+      path: "_jekyll/elements"
+      type: jekyll
     values:
-      categories: ['jekyll','element']
+      categories:
+        - 'jekyll'
+        - 'element'
 
 # Build settings
 markdown: kramdown
@@ -45,6 +50,15 @@ plugins:
   - jekyll-feed
   - jekyll-last-modified-at
   - jekyll-plantuml
+  - jekyll-mentions
+  - jemoji
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-time-to-read
+  - jekyll-categories
+  - jekyll-archives
+
 exclude:
   - Gemfile
   - Rakefile
@@ -54,3 +68,26 @@ exclude:
   - Rakefile
 #sass:
 #    sass_dir: _sass
+
+permalink: /blog/:year/:month/:day/:title/
+timezone: UTC
+paginate: 5          # Posts per page on the blog index
+paginate_path: "blog/posts/:num"  # Directory base for pagination URLs eg. /posts/2/
+recent_posts: 5       # Posts in the sidebar Recent Posts section
+excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
+excerpt_separator: "<!--more-->"
+category_dir: blog/categories
+
+emptyArray: []
+
+ditaa_output_directory: /assets/images/ditaa
+
+jekyll-archives:
+  enabled: all
+  layout: 'archive/archive'
+  permalinks:
+    year: '/archives/:year/'
+    month: '/archives/:year/:month/'
+    day: '/archives/:year/:month/:day/'
+    tag: '/archives/tag/:name/'
+    category: '/archives/category/:name/'

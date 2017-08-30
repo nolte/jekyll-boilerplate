@@ -1,0 +1,4 @@
+{% assign elements = include.tags | sort %}
+{% for tag in elements    %}
+	<span class="label label-default"> <i class="{{ site.data.electronic_tags[tag].css}}"></i> {{ tag }}</span>
+{% endfor %}

@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: site
 title:  "Plantuml"
-
+foo: "faaa"
 ---
 
 [Jekyll plantuml][jekyll-plantuml]

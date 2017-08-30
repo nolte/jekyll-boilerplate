@@ -37,6 +37,7 @@ group :jekyll_plugins do
    gem 'bootstrap', '4.0.0.alpha6'
    gem 'autoprefixer-rails'
    gem 'jekyll-assets'
+   gem 'jekyll-archives'
    gem 'jekyll-last-modified-at'
    gem 'jekyll-plantuml'
    gem 'jekyll-mentions'
@@ -45,6 +46,7 @@ group :jekyll_plugins do
    gem 'jekyll-paginate'
    gem 'jekyll-time-to-read'
    gem 'jekyll-watch'
+   gem 'jekyll-categories'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

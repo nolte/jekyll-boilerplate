@@ -1,9 +1,15 @@
 ---
-layout: default
+layout: site
 ---
 
 <div class="row">
   <div class="col-sm-6">
+    {% assign elements = site.posts %}
+    <ul>
+    {% for post in elements   %}
+     <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+    </ul>
     Welcome ....
   </div>
   <div class="col-sm-6">
