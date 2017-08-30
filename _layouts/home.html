@@ -12,3 +12,7 @@ layout: default
     </div>
   </div>
 </div>
+	{% assign elements = site.jekyll | sort: 'title'  %}
+	{% for post in elements   %}
+		{{post.title}}
+    {% endfor %}
