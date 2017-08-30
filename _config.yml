@@ -80,7 +80,7 @@ category_dir: blog/categories
 
 emptyArray: []
 
-
+ditaa_output_directory: /assets/images/ditaa
 
 jekyll-archives:
   enabled: all
