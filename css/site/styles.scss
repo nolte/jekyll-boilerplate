@@ -1,0 +1,17 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+@import "custom";
+@import "bootstrap";
+
+.unstyled {
+	list-style-type: none;
+	display: inline;
+	padding-left: 0;
+}
+
+.unstyled > li {
+	display: inline;
+}

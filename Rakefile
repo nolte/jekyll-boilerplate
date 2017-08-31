@@ -6,6 +6,7 @@ require 'html-proofer'
 require 'jekyll'
 require 'rubocop/rake_task'
 require 'uri'
+
 # config.encoding = "utf-8"
 
 Encoding.default_external = Encoding::UTF_8
@@ -37,7 +38,7 @@ end
 
 task :show do
   puts 'Cleaning up _site...'.yellow.bold
-    opts = { profile: true, destination: ENV['JEKYLL_DESTINATION'] }
+  opts = {  }
   Jekyll::Commands::Build.watch('_site',opts)
 end
 

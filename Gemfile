@@ -34,7 +34,7 @@ end
 group :jekyll_plugins do
    gem 'jemoji'
    gem "jekyll-feed", "~> 0.6"
-   gem 'bootstrap', '4.0.0.alpha6'
+   gem 'bootstrap', '~> 4.0.0.alpha6'
    gem 'autoprefixer-rails'
    gem 'jekyll-assets'
    gem 'jekyll-archives'
@@ -47,6 +47,8 @@ group :jekyll_plugins do
    gem 'jekyll-time-to-read'
    gem 'jekyll-watch'
    gem 'jekyll-categories'
+   gem 'jekyll-sass-converter'
+   gem 'jekyll-coffeescript'
    gem "minima", "~> 2.0"
    gem 'kramdown'
 end

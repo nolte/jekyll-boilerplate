@@ -4,13 +4,29 @@ layout: site
 
 <div class="row">
   <div class="col-sm-6">
-    {% assign elements = site.posts %}
-    <ul>
-    {% for post in elements   %}
-     <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-    </ul>
-    Welcome ....
+    <div class="card">
+      <div class="card-header">
+        Recent Posts
+      </div>
+
+        <div class="card-block">
+          <ul class="list-group list-group-flush">
+
+				{% assign publishedPosts = site.posts | sort "date", "last" %}
+ 				{% for post in publishedPosts limit:5  %}
+        <li class="list-group-item">
+          <div >
+            <div><h7><a href="{{  post.url | prepend: site.baseurl }}">{{post.title}}</a></h7></div>
+            <div><h8 class="mb-2 text-muted">{% include blog/post/date.html %}{{ time }}  {% include blog/post/tags.html %}</h8></div>
+          </div>
+        </li>
+				 {% endfor %}
+				</ul>
+      </div>
+
+    </div>
+
+
   </div>
   <div class="col-sm-6">
     <div class="jumbotron">
