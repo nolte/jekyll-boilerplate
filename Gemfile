@@ -17,7 +17,7 @@ gem 'rack-jekyll'
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
 
-group :build_plugins do
+group :test do
   gem 'html-proofer'
   gem 'rubocop'
   gem 'activesupport'
@@ -31,7 +31,7 @@ group :heroku_plugins do
 end
 
 # If you have any plugins, put them here!
-group :jekyll_plugins do
+group :development do
    gem 'jemoji'
    gem "jekyll-feed", "~> 0.6"
    gem 'bootstrap', '4.0.0.alpha6'
