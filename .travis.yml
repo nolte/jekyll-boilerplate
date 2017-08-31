@@ -40,5 +40,5 @@ script:
 
 after_success:
   - git add _site -f --all
-  - git rm Gemfile.lock
+  - git add Gemfile.lock
   - git commit -m "travisBuild"
