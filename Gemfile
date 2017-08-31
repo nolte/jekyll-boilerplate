@@ -11,13 +11,12 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll"
 gem 'rake'
+
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
 
 group :build_plugins do
-
-  gem 'rack-jekyll'
   gem 'html-proofer'
   gem 'rubocop'
   gem 'activesupport'
@@ -28,6 +27,7 @@ end
 
 group :heroku_plugins do
   gem 'puma'
+  gem 'rack-jekyll'
 end
 
 # If you have any plugins, put them here!
