@@ -11,24 +11,24 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll"
 gem 'rake'
-gem 'kramdown'
-gem 'rack-jekyll'
-gem 'puma'
-gem 'colorize'
-gem 'rubocop'
-gem 'rake'
-gem 'activesupport'
-gem 'business'
-gem 'html-proofer'
-gem 'stringex'
-gem 'colorator'
-#gem 'liquid', '~> 3.0', '>= 3.0.6'
-# This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "minima", "~> 2.0"
-
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
+
+group :build_plugins do
+
+  gem 'rack-jekyll'
+  gem 'html-proofer'
+  gem 'rubocop'
+  gem 'activesupport'
+  gem 'stringex'
+  gem 'colorator'
+  gem 'colorize'
+end
+
+group :heroku_plugins do
+  gem 'puma'
+end
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
@@ -37,6 +37,7 @@ group :jekyll_plugins do
    gem 'bootstrap', '4.0.0.alpha6'
    gem 'autoprefixer-rails'
    gem 'jekyll-assets'
+   gem 'jekyll-archives'
    gem 'jekyll-last-modified-at'
    gem 'jekyll-plantuml'
    gem 'jekyll-mentions'
@@ -45,6 +46,9 @@ group :jekyll_plugins do
    gem 'jekyll-paginate'
    gem 'jekyll-time-to-read'
    gem 'jekyll-watch'
+   gem 'jekyll-categories'
+   gem "minima", "~> 2.0"
+   gem 'kramdown'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

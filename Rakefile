@@ -35,8 +35,15 @@ task :build do
   Jekyll::Commands::Build.process(opts)
 end
 
+task :show do
+  puts 'Cleaning up _site...'.yellow.bold
+    opts = { profile: true, destination: ENV['JEKYLL_DESTINATION'] }
+  Jekyll::Commands::Build.watch('_site',opts)
+end
+
 task :clean do
   puts 'Cleaning up _site...'.yellow.bold
+
   Jekyll::Commands::Clean.process({})
 end
 

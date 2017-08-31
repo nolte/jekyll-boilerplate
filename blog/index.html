@@ -1,0 +1,35 @@
+---
+layout: site
+title: Blog
+regenerate: true
+blog_index: true
+---
+
+<div class="row">
+	<div class="col-sm-8" style="padding-right:20px; border-right: 1px solid #ccc;">
+  		{% assign index = true %}
+  		{% for post in paginator.posts %}
+  		<article class="listing">
+    		{% include blog/post/article.html %}
+  		</article>
+  	<hr>
+  	{% endfor %}
+  	</div>
+	<div class="col-sm-4">
+		{% include asides/categories.html %}
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-8">
+		<div class="pagination" style="width: 100%">
+
+		    {% if paginator.next_page %}
+		      <a class="pull-left" href="{{  p.url | prepend: site.baseurl }}{{paginator.next_page_path}}"><i class="mdi mdi-arrow-left-bold-circle"></i> Older</a>
+		    {% endif %}
+
+		    {% if paginator.previous_page %}
+		    	<a class="pull-right" href="{{  p.url | prepend: site.baseurl }}{{paginator.previous_page_path}}">Newer <i class="mdi mdi-arrow-right-bold-circle"></i></a>
+		    {% endif %}
+		    </div>
+		</div>
+</div>

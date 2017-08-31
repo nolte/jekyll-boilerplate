@@ -1,0 +1,16 @@
+<header>
+{% include blog/post/article-metadata.html %}
+</header>
+
+{% if index %}
+  <div class="entry-content clearfix">
+    {{ post.excerpt }}
+    {% if post.content contains site.excerpt_separator %}
+      <a class="btn pull-right" href="{{  p.url | prepend: site.baseurl }}{{ post.url }}#read-more">{{ site.excerpt_link }}</a>
+    {% endif %}
+  </div>
+{% else %}
+<div  id = "postContent">
+  {{ post.content | replace: site.excerpt_separator, '<a name="read-more"></a>' }}
+</div>
+{% endif %}
