@@ -11,7 +11,7 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll"
 gem 'rake'
-
+gem 'phantomjs', '~> 2.1', '>= 2.1.1.0'
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
@@ -24,6 +24,7 @@ group :build_plugins do
   gem 'colorator'
   gem 'colorize'
   gem 'selenium-webdriver'
+
 end
 
 group :heroku_plugins do

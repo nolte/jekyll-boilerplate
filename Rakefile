@@ -78,13 +78,12 @@ namespace :assets do
    end
 end
 
-task :default => [:test]
+#task :default => [:test]
 Rake::TestTask.new(:test) do |test|
   test.libs << 'test'
 
   # ensure the sample test file is included here
-  test.test_files = FileList['test/test_*.rb']
+  test.test_files = FileList['./test/test_*.rb']
 
   test.verbose = true
 end
-

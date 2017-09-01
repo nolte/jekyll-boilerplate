@@ -29,7 +29,7 @@ before_install:
   - sudo mv /tmp/plantuml  /usr/bin/plantuml
   - sudo chmod u+x /usr/bin/plantuml
   - sudo apt-get -qq update
-  - sudo apt-get install -y ditaa graphviz
+  - sudo apt-get install -y ditaa graphviz phantomjs
 
 install:
   - bundle install
@@ -46,4 +46,3 @@ after_success:
 
 after_deploy:
   - bundle exec rake test
-
