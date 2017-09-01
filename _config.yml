@@ -58,6 +58,8 @@ plugins:
   - jekyll-time-to-read
   - jekyll-categories
   - jekyll-archives
+  - jekyll-sass-converter
+  - jekyll-coffeescript
 
 exclude:
   - Gemfile
@@ -66,8 +68,10 @@ exclude:
   - vendor
   - Procfile
   - Rakefile
-#sass:
-#    sass_dir: _sass
+  - test
+
+sass:
+    sass_dir: _sass
 
 permalink: /blog/:year/:month/:day/:title/
 timezone: UTC

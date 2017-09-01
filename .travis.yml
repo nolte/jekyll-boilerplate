@@ -29,7 +29,7 @@ before_install:
   - sudo mv /tmp/plantuml  /usr/bin/plantuml
   - sudo chmod u+x /usr/bin/plantuml
   - sudo apt-get -qq update
-  - sudo apt-get install -y ditaa graphviz
+  - sudo apt-get install -y ditaa graphviz phantomjs
 
 install:
   - bundle install
@@ -43,3 +43,6 @@ after_success:
   - git add _site -f --all
   - git add Gemfile.lock
   - git commit -m "travisBuild"
+
+after_deploy:
+  - bundle exec rake test

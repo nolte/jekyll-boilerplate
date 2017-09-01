@@ -6,6 +6,8 @@ require 'html-proofer'
 require 'jekyll'
 require 'rubocop/rake_task'
 require 'uri'
+require 'rake/testtask'
+
 # config.encoding = "utf-8"
 
 Encoding.default_external = Encoding::UTF_8
@@ -37,7 +39,7 @@ end
 
 task :show do
   puts 'Cleaning up _site...'.yellow.bold
-    opts = { profile: true, destination: ENV['JEKYLL_DESTINATION'] }
+  opts = {  }
   Jekyll::Commands::Build.watch('_site',opts)
 end
 
@@ -74,4 +76,14 @@ namespace :assets do
    task :precompile do
        # puts `bundle exec jekyll build`
    end
+end
+
+#task :default => [:test]
+Rake::TestTask.new(:test) do |test|
+  test.libs << 'test'
+
+  # ensure the sample test file is included here
+  test.test_files = FileList['./test/test_*.rb']
+
+  test.verbose = true
 end

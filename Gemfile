@@ -11,30 +11,34 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll"
 gem 'rake'
+gem 'phantomjs', '~> 2.1', '>= 2.1.1.0'
+gem 'test-unit', '~> 3.2', '>= 3.2.5'
+
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
 
 group :build_plugins do
-
-  gem 'rack-jekyll'
   gem 'html-proofer'
   gem 'rubocop'
   gem 'activesupport'
   gem 'stringex'
   gem 'colorator'
   gem 'colorize'
+  gem 'selenium-webdriver'
+
 end
 
 group :heroku_plugins do
   gem 'puma'
+  gem 'rack-jekyll'
 end
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
    gem 'jemoji'
    gem "jekyll-feed", "~> 0.6"
-   gem 'bootstrap', '4.0.0.alpha6'
+   gem 'bootstrap', '~> 4.0.0.alpha6'
    gem 'autoprefixer-rails'
    gem 'jekyll-assets'
    gem 'jekyll-archives'
@@ -47,6 +51,8 @@ group :jekyll_plugins do
    gem 'jekyll-time-to-read'
    gem 'jekyll-watch'
    gem 'jekyll-categories'
+   gem 'jekyll-sass-converter'
+   gem 'jekyll-coffeescript'
    gem "minima", "~> 2.0"
    gem 'kramdown'
 end
