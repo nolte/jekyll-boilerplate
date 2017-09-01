@@ -6,6 +6,7 @@ require 'html-proofer'
 require 'jekyll'
 require 'rubocop/rake_task'
 require 'uri'
+require 'rake/testtask'
 
 # config.encoding = "utf-8"
 
@@ -76,3 +77,14 @@ namespace :assets do
        # puts `bundle exec jekyll build`
    end
 end
+
+
+Rake::TestTask.new(:integrationtest) do |test|
+  test.libs << 'test'
+
+  # ensure the sample test file is included here
+  test.test_files = FileList['test/test_*.rb']
+
+  test.verbose = true
+end
+

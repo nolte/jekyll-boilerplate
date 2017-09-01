@@ -23,6 +23,7 @@ group :build_plugins do
   gem 'stringex'
   gem 'colorator'
   gem 'colorize'
+  gem 'selenium-webdriver'
 end
 
 group :heroku_plugins do

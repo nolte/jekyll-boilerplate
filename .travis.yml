@@ -43,3 +43,7 @@ after_success:
   - git add _site -f --all
   - git add Gemfile.lock
   - git commit -m "travisBuild"
+
+after_deploy:
+  - bundle exec rake integrationtest
+
