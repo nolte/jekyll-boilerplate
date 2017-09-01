@@ -78,8 +78,8 @@ namespace :assets do
    end
 end
 
-
-Rake::TestTask.new(:integrationtest) do |test|
+task :default => [:test]
+Rake::TestTask.new(:test) do |test|
   test.libs << 'test'
 
   # ensure the sample test file is included here
