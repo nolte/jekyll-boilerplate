@@ -45,5 +45,5 @@ after_success:
   - git commit -m "travisBuild"
 
 after_deploy:
-  - bundle exec rake integrationtest
+  - bundle exec rake test
 
