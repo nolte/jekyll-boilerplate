@@ -2,7 +2,7 @@ asciiflow:
   url: https://asciiflow.com/
   description: Erstellen von ASCII Diagramm, welche Grundlage für ditaa Diagramme sind.
 ditaa:  
-  url: https://ditaa.sourceforge.net/
+  url: http://ditaa.sourceforge.net/
   description: Kleines jar um aus ASCII Dateien png Diagramme zu generieren.    
 jekyll-heroku:  
   url: https://github.com/jamesward/jekyll-heroku
@@ -20,10 +20,10 @@ jekyll-bootstrap-doc:
   url: https://mistic100.github.io/jekyll-bootstrap-doc/
   description: jekyll bootstrap template         
 emoji-cheat-sheet:
-  url: https://www.emoji-cheat-sheet.com/
+  url: http://www.emoji-cheat-sheet.com/
   description: emoji-cheat-sheet
 materialdesignicons:
-  url: https://materialdesignicons.com/
+  url: http://materialdesignicons.com/
   description: Vector Icons für die Menüpunkte
 revealjs:
   url: https://github.com/hakimel/reveal.js/
