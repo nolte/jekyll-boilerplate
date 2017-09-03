@@ -12,6 +12,8 @@ actor user
 database github
 control travisci
 collections heroku
+entity slack
+
 
 user -> github : commit to github
 github -> travisci : build the commit
@@ -20,4 +22,6 @@ travisci -> travisci : Temp deployment branch for heroku
 travisci -> heroku : deploy the static content as php app
 travisci -> travisci : switch back to build branch
 travisci -> heroku : execute selenium tests
+travisci -> slack : notify build state
+slack -> user :  notify user
 {% endplantuml %}
