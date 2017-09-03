@@ -68,6 +68,7 @@ exclude:
   - vendor
   - Procfile
   - Rakefile
+  - config.ru
   - test
 
 sass:

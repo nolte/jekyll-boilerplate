@@ -48,7 +48,8 @@ before_deploy:
   - ls -all $HEROKU_TMP
   - cd $HEROKU_TMP
   - git init
-  - git commit -a -m "travisBuild"
+  - git add --all
+  - git commit -m "travisBuild"
 
 
 after_deploy:
