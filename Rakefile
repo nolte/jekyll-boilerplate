@@ -54,9 +54,9 @@ task :html_proofer do
   puts 'Running html proofer...'.yellow.bold
   url_swap = { %r{^\/jekyll-site\/} => '/' }
   url_ignore = []
+  # ssl check fail on travisci
   url_ignore.push 'materialdesignicons.com'
-  url_ignore.push 'jekyllrb.com' # ssl check
- fail on travisci
+  url_ignore.push 'jekyllrb.com'  
   url_ignore.push 'ditaa.sourceforge.net'
   url_ignore.push 'emoji-cheat-sheet.com'
   url_ignore.push 'asciiflow.com'
