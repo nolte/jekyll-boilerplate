@@ -44,7 +44,7 @@ before_deploy:
   - mkdir -p $HEROKU_TMP
   - ls -all
   - cp -r $(pwd)/_site $HEROKU_TMP
-  - cp -r $(pwd)/index.php $HEROKU_TMP
+  - cp $(pwd)/index.php $HEROKU_TMP
   - ls -all $HEROKU_TMP
   - cd $HEROKU_TMP
   - git init
