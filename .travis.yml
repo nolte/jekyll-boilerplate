@@ -45,8 +45,11 @@ install:
 script:
   - bundle exec rake html_proofer
 
-before_deploy:
+after_success:
   - ./scripts/prepare_heroku_deployment.sh
+
+before_deploy:
+  - git checkout herokuapp
 
 after_deploy:
   - git checkout $TRAVIS_BRANCH
