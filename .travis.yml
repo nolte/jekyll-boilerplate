@@ -19,7 +19,8 @@ deploy:
 
 env:
   - PLANTUML_VERSION=1.2017.15
-  - HEROKU_TMP=/tmp/heroku_app
+  global:
+    - HEROKU_TMP=/tmp/heroku_app
 
 before_install:
   - gem install bundler
