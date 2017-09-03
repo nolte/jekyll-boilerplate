@@ -48,17 +48,14 @@ before_deploy:
   - cp $(pwd)/index.php $HEROKU_TMP
   - cp $(pwd)/Procfile $HEROKU_TMP
   - echo "{}" > $HEROKU_TMP/composer.json
-  - cd $HEROKU_TMP
-  - git init
+  - git branch herokuapp
+  - git checkout herokuapp
+  - rm -r $(pwd)/*
+  - cp -r $HEROKU_TMP/* $(pwd)
   - git add --all
-#  - git branch herokuapp
-#  - git checkout herokuapp
-#  - rm -r $(pwd)/*
-#  - cp -r $HEROKU_TMP/* $(pwd)
-#  - git add --all
   - git commit -am "travisBuild"
   - ls -all
 
 after_deploy:
-#  - git checkout master
+  - git checkout $TRAVIS_BRANCH
   - bundle exec rake test
