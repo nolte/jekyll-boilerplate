@@ -60,9 +60,11 @@ task :html_proofer do
   url_ignore.push 'ditaa.sourceforge.net'
   url_ignore.push 'emoji-cheat-sheet.com'
   url_ignore.push 'asciiflow.com'
+  url_ignore.push 'hypriot.com'
+  
   opts = { log_level: ':debug',
            url_swap: url_swap,
-           :url_ignore => [/jekyllrb.com/],
+           :url_ignore => url_ignore,
            :check_sri => false,
            :check_external_hash => true,
            :check_html => true,
