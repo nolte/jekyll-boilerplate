@@ -1,5 +1,5 @@
 asciiflow: 
-  url: https://asciiflow.com/
+  url: http://asciiflow.com/
   description: Erstellen von ASCII Diagramm, welche Grundlage für ditaa Diagramme sind.
 ditaa:  
   url: http://ditaa.sourceforge.net/
