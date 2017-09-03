@@ -41,8 +41,8 @@ script:
   - bundle exec rake html_proofer
 
 before_deploy:
-  - cp -r $(pwd)/_site/ $HEROKU_TMP/herkou_app
   - mkdir -p $HEROKU_TMP
+  - cp -r $(pwd)/_site/ $HEROKU_TMP
   - echo "<?php header( 'Location: /index.html' ) ;  ?>" > $HEROKU_TMP/index.php
   - cd $HEROKU_TMP
   - git init
