@@ -39,11 +39,7 @@ end
 
 task :show do
   puts 'start jeklyll serve...'.yellow.bold
-
   sh `bundle exec jekyll serve`
-
-
-
 end
 
 task :clean do
