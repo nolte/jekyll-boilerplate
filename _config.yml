@@ -56,7 +56,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-time-to-read
-  - jekyll-categories
+#  - jekyll-categories
   - jekyll-archives
   - jekyll-sass-converter
   - jekyll-coffeescript

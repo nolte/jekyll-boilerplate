@@ -10,6 +10,7 @@ links:
 [Ditaa][jekyll-ditaa] ist eine nette Möglichkeit einfach Diagramme als markdown zu speichern.   
 Durch [asciiflow.com][asciiflow] lassen sich die Diagramme recht einfach erstellen.
 
+<!--more-->
 
 *Generated:*   
 {% ditaa %}

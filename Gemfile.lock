@@ -68,8 +68,6 @@ GEM
       pathutil (>= 0.8)
       rack (~> 1.6)
       sprockets (~> 3.3, < 3.8)
-    jekyll-categories (0.0.2)
-      jekyll (>= 0.10.0)
     jekyll-coffeescript (1.0.2)
       coffee-script (~> 2.2)
       coffee-script-source (~> 1.11.1)
@@ -176,7 +174,6 @@ DEPENDENCIES
   jekyll
   jekyll-archives
   jekyll-assets
-  jekyll-categories
   jekyll-coffeescript
   jekyll-feed (~> 0.6)
   jekyll-last-modified-at

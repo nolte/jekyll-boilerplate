@@ -33,7 +33,7 @@ group :jekyll_plugins do
    gem 'jekyll-paginate'
    gem 'jekyll-time-to-read'
    gem 'jekyll-watch'
-   gem 'jekyll-categories'
+#   gem 'jekyll-categories'
    gem 'jekyll-sass-converter'
    gem 'jekyll-coffeescript'
    gem "minima", "~> 2.0"

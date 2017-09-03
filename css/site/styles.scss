@@ -4,7 +4,18 @@
 ---
 
 @import "custom";
-@import "bootstrap";
+
+.blog-posts .h1, h1 {
+    font-size: $blog-post-header-size;
+}
+
+.blog-posts .h2, h2 {
+    font-size: ($blog-post-header-size - 0.3);
+}
+
+.blog-posts hr {
+		border: 1px solid $brand-primary;
+}
 
 .unstyled {
 	list-style-type: none;

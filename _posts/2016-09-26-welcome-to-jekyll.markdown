@@ -11,8 +11,20 @@ categories:
 
 ## Addons
 
- {% assign elements = site.jekyll | sort: 'title'  %}
-
-{% for post in elements   %}
-* [{{ post.title }}]({{post.url}})
-{% endfor %}
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Plugin</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% assign elements = site.jekyll | sort: 'title'  %}
+    {% for post in elements   %}    
+      <tr>
+        <td><a href="{{post.url}}">{{ post.title }}</a></td>
+        <td>{{ post.excerpt }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>

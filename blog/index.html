@@ -9,7 +9,7 @@ blog_index: true
 	<div class="col-sm-8" style="padding-right:20px; border-right: 1px solid #ccc;">
   		{% assign index = true %}
   		{% for post in paginator.posts %}
-  		<article class="listing">
+  		<article class="listing blog-posts">
     		{% include blog/post/article.html %}
   		</article>
   	<hr>
