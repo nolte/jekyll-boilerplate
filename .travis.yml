@@ -19,6 +19,7 @@ deploy:
 
 env:
   - PLANTUML_VERSION=1.2017.15
+  - HEROKU_TMP=/tmp/heroku_app
 
 before_install:
   - gem install bundler
@@ -39,11 +40,10 @@ script:
   - bundle exec rake html_proofer
 
 before_deploy:
-  - cd $HOME/$USER
-  - mkdir herkou_app
-  - echo "<?php header( 'Location: /index.html' ) ;  ?>" > herkou_app/index.php
-  - cp -r $HOME/$USER/jekyll-boilerplate/_site/ $HOME/$USER/herkou_app
-  - cd $HOME/$USER/herkou_app
+  - cp -r $(pwd)/_site/ $HEROKU_TMP/herkou_app
+  - mkdir -p $HEROKU_TMP
+  - echo "<?php header( 'Location: /index.html' ) ;  ?>" > $HEROKU_TMP/index.php
+  - cd $HEROKU_TMP
   - git init
   - git commit -am "travisBuild"
 
