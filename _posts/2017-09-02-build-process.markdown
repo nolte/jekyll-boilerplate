@@ -25,3 +25,15 @@ travisci -> heroku : execute selenium tests
 travisci -> slack : notify build state
 slack -> user :  notify user
 {% endplantuml %}
+
+
+## Heroku Container
+
+Da sich der Blog nicht auf heroku Bauen lässt, durch die Plantuml & Ditaa Abhängigkeiten, werden nur die Generierten Dateien nach Heroku übertragen.
+Die
+
+```
+{% include prepare_heroku_deployment.sh %}
+```
+
+[Heroku-PHP-Support]:https://devcenter.heroku.com/articles/php-support
