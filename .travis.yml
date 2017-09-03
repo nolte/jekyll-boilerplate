@@ -45,6 +45,8 @@ before_deploy:
   - ls -all
   - cp -r $(pwd)/_site/* $HEROKU_TMP
   - cp $(pwd)/index.php $HEROKU_TMP
+  - cp $(pwd)/Procfile $HEROKU_TMP
+  - echo "{}" > $HEROKU_TMP/composer.json
 #  - git branch herokuapp
 #  - git checkout herokuapp
   - rm -r $(pwd)/*
