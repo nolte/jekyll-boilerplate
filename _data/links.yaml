@@ -1,15 +1,15 @@
-asciiflow: 
+asciiflow:
   url: http://asciiflow.com/
   description: Erstellen von ASCII Diagramm, welche Grundlage für ditaa Diagramme sind.
-ditaa:  
+ditaa:
   url: http://ditaa.sourceforge.net/
-  description: Kleines jar um aus ASCII Dateien png Diagramme zu generieren.    
-jekyll-heroku:  
+  description: Kleines jar um aus ASCII Dateien png Diagramme zu generieren.
+jekyll-heroku:
   url: https://github.com/jamesward/jekyll-heroku
   description: Grundlage für diese jekyll heroku Version
 jamesward-jekyll:
   url: https://www.jamesward.com/2014/09/24/jekyll-on-heroku
-  description: Beschreibung für das bereitstellen von Jekyll Sites auf Heroku    
+  description: Beschreibung für das bereitstellen von Jekyll Sites auf Heroku
 hypriot:
   url: https://blog.hypriot.com/
   description: Precompiled Docker binaries for armhf
@@ -18,7 +18,7 @@ armbian-cubox-i:
   description: Debian for cubox-i
 jekyll-bootstrap-doc:
   url: https://mistic100.github.io/jekyll-bootstrap-doc/
-  description: jekyll bootstrap template         
+  description: jekyll bootstrap template
 emoji-cheat-sheet:
   url: http://www.emoji-cheat-sheet.com/
   description: emoji-cheat-sheet
@@ -27,10 +27,10 @@ materialdesignicons:
   description: Vector Icons für die Menüpunkte
 revealjs:
   url: https://github.com/hakimel/reveal.js/
-  description: Html Presentation  
-  
-  
-  
-  
-  
-
+  description: Html Presentation
+plantuml:
+  url: http://plantuml.com/
+  description: Markdown to UML Diagramm
+cheatsheets:
+  url: http://ricostacruz.com/cheatsheets/
+  description: cheatsheets collection
