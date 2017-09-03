@@ -47,13 +47,13 @@ before_deploy:
   - cp $(pwd)/index.php $HEROKU_TMP
   - cp $(pwd)/Procfile $HEROKU_TMP
   - echo "{}" > $HEROKU_TMP/composer.json
-#  - git branch herokuapp
-#  - git checkout herokuapp
+  - git branch herokuapp
+  - git checkout herokuapp
   - rm -r $(pwd)/*
   - cp -r $HEROKU_TMP $(pwd)
   - git add --all
   - git commit -m "travisBuild"
-
+  - ls -all
 
 after_deploy:
   - git checkout master
