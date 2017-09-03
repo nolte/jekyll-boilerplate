@@ -38,9 +38,12 @@ task :build do
 end
 
 task :show do
-  puts 'Cleaning up _site...'.yellow.bold
-  opts = {  }
-  Jekyll::Commands::Build.watch('_site',opts)
+  puts 'start jeklyll serve...'.yellow.bold
+
+  sh `bundle exec jekyll serve`
+
+
+
 end
 
 task :clean do
