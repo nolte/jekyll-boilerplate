@@ -78,11 +78,6 @@ task :html_proofer do
   ).run
 end
 
-namespace :assets do
-   task :precompile do
-       # puts `bundle exec jekyll build`
-   end
-end
 
 #task :default => [:test]
 Rake::TestTask.new(:test) do |test|
