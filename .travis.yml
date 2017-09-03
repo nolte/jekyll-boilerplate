@@ -14,7 +14,7 @@ deploy:
     app: noltarium-blog-test
     on:
       repo: nolte/jekyll-boilerplate
-    all_branches: true
+      all_branches: true
   - provider: pages
     skip_cleanup: true
     github_token:
