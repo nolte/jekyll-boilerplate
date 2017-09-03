@@ -55,16 +55,17 @@ task :html_proofer do
   url_swap = { %r{^\/jekyll-site\/} => '/' }
   url_ignore = []
   # ssl check fail on travisci
-  url_ignore.push 'materialdesignicons.com'
-  url_ignore.push 'jekyllrb.com'  
-  url_ignore.push 'ditaa.sourceforge.net'
-  url_ignore.push 'emoji-cheat-sheet.com'
-  url_ignore.push 'asciiflow.com'
-  url_ignore.push 'hypriot.com'
-  
+  url_ignore.push /materialdesignicons.com/
+  url_ignore.push /jekyllrb.com/
+  url_ignore.push /ditaa.sourceforge.net/
+  url_ignore.push /emoji-cheat-sheet.com/
+  url_ignore.push /asciiflow.com/
+  url_ignore.push /hypriot.com/
+
   opts = { log_level: ':debug',
            url_swap: url_swap,
-           :url_ignore => url_ignore,
+           #url_ignore: url_ignore,
+           url_ignore: url_ignore,
            :check_sri => false,
            :check_external_hash => true,
            :check_html => true,
