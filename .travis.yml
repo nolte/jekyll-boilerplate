@@ -42,7 +42,9 @@ script:
 
 before_deploy:
   - mkdir -p $HEROKU_TMP
+  - ls -all 
   - cp -r $(pwd)/_site/ $HEROKU_TMP
+  - ls -all $HEROKU_TMP
   - echo "<?php header( 'Location: /index.html' ) ;  ?>" > $HEROKU_TMP/index.php
   - cd $HEROKU_TMP
   - git init
