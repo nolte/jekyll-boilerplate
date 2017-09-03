@@ -38,7 +38,6 @@ install:
   - bundle install
 
 script:
-  - bundle exec rake build
   - bundle exec rake html_proofer
 
 before_deploy:
