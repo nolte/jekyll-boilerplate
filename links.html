@@ -1,0 +1,13 @@
+---
+layout: site
+title: Links
+navigation: true
+---
+
+<ul>
+{% for link in site.data.links %}
+
+ <li><a href="{{link[1].url}}" target="_blank">{{link[0]}}</a> ({{link[1].description}})</li>
+
+{% endfor %}
+</ul>

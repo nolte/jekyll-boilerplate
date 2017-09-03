@@ -38,9 +38,8 @@ task :build do
 end
 
 task :show do
-  puts 'Cleaning up _site...'.yellow.bold
-  opts = {  }
-  Jekyll::Commands::Build.watch('_site',opts)
+  puts 'start jeklyll serve...'.yellow.bold
+  sh `bundle exec jekyll serve`
 end
 
 task :clean do
@@ -54,11 +53,18 @@ task :html_proofer do
   puts 'Running html proofer...'.yellow.bold
   url_swap = { %r{^\/jekyll-site\/} => '/' }
   url_ignore = []
+  # ssl check fail on travisci
+  url_ignore.push /materialdesignicons.com/
+  url_ignore.push /jekyllrb.com/
+  url_ignore.push /ditaa.sourceforge.net/
+  url_ignore.push /emoji-cheat-sheet.com/
+  url_ignore.push /asciiflow.com/
+  url_ignore.push /hypriot.com/
 
-  url_ignore.push 'jekyllrb.com' # ssl check fail on travisci
   opts = { log_level: ':debug',
            url_swap: url_swap,
-           :url_ignore => [/jekyllrb.com/],
+           #url_ignore: url_ignore,
+           url_ignore: url_ignore,
            :check_sri => false,
            :check_external_hash => true,
            :check_html => true,
