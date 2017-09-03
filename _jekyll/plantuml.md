@@ -1,14 +1,23 @@
 ---
-layout: site
+layout: jekyll_plugin
 title:  "Plantuml"
-foo: "faaa"
+links:
+  jekyll_project:
+    title: jekyll-plantuml
+    url: https://github.com/yegor256/jekyll-plantuml
 ---
 
-[Jekyll plantuml][jekyll-plantuml]
+[Plantuml][plantuml] dient zum generieren von UML Diagram
 
+*Generated:*   
 {% plantuml %}
 [First] - [Second]
 {% endplantuml %}
 
+*Original:*   
 
-[jekyll-plantuml]: https://github.com/yegor256/jekyll-plantuml
+```
+[First] - [Second]
+```
+
+[plantuml]: {{site.data.links['plantuml'].url}}
