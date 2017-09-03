@@ -5,6 +5,12 @@
 
 @import "custom";
 
+
+#pagenavigation {
+  border-bottom: 1px solid $brand-primary;
+  margin-bottom: 1em;
+}
+
 .blog-posts .h1, h1 {
     font-size: $blog-post-header-size;
 }
