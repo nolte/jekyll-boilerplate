@@ -29,10 +29,6 @@ group :build_plugins do
 
 end
 
-group :heroku_plugins do
-  gem 'puma'
-  gem 'rack-jekyll'
-end
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
