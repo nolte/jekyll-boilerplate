@@ -50,7 +50,7 @@ before_deploy:
   - git branch herokuapp
   - git checkout herokuapp
   - rm -r $(pwd)/*
-  - cp -r $HEROKU_TMP $(pwd)
+  - cp -r $HEROKU_TMP/* $(pwd)
   - git add --all
   - git commit -m "travisBuild"
   - ls -all
