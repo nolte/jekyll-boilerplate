@@ -45,8 +45,8 @@ before_deploy:
   - ls -all
   - cp -r $(pwd)/_site/* $HEROKU_TMP
   - cp $(pwd)/index.php $HEROKU_TMP
-  - git branch herokuapp
-  - git checkout herokuapp
+#  - git branch herokuapp
+#  - git checkout herokuapp
   - rm -r $(pwd)/*
   - cp -r $HEROKU_TMP $(pwd)
   - git add --all
@@ -54,4 +54,5 @@ before_deploy:
 
 
 after_deploy:
+  - git checkout master
   - bundle exec rake test
