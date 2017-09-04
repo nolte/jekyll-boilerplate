@@ -29,7 +29,7 @@ env:
     - PLANTUML_VERSION=1.2017.15
 
 before_install:
-  - chmod u+x /scripts/prepare_system_dependency.sh
+  - chmod u+x ./scripts/prepare_system_dependency.sh
   - ./scripts/prepare_system_dependency.sh
 
 install:
