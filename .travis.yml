@@ -1,49 +1,65 @@
 language: ruby
 dist: trusty
 sudo: required
-rvm:
-- 2.4.1
-#- 2.3.1
+language: ruby
 jdk:
   - openjdk8
-#  - oraclejdk8
-deploy:
-  - provider: heroku
-    api_key:
-      secure: "a8xZ6u2CYdRSoUc/pEo5XX0XLwpAWZofCvt0fxmPHUehUWy/3Z3qi2TC+ogToizJpTgOATN8yv6FV/TQliynj6DGLPE3rODh2wL1exgqevTXkz8LcySmQleAD2C1RnX2PA5z36P9bqDBNUdtMN2nwykgGyGUyg1ZhgIdosCudQ7czww44MTvSHFgf6M7l4d/2ZqOiNTzEmNXs3WWILl58Rw57sxlH/kWBLNs7L49z2MUsuWQFvdl8J+Dsm0S5tTJZfcjPlx8wNKpA8QtIacZV/oTpq6KAebzo20f6wrsVnNSeETDpkZNbz/P2jWuTe5p3Ck5oaDzf/HokvfXBdEnuteUvDnh1uQt388xw2Qndmwcf3PBA/JXUbhRwp61bbDFRkX/ALjit1K/bpr98c77dFQ2980E/9NyNroG3poxVY5o1B38M3AUCsXCrlW89rJ/TPAYwV5ypds2xU73OQP23t35KHb3kdYUqbplygkLqAO0mWfXFDdOpVgVY0cxV7fglMNXkV3shXNqv+R3wvA2yWpDlVTrWseR+lxLoSuSeto3xsFSQNg2CpBuTuCQG+Ajmo0uSNUbVNI3sW96cs5DTNfYScye8NYpnMiscL1b3Q7dKKsKrjrTBX12H5kMWrrqhy6IM/MiQmvNou26Uo+2SIcAdsk4Kr+WlG3GxaQuYes="
-    app: noltarium-blog-test
-    on:
-      repo: nolte/jekyll-boilerplate
-      all_branches: true
-  - provider: pages
-    skip_cleanup: true
-    github_token:
-      secure: "S5/FSI0IM8lV/N+/unnnLFD0CdRoHEXPp0KIsFb8cbZ8iyBDxkBRDEG0G4AnZNTtZfA0E6ZzURe796Wq7lD/e+uJRgu5WHnSNwBy7wlCUPFyRdgJsRmpVbouNWizWmoCMRy6HRMCk2LFJyWUUgrydjNeY0fqDaqLflEOj3wgCtWOgyDF5PSvIu55pdpQnUJTYrRGnWZFXDPyjQLxXEPB997Cy9Sra9ZZ5qW8xLNkVcJwCyR9eRlrfmHwF5OK0BdqY93myBgDwQFXi4DuyKUCKgyzNHcqTbwI2HCZbqUPTTjeij3WkkVnr+rKd8gYOARlkm7fe7nBl82VKubZA3lQWnFmSEh7idelV7EGoeJSukG7W+OlHM+J9j/pLKJ29G1Jz6bzimN+pw6dQDmzzmIBmhfeHmzVxo57novA+mpiiSa0iHHjfzKnxpfPq2dCWLxlW5N3i2t5OKSZjX8l5CWwAZyu65bcgq5mTqowutPFtBUjmhxkPtzHvNwtzm0pdkG3slpg1Sxj+eRA3/lyyit+PdYMcI2ydv62353UQNtdCwxrz0fi6JEJNp1S0tprY5knwuuYdk2WmNc9uZoEvbGCFP0Sd525h2+0nkEgTyblfC6NiZM0BUAghLOw7JNm2rYSL6GDz+a6SfucTZuI7jh7XGHfNiB6MItu/jERUGvgw3o="
-    on:
-      branch: master
 
+rvm:
+  - 2.4.1
 
 env:
   global:
     - HEROKU_TMP=/tmp/heroku_app
     - PLANTUML_VERSION=1.2017.15
 
-before_install:
-  - chmod u+x ./scripts/prepare_system_dependency.sh
-  - ./scripts/prepare_system_dependency.sh
+jobs:
+  include:
+    - stage: build the blog
+      before_install:
+        - chmod u+x ./scripts/prepare_system_dependency.sh
+        - ./scripts/prepare_system_dependency.sh
+      install:
+        - bundle install
+      script:
+        - bundle exec rake html_proofer
+      after_success:
+        - ./scripts/prepare_heroku_deployment.sh
+      before_deploy:
+        - git checkout herokuapp
+      deploy:
+        - provider: heroku
+          api_key:
+            secure: "a8xZ6u2CYdRSoUc/pEo5XX0XLwpAWZofCvt0fxmPHUehUWy/3Z3qi2TC+ogToizJpTgOATN8yv6FV/TQliynj6DGLPE3rODh2wL1exgqevTXkz8LcySmQleAD2C1RnX2PA5z36P9bqDBNUdtMN2nwykgGyGUyg1ZhgIdosCudQ7czww44MTvSHFgf6M7l4d/2ZqOiNTzEmNXs3WWILl58Rw57sxlH/kWBLNs7L49z2MUsuWQFvdl8J+Dsm0S5tTJZfcjPlx8wNKpA8QtIacZV/oTpq6KAebzo20f6wrsVnNSeETDpkZNbz/P2jWuTe5p3Ck5oaDzf/HokvfXBdEnuteUvDnh1uQt388xw2Qndmwcf3PBA/JXUbhRwp61bbDFRkX/ALjit1K/bpr98c77dFQ2980E/9NyNroG3poxVY5o1B38M3AUCsXCrlW89rJ/TPAYwV5ypds2xU73OQP23t35KHb3kdYUqbplygkLqAO0mWfXFDdOpVgVY0cxV7fglMNXkV3shXNqv+R3wvA2yWpDlVTrWseR+lxLoSuSeto3xsFSQNg2CpBuTuCQG+Ajmo0uSNUbVNI3sW96cs5DTNfYScye8NYpnMiscL1b3Q7dKKsKrjrTBX12H5kMWrrqhy6IM/MiQmvNou26Uo+2SIcAdsk4Kr+WlG3GxaQuYes="
+          app: noltarium-blog-test
+          on:
+            repo: nolte/jekyll-boilerplate
+            all_branches: true
+      after_deploy:
+        - git checkout $TRAVIS_BRANCH
+        - bundle exec rake test
 
-install:
-  - bundle install
-
-script:
-  - bundle exec rake html_proofer
-
-after_success:
-  - ./scripts/prepare_heroku_deployment.sh
-
-before_deploy:
-  - git checkout herokuapp
-
-after_deploy:
-  - git checkout $TRAVIS_BRANCH
-  - bundle exec rake test
+    - stage: deploy as gh-page
+      env:
+        - JEKYLL_BASEURL=$TRAVIS_BUILD_DIR
+      before_install:
+        - chmod u+x ./scripts/prepare_system_dependency.sh
+        - ./scripts/prepare_system_dependency.sh
+      install:
+        - bundle install
+      script:
+        - bundle exec rake html_proofer
+      after_success:
+        - ./scripts/prepare_heroku_deployment.sh
+      before_deploy:
+        - git checkout herokuapp
+      deploy:
+        - provider: pages
+          skip_cleanup: true
+          github_token:
+            secure: "S5/FSI0IM8lV/N+/unnnLFD0CdRoHEXPp0KIsFb8cbZ8iyBDxkBRDEG0G4AnZNTtZfA0E6ZzURe796Wq7lD/e+uJRgu5WHnSNwBy7wlCUPFyRdgJsRmpVbouNWizWmoCMRy6HRMCk2LFJyWUUgrydjNeY0fqDaqLflEOj3wgCtWOgyDF5PSvIu55pdpQnUJTYrRGnWZFXDPyjQLxXEPB997Cy9Sra9ZZ5qW8xLNkVcJwCyR9eRlrfmHwF5OK0BdqY93myBgDwQFXi4DuyKUCKgyzNHcqTbwI2HCZbqUPTTjeij3WkkVnr+rKd8gYOARlkm7fe7nBl82VKubZA3lQWnFmSEh7idelV7EGoeJSukG7W+OlHM+J9j/pLKJ29G1Jz6bzimN+pw6dQDmzzmIBmhfeHmzVxo57novA+mpiiSa0iHHjfzKnxpfPq2dCWLxlW5N3i2t5OKSZjX8l5CWwAZyu65bcgq5mTqowutPFtBUjmhxkPtzHvNwtzm0pdkG3slpg1Sxj+eRA3/lyyit+PdYMcI2ydv62353UQNtdCwxrz0fi6JEJNp1S0tprY5knwuuYdk2WmNc9uZoEvbGCFP0Sd525h2+0nkEgTyblfC6NiZM0BUAghLOw7JNm2rYSL6GDz+a6SfucTZuI7jh7XGHfNiB6MItu/jERUGvgw3o="
+          on:
+            branch: master
+      after_deploy:
+        - git checkout $TRAVIS_BRANCH
+        - bundle exec rake test
