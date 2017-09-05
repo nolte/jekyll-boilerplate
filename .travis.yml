@@ -40,6 +40,9 @@ jobs:
         - bundle exec rake test
 
     - stage: deploy as gh-page
+      branches:
+        only:
+        - master    
       env:
         - JEKYLL_BASEURL=$TRAVIS_BUILD_DIR
       before_install:
