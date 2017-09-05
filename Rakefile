@@ -46,7 +46,12 @@ end
 task :html_proofer do
   Rake::Task['build'].invoke
   puts 'Running html proofer...'.yellow.bold
-  url_swap = { %r{^\/mytest\/} => '/' }
+  url_swap1 = "^\/jekyll-boilerplate\/"
+  url_swap2 = "^\/jekyll-boilerplate"
+  url_swap1_regex = Regexp.new url_swap1
+  url_swap2_regex = Regexp.new url_swap2
+
+  url_swap = { url_swap1_regex => '/',url_swap2_regex => '/' }
   url_ignore = []
   # ssl check fail on travisci
   url_ignore.push /materialdesignicons.com/
