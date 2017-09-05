@@ -21,6 +21,8 @@ jobs:
       before_install:
         - chmod u+x ./scripts/prepare_system_dependency.sh
         - ./scripts/prepare_system_dependency.sh
+        - chmod u+x ./scripts/prepare_generated_files_branch.sh
+        - chmod u+x ./scripts/prepare_heroku_deployment.sh
       install:
         - bundle install
       script:
@@ -51,6 +53,7 @@ jobs:
       before_install:
         - chmod u+x ./scripts/prepare_system_dependency.sh
         - ./scripts/prepare_system_dependency.sh
+        - chmod u+x ./scripts/prepare_generated_files_branch.sh      
       install:
         - bundle install
       script:
