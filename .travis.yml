@@ -12,6 +12,8 @@ env:
   global:
     - HEROKU_TMP=/tmp/heroku_app
     - PLANTUML_VERSION=1.2017.15
+    - GENERATED_FILE_BRANCH_NAME=tmp_generated
+    - GENERATED_FILE_BRANCH_COMMIT_MSG=travisBuild
 
 jobs:
   include:
@@ -24,6 +26,7 @@ jobs:
       script:
         - bundle exec rake html_proofer
       after_success:
+        - ./scripts/prepare_generated_files_branch.sh
         - ./scripts/prepare_heroku_deployment.sh
       before_deploy:
         - git checkout herokuapp
@@ -42,7 +45,7 @@ jobs:
     - stage: deploy as gh-page
       branches:
         only:
-        - master    
+        - master
       env:
         - JEKYLL_BASEURL=$TRAVIS_BUILD_DIR
       before_install:
@@ -53,9 +56,9 @@ jobs:
       script:
         - bundle exec rake html_proofer
       after_success:
-        - ./scripts/prepare_heroku_deployment.sh
+        - ./scripts/prepare_generated_files_branch.sh
       before_deploy:
-        - git checkout herokuapp
+        - git checkout $GENERATED_FILE_BRANCH_NAME
       deploy:
         - provider: pages
           skip_cleanup: true
