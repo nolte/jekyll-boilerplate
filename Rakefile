@@ -46,8 +46,9 @@ end
 task :html_proofer do
   Rake::Task['build'].invoke
   puts 'Running html proofer...'.yellow.bold
-  puts 'Used Jekyll Basedir #{ENV['JEKYLL_BASEURL']} ...'.yellow.bold
+
   base="#{ENV['JEKYLL_BASEURL']}"
+  puts 'Used Jekyll Basedir ...'+base.yellow.bold
   base[0] = ''
   url_swap1 = "^\/"+base+"\/"
   url_swap2 = "^\/"+base
