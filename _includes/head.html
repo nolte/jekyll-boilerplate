@@ -6,8 +6,8 @@
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
-  {% assign custom_url = site.url | append: site.baseurl %}
-  {% assign full_base_url = custom_url %}
+  {% assign custom_url = "/" | append: site.baseurl %}
+  {% assign full_base_url = site.baseurl %}
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: full_base_url }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/css/tether-theme-arrows.min.css" integrity="sha256-Kk7vb25CCBnA2YrQtZU7RXd1s8gYKKpcZUMncHmHhR4=" crossorigin="anonymous" />

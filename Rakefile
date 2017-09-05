@@ -27,12 +27,7 @@ end
 # Rake Jekyll tasks
 task :build do
   puts 'Building site...'.yellow.bold
-  if ENV['JEKYLL_WATCH'] == 'true'
-    opts = { profile: true, destination: ENV['JEKYLL_DESTINATION'], watch: '' }
-  else
-    opts = { profile: true, destination: ENV['JEKYLL_DESTINATION'] }
-  end
-
+  opts = { profile: true, destination: ENV['JEKYLL_DESTINATION'], baseurl: ENV['JEKYLL_BASEURL']  }
   puts opts.to_s.yellow.bold
   Jekyll::Commands::Build.process(opts)
 end
@@ -51,7 +46,16 @@ end
 task :html_proofer do
   Rake::Task['build'].invoke
   puts 'Running html proofer...'.yellow.bold
-  url_swap = { %r{^\/jekyll-site\/} => '/' }
+
+  base="#{ENV['JEKYLL_BASEURL']}"
+  puts 'Used Jekyll Basedir ...'+base.yellow.bold
+  base[0] = ''
+  url_swap1 = "^\/"+base+"\/"
+  url_swap2 = "^\/"+base
+  url_swap1_regex = Regexp.new url_swap1
+  url_swap2_regex = Regexp.new url_swap2
+
+  url_swap = { url_swap1_regex => '/',url_swap2_regex => '/' }
   url_ignore = []
   # ssl check fail on travisci
   url_ignore.push /materialdesignicons.com/
