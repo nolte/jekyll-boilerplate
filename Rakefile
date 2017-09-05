@@ -46,7 +46,7 @@ end
 task :html_proofer do
   Rake::Task['build'].invoke
   puts 'Running html proofer...'.yellow.bold
-  url_swap = { %r{^\/ENV['JEKYLL_BASEURL']\/} => '/' }
+  url_swap = { %r{^\/mytest\/} => '/' }
   url_ignore = []
   # ssl check fail on travisci
   url_ignore.push /materialdesignicons.com/
