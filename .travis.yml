@@ -18,6 +18,8 @@ env:
 jobs:
   include:
     - stage: build the blog
+      env:
+        - JEKYLL_BASEURL=""    
       before_install:
         - chmod u+x ./scripts/prepare_system_dependency.sh
         - ./scripts/prepare_system_dependency.sh
@@ -53,7 +55,7 @@ jobs:
       before_install:
         - chmod u+x ./scripts/prepare_system_dependency.sh
         - ./scripts/prepare_system_dependency.sh
-        - chmod u+x ./scripts/prepare_generated_files_branch.sh      
+        - chmod u+x ./scripts/prepare_generated_files_branch.sh
       install:
         - bundle install
       script:

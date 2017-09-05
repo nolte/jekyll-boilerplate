@@ -27,12 +27,7 @@ end
 # Rake Jekyll tasks
 task :build do
   puts 'Building site...'.yellow.bold
-  if ENV['JEKYLL_WATCH'] == 'true'
-    opts = { profile: true, destination: ENV['JEKYLL_DESTINATION'], watch: '' }
-  else
-    opts = { profile: true, destination: ENV['JEKYLL_DESTINATION'] }
-  end
-
+  opts = { profile: true, destination: ENV['JEKYLL_DESTINATION'], baseurl: ENV['JEKYLL_BASEURL']  }
   puts opts.to_s.yellow.bold
   Jekyll::Commands::Build.process(opts)
 end
