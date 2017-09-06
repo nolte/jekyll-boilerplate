@@ -51,7 +51,7 @@ jobs:
       env:
         - PROJECT=$(basename $TRAVIS_BUILD_DIR)
         - JEKYLL_BASEURL=\/$PROJECT
-        - BLOG_DEPLOY_TEST_URL=https://noltarium-blog-test.herokuapp.com/s        
+        - BLOG_DEPLOY_TEST_URL=https://nolte.github.io/jekyll-boilerplate/
       before_install:
         - chmod u+x ./scripts/prepare_system_dependency.sh
         - ./scripts/prepare_system_dependency.sh
