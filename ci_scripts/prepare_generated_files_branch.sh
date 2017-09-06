@@ -22,13 +22,12 @@ ls -all $TRAVIS_BUILD_DIR
 
 rm -r $TRAVIS_BUILD_DIR\/.travis.yml
 ls -all $TRAVIS_BUILD_DIR
-
-echo "copy"
 # copy back the generated files
 cp -r $HEROKU_TMP\/* $TRAVIS_BUILD_DIR
 echo "copy"
 ls -all $TRAVIS_BUILD_DIR
-
+echo $(pwd)
 # add all generated files to the branch
 git add --all
 git commit -am $GENERATED_FILE_BRANCH_COMMIT_MSG
+echo "branch created"
