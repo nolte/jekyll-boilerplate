@@ -29,15 +29,15 @@ jobs:
         - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_heroku_deployment.sh
         - $TRAVISCI_SCRIPT_DIR/prepare_system_dependency.sh
       install:
-        - cd $TRAVIS_BUILD_DIR/jekyll_content
-        - bundle install
+        - bundle install --gemfile=$TRAVIS_BUILD_DIR/jekyll_content/Gemfile
       script:
+        - cd $TRAVIS_BUILD_DIR/jekyll_content
         - bundle exec rake html_proofer
       after_success:
-        - cd $TRAVISCI_SCRIPT_DIR
         - $TRAVISCI_SCRIPT_DIR/prepare_generated_files_branch.sh
         - $TRAVISCI_SCRIPT_DIR/prepare_heroku_deployment.sh
       before_deploy:
+        - cd $TRAVIS_BUILD_DIR
         - git checkout herokuapp
       deploy:
         - provider: heroku
