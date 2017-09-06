@@ -5,9 +5,9 @@ module Test
   class TestHomePage < Test::Unit::TestCase
 
     def setup
-
+      base="#{ENV['JEKYLL_BASEURL']}"
       @driver = Selenium::WebDriver.for :phantomjs
-      @driver.navigate.to('https://noltarium-blog-test.herokuapp.com')
+      @driver.navigate.to(base)
 
     end
 
