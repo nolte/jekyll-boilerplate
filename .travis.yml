@@ -11,41 +11,9 @@ rvm:
 env:
   global:
     - HEROKU_TMP=/tmp/heroku_app
-    - TRAVISCI_SCRIPT_DIR=/tmp/ci_scripts
     - PLANTUML_VERSION=1.2017.15
     - GENERATED_FILE_BRANCH_NAME=tmp_generated
     - GENERATED_FILE_BRANCH_COMMIT_MSG=travisBuild
-
-# install dependencies and prepare build env
-before_install:
-# copy build scripts to tmp folder for the tavis.yml
-  - mkdir -p $TRAVISCI_SCRIPT_DIR
-  - cp -r $TRAVIS_BUILD_DIR/ci_scripts/* $TRAVISCI_SCRIPT_DIR
-  - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_system_dependency.sh
-  - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_generated_files_branch.sh
-  - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_heroku_deployment.sh
-# install system build dependencies
-  - $TRAVISCI_SCRIPT_DIR/prepare_system_dependency.sh
-
-install:
-  - bundle install --gemfile=$TRAVIS_BUILD_DIR/jekyll_content/Gemfile
-
-script:
-  - cd $TRAVIS_BUILD_DIR/jekyll_content
-  - bundle exec rake html_proofer
-  - cd $TRAVIS_BUILD_DIR
-
-# create a branch with generated static jekyll files
-after_success:
-  - $TRAVISCI_SCRIPT_DIR/prepare_generated_files_branch.sh
-
-# execute selenium integration tests
-after_deploy:
-  - cd $TRAVIS_BUILD_DIR/integration_test
-  - bundle install
-  - git checkout $TRAVIS_BRANCH
-  - bundle exec rake test
-
 
 jobs:
   include:
@@ -53,8 +21,19 @@ jobs:
       env:
         - JEKYLL_BASEURL=
         - BLOG_DEPLOY_TEST_URL=https://noltarium-blog-test.herokuapp.com/
+      before_install:
+        - chmod u+x ./scripts/prepare_system_dependency.sh
+        - ./scripts/prepare_system_dependency.sh
+        - chmod u+x ./scripts/prepare_generated_files_branch.sh
+        - chmod u+x ./scripts/prepare_heroku_deployment.sh
+      install:
+        - bundle install
+      script:
+        - bundle exec rake html_proofer
+      after_success:
+        - ./scripts/prepare_generated_files_branch.sh
+        - ./scripts/prepare_heroku_deployment.sh
       before_deploy:
-        - $TRAVISCI_SCRIPT_DIR/prepare_heroku_deployment.sh
         - git checkout herokuapp
       deploy:
         - provider: heroku
@@ -64,13 +43,25 @@ jobs:
           on:
             repo: nolte/jekyll-boilerplate
             all_branches: true
-
+      after_deploy:
+        - git checkout $TRAVIS_BRANCH
+        - bundle exec rake test
 
     - stage: deploy as gh-page
       env:
         - PROJECT=$(basename $TRAVIS_BUILD_DIR)
         - JEKYLL_BASEURL=\/$PROJECT
         - BLOG_DEPLOY_TEST_URL=https://nolte.github.io/jekyll-boilerplate/
+      before_install:
+        - chmod u+x ./scripts/prepare_system_dependency.sh
+        - ./scripts/prepare_system_dependency.sh
+        - chmod u+x ./scripts/prepare_generated_files_branch.sh
+      install:
+        - bundle install
+      script:
+        - bundle exec rake html_proofer
+      after_success:
+        - ./scripts/prepare_generated_files_branch.sh
       before_deploy:
         - git checkout $GENERATED_FILE_BRANCH_NAME
       deploy:
@@ -78,3 +69,6 @@ jobs:
           skip_cleanup: false
           github_token:
             secure: "S5/FSI0IM8lV/N+/unnnLFD0CdRoHEXPp0KIsFb8cbZ8iyBDxkBRDEG0G4AnZNTtZfA0E6ZzURe796Wq7lD/e+uJRgu5WHnSNwBy7wlCUPFyRdgJsRmpVbouNWizWmoCMRy6HRMCk2LFJyWUUgrydjNeY0fqDaqLflEOj3wgCtWOgyDF5PSvIu55pdpQnUJTYrRGnWZFXDPyjQLxXEPB997Cy9Sra9ZZ5qW8xLNkVcJwCyR9eRlrfmHwF5OK0BdqY93myBgDwQFXi4DuyKUCKgyzNHcqTbwI2HCZbqUPTTjeij3WkkVnr+rKd8gYOARlkm7fe7nBl82VKubZA3lQWnFmSEh7idelV7EGoeJSukG7W+OlHM+J9j/pLKJ29G1Jz6bzimN+pw6dQDmzzmIBmhfeHmzVxo57novA+mpiiSa0iHHjfzKnxpfPq2dCWLxlW5N3i2t5OKSZjX8l5CWwAZyu65bcgq5mTqowutPFtBUjmhxkPtzHvNwtzm0pdkG3slpg1Sxj+eRA3/lyyit+PdYMcI2ydv62353UQNtdCwxrz0fi6JEJNp1S0tprY5knwuuYdk2WmNc9uZoEvbGCFP0Sd525h2+0nkEgTyblfC6NiZM0BUAghLOw7JNm2rYSL6GDz+a6SfucTZuI7jh7XGHfNiB6MItu/jERUGvgw3o="
+      after_deploy:
+        - git checkout $TRAVIS_BRANCH
+        - bundle exec rake test
