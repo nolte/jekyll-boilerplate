@@ -10,10 +10,6 @@ group :test do
   gem 'stringex'
   gem 'colorator'
   gem 'colorize'
-
-  gem 'selenium-webdriver'
-  gem 'phantomjs', '~> 2.1', '>= 2.1.1.0'
-  gem 'test-unit', '~> 3.2', '>= 3.2.5'
 end
 
 
