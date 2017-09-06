@@ -15,7 +15,7 @@ git checkout $GENERATED_FILE_BRANCH_NAME
 ls -all $TRAVIS_BUILD_DIR
 
 # remove all existing files
-rm -r $TRAVIS_BUILD_DIR/*
+rm -r $TRAVIS_BUILD_DIR\/*
 ## remove invisible files
 
 ls -all $TRAVIS_BUILD_DIR
