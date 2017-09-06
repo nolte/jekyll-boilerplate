@@ -26,6 +26,7 @@ jobs:
         - chmod u+x ./ci_scripts/prepare_generated_files_branch.sh
         - chmod u+x ./ci_scripts/prepare_heroku_deployment.sh
       install:
+        - cd $TRAVIS_BUILD_DIR/jekyll_content
         - bundle install
       script:
         - bundle exec rake html_proofer
@@ -43,6 +44,8 @@ jobs:
             repo: nolte/jekyll-boilerplate
             all_branches: true
       after_deploy:
+        - cd $TRAVIS_BUILD_DIR/integration_test
+        - bundle install
         - git checkout $TRAVIS_BRANCH
         - bundle exec rake test
 
@@ -73,5 +76,7 @@ jobs:
 #          on:
 #            branch: master
       after_deploy:
+        - cd $TRAVIS_BUILD_DIR/integration_test
+        - bundle install         
         - git checkout $TRAVIS_BRANCH
         - bundle exec rake test

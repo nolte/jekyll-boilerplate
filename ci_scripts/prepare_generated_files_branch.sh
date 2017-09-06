@@ -4,19 +4,19 @@
 #
 mkdir -p $HEROKU_TMP
 # copy generated files to tmp folder
-cp -r $(pwd)/jekyll_content/_site/* $HEROKU_TMP
+cp -r $TRAVIS_BUILD_DIR/jekyll_content/_site/* $HEROKU_TMP
 
 # create the tmpbrach
 git branch $GENERATED_FILE_BRANCH_NAME
 git checkout $GENERATED_FILE_BRANCH_NAME
 # remove all existing files
-rm -r $(pwd)/*
+rm -r $TRAVIS_BUILD_DIR/*
 ## remove invisible files
-rm $(pwd)/.gitignore
-rm -r $(pwd)/.travis.yml
+rm $TRAVIS_BUILD_DIR/.gitignore
+rm -r $TRAVIS_BUILD_DIR/.travis.yml
 
 # copy back the generated files
-cp -r $HEROKU_TMP/* $(pwd)
+cp -r $HEROKU_TMP/* $TRAVIS_BUILD_DIR
 
 # add all generated files to the branch
 git add --all
