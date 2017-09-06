@@ -16,23 +16,24 @@ env:
     - GENERATED_FILE_BRANCH_NAME=tmp_generated
     - GENERATED_FILE_BRANCH_COMMIT_MSG=travisBuild
 
+before_install:
+  - mkdir -p $TRAVISCI_SCRIPT_DIR
+  - cp -r $TRAVIS_BUILD_DIR/ci_scripts/* $TRAVISCI_SCRIPT_DIR
+  - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_system_dependency.sh
+  - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_generated_files_branch.sh
+  - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_heroku_deployment.sh
+  - $TRAVISCI_SCRIPT_DIR/prepare_system_dependency.sh
+install:
+  - bundle install --gemfile=$TRAVIS_BUILD_DIR/jekyll_content/Gemfile
+script:
+  - cd $TRAVIS_BUILD_DIR/jekyll_content
+  - bundle exec rake html_proofer
+
 jobs:
   include:
     - stage: build the blog
       env:
         - JEKYLL_BASEURL=
-      before_install:
-        - mkdir -p $TRAVISCI_SCRIPT_DIR
-        - cp -r $TRAVIS_BUILD_DIR/ci_scripts/* $TRAVISCI_SCRIPT_DIR
-        - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_system_dependency.sh
-        - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_generated_files_branch.sh
-        - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_heroku_deployment.sh
-        - $TRAVISCI_SCRIPT_DIR/prepare_system_dependency.sh
-      install:
-        - bundle install --gemfile=$TRAVIS_BUILD_DIR/jekyll_content/Gemfile
-      script:
-        - cd $TRAVIS_BUILD_DIR/jekyll_content
-        - bundle exec rake html_proofer
       after_success:
         - $TRAVISCI_SCRIPT_DIR/prepare_generated_files_branch.sh
         - $TRAVISCI_SCRIPT_DIR/prepare_heroku_deployment.sh
@@ -57,18 +58,7 @@ jobs:
       env:
         - PROJECT=$(basename $TRAVIS_BUILD_DIR)
         - JEKYLL_BASEURL=\/$PROJECT
-      before_install:
-        - mkdir -p $TRAVISCI_SCRIPT_DIR
-        - cp -r $TRAVIS_BUILD_DIR/ci_scripts/* $TRAVISCI_SCRIPT_DIR
-        - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_system_dependency.sh
-        - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_generated_files_branch.sh
-        - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_heroku_deployment.sh
-        - $TRAVISCI_SCRIPT_DIR/prepare_system_dependency.sh
-      install:
-        - bundle install --gemfile=$TRAVIS_BUILD_DIR/jekyll_content/Gemfile
-      script:
-        - cd $TRAVIS_BUILD_DIR/jekyll_content
-        - bundle exec rake html_proofer
+
       after_success:
         - $TRAVISCI_SCRIPT_DIR/prepare_generated_files_branch.sh
       before_deploy:
