@@ -25,7 +25,7 @@ ls -all $TRAVIS_BUILD_DIR
 # copy back the generated files
 cp -r $HEROKU_TMP\/* $TRAVIS_BUILD_DIR
 echo "copy"
-ls -all $TRAVIS_BUILD_DIR
+cd $TRAVIS_BUILD_DIR
 echo $(pwd)
 # add all generated files to the branch
 git add --all
