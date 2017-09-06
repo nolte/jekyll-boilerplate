@@ -52,6 +52,7 @@ jobs:
     - stage: build the blog
       env:
         - JEKYLL_BASEURL=
+        - BLOG_DEPLOY_TEST_URL=https://noltarium-blog-test.herokuapp.com/
       before_deploy:
         - $TRAVISCI_SCRIPT_DIR/prepare_heroku_deployment.sh
         - git checkout herokuapp
@@ -69,6 +70,7 @@ jobs:
       env:
         - PROJECT=$(basename $TRAVIS_BUILD_DIR)
         - JEKYLL_BASEURL=\/$PROJECT
+        - BLOG_DEPLOY_TEST_URL=https://nolte.github.io/jekyll-boilerplate/
       before_deploy:
         - git checkout $GENERATED_FILE_BRANCH_NAME
       deploy:

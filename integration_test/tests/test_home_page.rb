@@ -5,9 +5,9 @@ module Test
   class TestHomePage < Test::Unit::TestCase
 
     def setup
-
+      base="#{ENV['BLOG_DEPLOY_TEST_URL']}"
       @driver = Selenium::WebDriver.for :phantomjs
-      @driver.navigate.to('https://noltarium-blog-test.herokuapp.com')
+      @driver.navigate.to(base)
 
     end
 
