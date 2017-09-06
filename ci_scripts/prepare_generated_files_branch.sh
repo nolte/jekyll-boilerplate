@@ -12,7 +12,7 @@ git checkout $GENERATED_FILE_BRANCH_NAME
 # remove all existing files
 rm -r $TRAVIS_BUILD_DIR/*
 ## remove invisible files
-rm $TRAVIS_BUILD_DIR/.gitignore
+
 rm -r $TRAVIS_BUILD_DIR/.travis.yml
 
 # copy back the generated files
