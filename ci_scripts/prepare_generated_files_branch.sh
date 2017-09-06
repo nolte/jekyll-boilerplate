@@ -4,7 +4,7 @@
 #
 mkdir -p $HEROKU_TMP
 # copy generated files to tmp folder
-cp -r $(pwd)/_site/* $HEROKU_TMP
+cp -r $(pwd)/jekyll_content/_site/* $HEROKU_TMP
 
 # create the tmpbrach
 git branch $GENERATED_FILE_BRANCH_NAME
@@ -13,7 +13,6 @@ git checkout $GENERATED_FILE_BRANCH_NAME
 rm -r $(pwd)/*
 ## remove invisible files
 rm $(pwd)/.gitignore
-rm -r $(pwd)/.sass-cache
 rm -r $(pwd)/.travis.yml
 
 # copy back the generated files

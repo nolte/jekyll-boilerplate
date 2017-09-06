@@ -1,0 +1,15 @@
+# encoding: utf-8
+# coding: utf-8
+
+require 'colorize'
+require 'rake/testtask'
+
+task :default => [:test]
+Rake::TestTask.new(:test) do |test|
+  test.libs << 'test'
+
+  # ensure the sample test file is included here
+  test.test_files = FileList['./tests/test_*.rb']
+
+  test.verbose = true
+end
