@@ -21,18 +21,18 @@ jobs:
       env:
         - JEKYLL_BASEURL=
       before_install:
-        - chmod u+x ./ci_scripts/prepare_system_dependency.sh
-        - ./ci_scripts/prepare_system_dependency.sh
-        - chmod u+x ./ci_scripts/prepare_generated_files_branch.sh
-        - chmod u+x ./ci_scripts/prepare_heroku_deployment.sh
+        - chmod u+x $TRAVIS_BUILD_DIR/ci_scripts/prepare_system_dependency.sh
+        - $TRAVIS_BUILD_DIR/ci_scripts/prepare_system_dependency.sh
+        - chmod u+x $TRAVIS_BUILD_DIR/ci_scripts/prepare_generated_files_branch.sh
+        - chmod u+x $TRAVIS_BUILD_DIR/ci_scripts/prepare_heroku_deployment.sh
       install:
         - cd $TRAVIS_BUILD_DIR/jekyll_content
         - bundle install
       script:
         - bundle exec rake html_proofer
       after_success:
-        - ./ci_scripts/prepare_generated_files_branch.sh
-        - ./ci_scripts/prepare_heroku_deployment.sh
+        - $TRAVIS_BUILD_DIR/ci_scripts/prepare_generated_files_branch.sh
+        - $TRAVIS_BUILD_DIR/ci_scripts/prepare_heroku_deployment.sh
       before_deploy:
         - git checkout herokuapp
       deploy:
@@ -54,18 +54,18 @@ jobs:
         only:
         - master
       env:
-       - PROJECT=$(basename $TRAVIS_BUILD_DIR)
+        - PROJECT=$(basename $TRAVIS_BUILD_DIR)
         - JEKYLL_BASEURL=\/$PROJECT
       before_install:
-        - chmod u+x ./ci_scripts/prepare_system_dependency.sh
-        - ./ci_scripts/prepare_system_dependency.sh
-        - chmod u+x ./ci_scripts/prepare_generated_files_branch.sh
+        - chmod u+x $TRAVIS_BUILD_DIR/ci_scripts/prepare_system_dependency.sh
+        - $TRAVIS_BUILD_DIR/ci_scripts/prepare_system_dependency.sh
+        - chmod u+x $TRAVIS_BUILD_DIR/ci_scripts/prepare_generated_files_branch.sh
       install:
         - bundle install
       script:
         - bundle exec rake html_proofer
       after_success:
-        - ./ci_scripts/prepare_generated_files_branch.sh
+        - $TRAVIS_BUILD_DIR/ci_scripts/prepare_generated_files_branch.sh
       before_deploy:
         - git checkout $GENERATED_FILE_BRANCH_NAME
       deploy:
@@ -77,6 +77,6 @@ jobs:
 #            branch: master
       after_deploy:
         - cd $TRAVIS_BUILD_DIR/integration_test
-        - bundle install         
+        - bundle install
         - git checkout $TRAVIS_BRANCH
         - bundle exec rake test
