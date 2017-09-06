@@ -51,8 +51,8 @@ jobs:
         only:
         - master
       env:
-        - JEKYLL_BASEURL="/"
-        - JEKYLL_BASEURL+=$(basename $TRAVIS_BUILD_DIR)
+       - PROJECT+=$(basename $TRAVIS_BUILD_DIR)
+        - JEKYLL_BASEURL="/"$PROJECT
  #       -  JEKYLL_BASEURL=/jekyll-boilerplate
       before_install:
         - chmod u+x ./scripts/prepare_system_dependency.sh
