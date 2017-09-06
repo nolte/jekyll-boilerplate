@@ -11,6 +11,7 @@ rvm:
 env:
   global:
     - HEROKU_TMP=/tmp/heroku_app
+    - TRAVISCI_SCRIPT_DIR=/tmp/ci_scripts
     - PLANTUML_VERSION=1.2017.15
     - GENERATED_FILE_BRANCH_NAME=tmp_generated
     - GENERATED_FILE_BRANCH_COMMIT_MSG=travisBuild
@@ -21,18 +22,20 @@ jobs:
       env:
         - JEKYLL_BASEURL=
       before_install:
-        - chmod u+x $TRAVIS_BUILD_DIR/ci_scripts/prepare_system_dependency.sh
-        - $TRAVIS_BUILD_DIR/ci_scripts/prepare_system_dependency.sh
-        - chmod u+x $TRAVIS_BUILD_DIR/ci_scripts/prepare_generated_files_branch.sh
-        - chmod u+x $TRAVIS_BUILD_DIR/ci_scripts/prepare_heroku_deployment.sh
+        - mkdir -p $TRAVISCI_SCRIPT_DIR
+        - cp -r $TRAVIS_BUILD_DIR/ci_scripts/* $TRAVISCI_SCRIPT_DIR
+        - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_system_dependency.sh
+        - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_generated_files_branch.sh
+        - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_heroku_deployment.sh
+        - $TRAVISCI_SCRIPT_DIR/prepare_system_dependency.sh        
       install:
         - cd $TRAVIS_BUILD_DIR/jekyll_content
         - bundle install
       script:
         - bundle exec rake html_proofer
       after_success:
-        - $TRAVIS_BUILD_DIR/ci_scripts/prepare_generated_files_branch.sh
-        - $TRAVIS_BUILD_DIR/ci_scripts/prepare_heroku_deployment.sh
+        - $TRAVISCI_SCRIPT_DIR/prepare_generated_files_branch.sh
+        - $TRAVISCI_SCRIPT_DIR/prepare_heroku_deployment.sh
       before_deploy:
         - git checkout herokuapp
       deploy:
@@ -44,9 +47,9 @@ jobs:
             repo: nolte/jekyll-boilerplate
             all_branches: true
       after_deploy:
+        - git checkout $TRAVIS_BRANCH
         - cd $TRAVIS_BUILD_DIR/integration_test
         - bundle install
-        - git checkout $TRAVIS_BRANCH
         - bundle exec rake test
 
     - stage: deploy as gh-page
