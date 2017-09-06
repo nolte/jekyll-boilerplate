@@ -16,12 +16,15 @@ env:
     - GENERATED_FILE_BRANCH_NAME=tmp_generated
     - GENERATED_FILE_BRANCH_COMMIT_MSG=travisBuild
 
+# install dependencies and prepare build env
 before_install:
+# copy build scripts to tmp folder for the tavis.yml
   - mkdir -p $TRAVISCI_SCRIPT_DIR
   - cp -r $TRAVIS_BUILD_DIR/ci_scripts/* $TRAVISCI_SCRIPT_DIR
   - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_system_dependency.sh
   - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_generated_files_branch.sh
   - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_heroku_deployment.sh
+# install system build dependencies
   - $TRAVISCI_SCRIPT_DIR/prepare_system_dependency.sh
 
 install:
@@ -32,14 +35,17 @@ script:
   - bundle exec rake html_proofer
   - cd $TRAVIS_BUILD_DIR
 
+# create a branch with generated static jekyll files
+after_success:
+  - $TRAVISCI_SCRIPT_DIR/prepare_generated_files_branch.sh
+
+# execute selenium integration tests
 after_deploy:
   - cd $TRAVIS_BUILD_DIR/integration_test
   - bundle install
   - git checkout $TRAVIS_BRANCH
   - bundle exec rake test
 
-after_success:
-  - $TRAVISCI_SCRIPT_DIR/prepare_generated_files_branch.sh
 
 jobs:
   include:
