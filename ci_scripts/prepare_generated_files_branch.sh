@@ -9,6 +9,9 @@ cp -r $TRAVIS_BUILD_DIR/jekyll_content/_site/* $HEROKU_TMP
 # create the tmpbrach
 git branch $GENERATED_FILE_BRANCH_NAME
 git checkout $GENERATED_FILE_BRANCH_NAME
+
+ls -all $TRAVIS_BUILD_DIR
+
 # remove all existing files
 rm -r $TRAVIS_BUILD_DIR/*
 ## remove invisible files
