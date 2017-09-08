@@ -78,3 +78,6 @@ jobs:
       deploy:
         - provider: script
           script: $TRAVISCI_SCRIPT_DIR/deploy_ghpage.sh
+          on:
+            repo: nolte/jekyll-boilerplate
+            all_branches: true
