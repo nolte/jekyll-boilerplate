@@ -12,7 +12,15 @@ git clone -b gh-pages https://github.com/nolte/jekyll-boilerplate.git $GITHUB_PA
 
 cd $GITHUB_PAGE_DIR
 ls -all $GITHUB_PAGE_DIR
-find . -path ./.git -prune -o -exec rm -rf {} \; 2> /dev/null
+echo $(pwd)
+
+git rm -rf .
+git clean -fxd
+echo "content after clean"
+echo $(pwd)
+ls -all
+
+
 ls -all $GITHUB_PAGE_DIR
 
 cp -r $GENERATED_FILE_BRANCH_DIR\/* $GITHUB_PAGE_DIR
