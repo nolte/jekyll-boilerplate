@@ -43,9 +43,10 @@ after_success:
 
 # execute selenium integration tests
 after_deploy:
+  - cd $TRAVIS_BUILD_DIR
+  - git checkout $TRAVIS_BRANCH
   - cd $TRAVIS_BUILD_DIR/integration_test
   - bundle install
-  - git checkout $TRAVIS_BRANCH
   - bundle exec rake test
 
 
