@@ -1,6 +1,6 @@
 #!/bin/bash
 set -o errexit
-
+echo $GENERATED_FILE_BRANCH_DIR
 GITHUB_PAGE_DIR=/tmp/ghpage
 
 # config
@@ -14,7 +14,7 @@ cd $GITHUB_PAGE_DIR
 ls -all $GITHUB_PAGE_DIR
 find . -path ./.git -prune -o -exec rm -rf {} \; 2> /dev/null
 ls -all $GITHUB_PAGE_DIR
-echo $GENERATED_FILE_BRANCH_DIR
+
 cp -r $GENERATED_FILE_BRANCH_DIR\/* $GITHUB_PAGE_DIR
 
 # add all generated files to the branch
