@@ -11,11 +11,11 @@ git config --global user.name "Travis CI"
 git clone -b gh-pages https://github.com/nolte/jekyll-boilerplate.git $GITHUB_PAGE_DIR
 
 cd $GITHUB_PAGE_DIR
-ls -all /tmp/ghpage
+ls -all $GITHUB_PAGE_DIR
 find . -path ./.git -prune -o -exec rm -rf {} \; 2> /dev/null
+ls -all $GITHUB_PAGE_DIR
 
-
-cp -r $HEROKU_TMP\/* $GITHUB_PAGE_DIR
+cp -r $GENERATED_FILE_BRANCH_DIR\/* $GITHUB_PAGE_DIR
 
 # add all generated files to the branch
 git add --all

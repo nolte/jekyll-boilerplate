@@ -10,11 +10,11 @@ rvm:
 
 env:
   global:
-    - HEROKU_TMP=/tmp/heroku_app
     - TRAVISCI_SCRIPT_DIR=/tmp/ci_scripts
     - PLANTUML_VERSION=1.2017.15
     - GENERATED_FILE_BRANCH_NAME=tmp_generated
     - GENERATED_FILE_BRANCH_COMMIT_MSG=travisBuild
+    - GENERATED_FILE_BRANCH_DIR=/tmp/heroku_app
     - GITHUB_TOKEN="S5/FSI0IM8lV/N+/unnnLFD0CdRoHEXPp0KIsFb8cbZ8iyBDxkBRDEG0G4AnZNTtZfA0E6ZzURe796Wq7lD/e+uJRgu5WHnSNwBy7wlCUPFyRdgJsRmpVbouNWizWmoCMRy6HRMCk2LFJyWUUgrydjNeY0fqDaqLflEOj3wgCtWOgyDF5PSvIu55pdpQnUJTYrRGnWZFXDPyjQLxXEPB997Cy9Sra9ZZ5qW8xLNkVcJwCyR9eRlrfmHwF5OK0BdqY93myBgDwQFXi4DuyKUCKgyzNHcqTbwI2HCZbqUPTTjeij3WkkVnr+rKd8gYOARlkm7fe7nBl82VKubZA3lQWnFmSEh7idelV7EGoeJSukG7W+OlHM+J9j/pLKJ29G1Jz6bzimN+pw6dQDmzzmIBmhfeHmzVxo57novA+mpiiSa0iHHjfzKnxpfPq2dCWLxlW5N3i2t5OKSZjX8l5CWwAZyu65bcgq5mTqowutPFtBUjmhxkPtzHvNwtzm0pdkG3slpg1Sxj+eRA3/lyyit+PdYMcI2ydv62353UQNtdCwxrz0fi6JEJNp1S0tprY5knwuuYdk2WmNc9uZoEvbGCFP0Sd525h2+0nkEgTyblfC6NiZM0BUAghLOw7JNm2rYSL6GDz+a6SfucTZuI7jh7XGHfNiB6MItu/jERUGvgw3o="
 
 # install dependencies and prepare build env
