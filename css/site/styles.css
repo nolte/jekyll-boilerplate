@@ -1,0 +1,25 @@
+.site-header {
+  border-bottom: 1px solid #049cdb;
+  margin-bottom: 1em; }
+
+.site-footer {
+  border-top: 1px solid #049cdb;
+  margin-top: 1em;
+  padding-top: 0.5em; }
+
+.blog-posts .h1, h1 {
+  font-size: 1.35em; }
+
+.blog-posts .h2, h2 {
+  font-size: 1.05em; }
+
+.blog-posts hr {
+  border: 1px solid #049cdb; }
+
+.unstyled {
+  list-style-type: none;
+  display: inline;
+  padding-left: 0; }
+
+.unstyled > li {
+  display: inline; }

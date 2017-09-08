@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="/jekyll-boilerplate/feed.xml" rel="self" type="application/atom+xml" /><link href="/jekyll-boilerplate/" rel="alternate" type="text/html" /><updated>2017-09-08T17:37:17+00:00</updated><id>/jekyll-boilerplate/</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</subtitle><entry><title type="html">Build Process</title><link href="/jekyll-boilerplate/blog/2017/09/02/build-process/" rel="alternate" type="text/html" title="Build Process" /><published>2017-09-02T12:31:11+00:00</published><updated>2017-09-06T18:09:44+00:00</updated><id>/jekyll-boilerplate/blog/2017/09/02/build-process</id><content type="html" xml:base="/jekyll-boilerplate/blog/2017/09/02/build-process/">&lt;p&gt;&lt;img src=&quot;/jekyll-boilerplate/uml/aee04b6bb4302c85992aa6e34c7e9a74.svg&quot; alt=&quot;PlantUML SVG diagram&quot; class=&quot;plantuml&quot; /&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;heroku-container&quot;&gt;Heroku Container&lt;/h2&gt;
+
+&lt;p&gt;Da sich der Blog nicht auf heroku Bauen lässt, durch die Plantuml &amp;amp; Ditaa Abhängigkeiten, werden nur die generierten Dateien nach Heroku übertragen.&lt;/p&gt;
+
+&lt;p&gt;Die &lt;a href=&quot;https://devcenter.heroku.com/articles/php-support&quot;&gt;HerokuApp&lt;/a&gt; wird während des TravisCI Builds mit Hilfe folgenden scriptes vorbereitet.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;../scripts/prepare_heroku_deployment.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="/jekyll-boilerplate/blog/2016/09/26/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2016-09-26T12:31:11+00:00</published><updated>2017-09-06T18:09:44+00:00</updated><id>/jekyll-boilerplate/blog/2016/09/26/welcome-to-jekyll</id><content type="html" xml:base="/jekyll-boilerplate/blog/2016/09/26/welcome-to-jekyll/">&lt;p&gt;Ein neues “Kopier” Projekt für jekyll Blogs. :+1:&lt;/p&gt;
+
+&lt;h2 id=&quot;addons&quot;&gt;Addons&lt;/h2&gt;
+
+&lt;table class=&quot;table table-striped&quot;&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Plugin&lt;/th&gt;
+        &lt;th&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+    
+        
+      &lt;tr&gt;
+        &lt;td&gt;&lt;a href=&quot;/jekyll/plantuml/&quot;&gt;Plantuml&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;p&gt;&lt;a href=&quot;http://plantuml.com/&quot;&gt;Plantuml&lt;/a&gt; dient zum generieren von UML Diagram&lt;/p&gt;
+
+&lt;/td&gt;
+      &lt;/tr&gt;
+        
+      &lt;tr&gt;
+        &lt;td&gt;&lt;a href=&quot;/jekyll/ditaa/&quot;&gt;ditaa&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;p&gt;&lt;a href=&quot;http://ditaa.sourceforge.net/&quot;&gt;Ditaa&lt;/a&gt; ist eine nette Möglichkeit einfach Diagramme als markdown zu speichern. &lt;br /&gt;
+Durch &lt;a href=&quot;http://asciiflow.com/&quot;&gt;asciiflow.com&lt;/a&gt; lassen sich die Diagramme recht einfach erstellen.&lt;/p&gt;
+
+&lt;/td&gt;
+      &lt;/tr&gt;
+        
+      &lt;tr&gt;
+        &lt;td&gt;&lt;a href=&quot;/jekyll/jekyll-categories/&quot;&gt;jekyll-categories&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;p&gt;Generiere Kategorie Seiten auf basis der Blogeinträge.&lt;/p&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+        
+      &lt;tr&gt;
+        &lt;td&gt;&lt;a href=&quot;/jekyll/jemoji/&quot;&gt;jemoji&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;p&gt;Netter Spielkram und den Blog Bunter zu gestalten :neckbeard:, Mögliche &lt;a href=&quot;https://www.webpagefx.com/tools/emoji-cheat-sheet/&quot;&gt;emoji&lt;/a&gt;.&lt;/p&gt;
+
+&lt;/td&gt;
+      &lt;/tr&gt;
+    
+    &lt;/tbody&gt;
+  &lt;/table&gt;</content><author><name></name></author><summary type="html">Ein neues “Kopier” Projekt für jekyll Blogs. :+1: Addons Plugin Description Plantuml Plantuml dient zum generieren von UML Diagram ditaa Ditaa ist eine nette Möglichkeit einfach Diagramme als markdown zu speichern. Durch asciiflow.com lassen sich die Diagramme recht einfach erstellen. jekyll-categories Generiere Kategorie Seiten auf basis der Blogeinträge. jemoji Netter Spielkram und den Blog Bunter zu gestalten :neckbeard:, Mögliche emoji.</summary></entry></feed>
