@@ -25,6 +25,8 @@ ls -all $GITHUB_PAGE_DIR
 
 cp -r $GENERATED_FILE_BRANCH_DIR\/* $GITHUB_PAGE_DIR
 
+ls -all
+
 # add all generated files to the branch
 git add --all
 git commit -am $GENERATED_FILE_BRANCH_COMMIT_MSG
