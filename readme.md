@@ -2,8 +2,8 @@
 
  [![Build Status](https://travis-ci.org/nolte/jekyll-boilerplate.svg?branch=master)](https://travis-ci.org/nolte/jekyll-boilerplate)
 
- develop version on https://noltarium-blog-test.herokuapp.com/
- master version on https://nolte.github.io/jekyll-boilerplate
+ develop version on https://noltarium-blog-test.herokuapp.com/   
+ master version on https://nolte.github.io/jekyll-boilerplate   
 
 
 ## Project Structure
