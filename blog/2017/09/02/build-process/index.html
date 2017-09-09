@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  gitRevision: d078e57f4aeb9d51a91b6e1d19bbb2a9ec1dca33
+  gitRevision: 28050aff0bfab4cb0a09af36c5c4530bd8e23364
   gitBranch: HEAD 
 -->
 <html lang="en">
@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>Build Process</title>
-  <meta name="description" content="">
+  <meta name="description" content="Commit Ablauf">
 
   
   
@@ -96,18 +96,28 @@
 
 
 <div  id = "postContent">
-  <p><img src="/jekyll-boilerplate/uml/aee04b6bb4302c85992aa6e34c7e9a74.svg" alt="PlantUML SVG diagram" class="plantuml" /></p>
+  <h2 id="commit-ablauf">Commit Ablauf</h2>
+
+<p><img src="/jekyll-boilerplate/uml/aee04b6bb4302c85992aa6e34c7e9a74.svg" alt="PlantUML SVG diagram" class="plantuml" /></p>
 
 <a name="read-more"></a>
 
+<p>Jeder build wird als Heroku App deployt, dieses dient als “DevStage”.  <br />
+Nur der Master wird als <a href="https://pages.github.com/">GitHub Pages</a> im branch <code class="highlighter-rouge">gh-pages</code> publiziert.<br />
+Diese Trennung wurde durch die Nutzung von <a href="https://docs.travis-ci.com/user/build-stages/">Travis-ci Built Stages</a> erreicht.  <br />
+siehe: <a href="https://travis-ci.org/nolte/jekyll-boilerplate"><img src="https://travis-ci.org/nolte/jekyll-boilerplate.svg?branch=master" alt="Build Status" /></a></p>
+
 <h2 id="heroku-container">Heroku Container</h2>
 
-<p>Da sich der Blog nicht auf heroku Bauen lässt, durch die Plantuml &amp; Ditaa Abhängigkeiten, werden nur die generierten Dateien nach Heroku übertragen.</p>
+<p>Da sich der Blog nicht auf heroku Bauen lässt, durch die Plantuml &amp; Ditaa Abhängigkeiten, werden nur die generierten Dateien nach Heroku übertragen.
+Der Blog läuft dann als <a href="https://devcenter.heroku.com/articles/php-support">Heroku PHP App</a>.</p>
 
-<p>Die <a href="https://devcenter.heroku.com/articles/php-support">HerokuApp</a> wird während des TravisCI Builds mit Hilfe folgenden scriptes vorbereitet.</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>../scripts/prepare_heroku_deployment.sh
-</code></pre>
-</div>
+<h2 id="blog-release">Blog Release</h2>
+
+<p><img src="/jekyll-boilerplate/uml/7882a164f0cdef56739c63a0136ada5d.svg" alt="PlantUML SVG diagram" class="plantuml" /></p>
+
+<p>Der aktuell aktive <strong>Feature Branch</strong> ist als <a href="https://noltarium-blog-test.herokuapp.com/">Heroku App</a> einsehbar. <br />
+Die generierte Blog version vom <strong>Master Branche</strong> ist unter <a href="https://nolte.github.io/jekyll-boilerplate">github.io</a> zu finden.</p>
 
 
 </div>
