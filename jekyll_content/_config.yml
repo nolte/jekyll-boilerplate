@@ -48,7 +48,7 @@ plugins:
   - jekyll-assets
   - jekyll-feed
   - jekyll-last-modified-at
-  - jekyll-plantuml
+#  - jekyll-plantuml
   - jekyll-mentions
   - jemoji
   - jekyll-redirect-from
