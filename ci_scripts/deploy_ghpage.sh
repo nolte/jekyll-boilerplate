@@ -9,6 +9,7 @@ ORIGIN_URL=`git config --get remote.origin.url`
 ORIGIN_URL_WITH_CREDENTIALS=${ORIGIN_URL/\/\/github.com/\/\/$GITHUB_TOKEN@github.com}
 
 #cp .gitignore $DIST_DIRECTORY || exit 1
+mkdir $GITHUB_PAGE_DIR
 cd $GITHUB_PAGE_DIR
 echo "Checking out gh-pages branch"
 git checkout -B gh-pages || exit 1
