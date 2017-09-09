@@ -46,7 +46,9 @@ after_deploy:
   - bundle install
   - bundle exec rake test
 
-
+notifications:
+  slack:
+    secure: SJ4U9hM9rVY/4WuaDE/yroDlhruzcfnIkdfpXXG02sVLX/iEoR0/ioOAseQ/s1MagFV4cINc2c4OfNpgEbbl7iyKZwKmx9ijlV+G6JYc+1wP+LJpnwzywoJMtfbE0ZTFoxDBr97nveeNQHNgaxhlRXHGegBjIb1Im4hyoDsjGZoj34l5ssss4me/NCXl7Ig93FyA1ju8cPO6D8DEtRdObxctMZOHg7cc7Z7Qd0pdKr4S9o4bSpfGJucCxjUkrLEJc3X7pUT9TXO6Dj3VPMkjSMGFDMXaWzzWGgfp0dkgSLKUVLCJJHUwvdPZzAoYvpL7h6FQaQNoS/7SrhBybXllXaYXhd90nUHUyiWgPSzo9RwzzkmwCLrQR73iB7WpwXxfVPZcWbLfNqJ7QMaU/66X86CN308CoKVpcP8niHcNIy4115AjxdUzT7osV1ikrNp2l+W/2rDGXmQhO0lvJTWRlYOdjLST6DxhV3/xFx9PeA8nma1d480QMvEYjzhGyXxqjqy3Mn9lGJVChi7jkE0oUEs0DGeZWOP3ThAFrJtxYvOSX8bFkcI1FwHqEhBypWzGN/OL5TEWBFZ9VAJBGe7Q1V7qQ+T8L6ZNiWk7uV9hRLaUkzwGUcls+tdlSn5O5YdNDQc5hXGmVZ69BjC/QbdulVCVSONo5ZfvgnjqgnrJ0jQ=
 jobs:
   include:
   # Build the Jekyll blog as Heroku App
