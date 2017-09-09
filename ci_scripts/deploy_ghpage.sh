@@ -2,7 +2,7 @@
 set -o errexit
 
 # config
-git config --global user.email "nobody@nobody.org"
+git config --global user.email "deploy@travis-ci.org"
 git config --global user.name "Travis CI"
 
 git clone --quiet --branch=gh-pages https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git $GITHUB_PAGE_DIR > /dev/null
