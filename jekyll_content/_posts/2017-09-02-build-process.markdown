@@ -7,6 +7,8 @@ categories:
   - build
 ---
 
+## Commit Ablauf
+
 {% plantuml %}
 actor user
 database github
@@ -30,14 +32,45 @@ slack -> user :  notify user
 
 <!--more-->
 
+Jeder build wird als Heroku App deployt, dieses dient als "DevStage".    
+Nur der Master wird als [GitHub Pages][github-pages] im branch ```gh-pages``` publiziert.  
+Diese Trennung wurde durch die Nutzung von [Travis-ci Built Stages][travis-ci-build-stages] erreicht.    
+siehe: [![Build Status](https://travis-ci.org/nolte/jekyll-boilerplate.svg?branch=master)](https://travis-ci.org/nolte/jekyll-boilerplate)
+
+
 ## Heroku Container
 
 Da sich der Blog nicht auf heroku Bauen lässt, durch die Plantuml & Ditaa Abhängigkeiten, werden nur die generierten Dateien nach Heroku übertragen.
+Der Blog läuft dann als [Heroku PHP App][Heroku-PHP-Support].
 
+## Blog Release
 
-Die [HerokuApp][Heroku-PHP-Support] wird während des TravisCI Builds mit Hilfe folgenden scriptes vorbereitet.
-```
-{% include prepare_heroku_deployment.sh %}
-```
+{% plantuml %}
 
+actor user
+database github_master
+database github_feature_branch
+collections heroku
+database github_gh_pages
+
+activate github_master
+user -> github_master : create new\nfeature branch from master
+github_master -> github_feature_branch: new Feature Branch
+activate github_feature_branch
+user -> github_feature_branch : commit changes
+github_feature_branch -> heroku : deploy to dev stage
+github_feature_branch -> github_master: reintegrate feature
+deactivate github_feature_branch
+github_master -> github_gh_pages : deploy to production stage
+
+{% endplantuml %}
+
+Der aktuell aktive **Feature Branch** ist als [Heroku App][stage-dev] einsehbar.   
+Die generierte Blog version vom **Master Branche** ist unter [github.io][stage-production] zu finden.
+
+[stage-dev]:https://noltarium-blog-test.herokuapp.com/   
+[stage-production]:https://nolte.github.io/jekyll-boilerplate   
+
+[travis-ci-build-stages]:https://docs.travis-ci.com/user/build-stages/
+[github-pages]:https://pages.github.com/
 [Heroku-PHP-Support]:https://devcenter.heroku.com/articles/php-support
