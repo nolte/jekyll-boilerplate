@@ -16,6 +16,11 @@
   padding-top: 0.5em;
 }
 
+.post-header {
+    border-bottom: 1px solid $brand-primary;
+    margin-bottom: 0.5em;
+    padding-top: 0.5em;
+}
 
 .blog-posts .h1, h1 {
     font-size: $blog-post-header-size;
@@ -23,6 +28,17 @@
 
 .blog-posts .h2, h2 {
     font-size: ($blog-post-header-size - 0.3);
+    border-bottom: 1px solid $gray-base;
+}
+
+.blog-posts .h3, h3 {
+    font-size: ($blog-post-header-size - 0.4);
+    border-bottom: 1px solid $gray-light;
+}
+
+.blog-posts .h4, h4 {
+    font-size: ($blog-post-header-size - 0.5);
+    border-bottom: 1px solid $gray-light;
 }
 
 .blog-posts hr {
@@ -37,4 +53,17 @@
 
 .unstyled > li {
 	display: inline;
+}
+
+// toc css stuff
+
+nav[data-toggle='toc'] {
+	margin-top: 30px;
+}
+
+nav[data-toggle='toc'] ul {
+	display: block;
+}
+nav[data-toggle='toc'] .nav .nav {
+	display: block;
 }
