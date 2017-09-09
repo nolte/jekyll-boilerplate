@@ -7,11 +7,25 @@
   margin-top: 1em;
   padding-top: 0.5em; }
 
+.post-header {
+  border-bottom: 1px solid #049cdb;
+  margin-bottom: 0.5em;
+  padding-top: 0.5em; }
+
 .blog-posts .h1, h1 {
   font-size: 1.35em; }
 
 .blog-posts .h2, h2 {
-  font-size: 1.05em; }
+  font-size: 1.05em;
+  border-bottom: 1px solid #000; }
+
+.blog-posts .h3, h3 {
+  font-size: 0.95em;
+  border-bottom: 1px solid #777777; }
+
+.blog-posts .h4, h4 {
+  font-size: 0.85em;
+  border-bottom: 1px solid #777777; }
 
 .blog-posts hr {
   border: 1px solid #049cdb; }
@@ -23,3 +37,12 @@
 
 .unstyled > li {
   display: inline; }
+
+nav[data-toggle='toc'] {
+  margin-top: 30px; }
+
+nav[data-toggle='toc'] ul {
+  display: block; }
+
+nav[data-toggle='toc'] .nav .nav {
+  display: block; }

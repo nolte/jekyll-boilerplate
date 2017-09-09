@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="/jekyll-boilerplate/feed.xml" rel="self" type="application/atom+xml" /><link href="/jekyll-boilerplate/" rel="alternate" type="text/html" /><updated>2017-09-09T16:35:34+00:00</updated><id>/jekyll-boilerplate/</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="/jekyll-boilerplate/feed.xml" rel="self" type="application/atom+xml" /><link href="/jekyll-boilerplate/" rel="alternate" type="text/html" /><updated>2017-09-09T17:34:57+00:00</updated><id>/jekyll-boilerplate/</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </subtitle><entry><title type="html">Build Process</title><link href="/jekyll-boilerplate/blog/2017/09/02/build-process/" rel="alternate" type="text/html" title="Build Process" /><published>2017-09-02T12:31:11+00:00</published><updated>2017-09-09T13:44:40+00:00</updated><id>/jekyll-boilerplate/blog/2017/09/02/build-process</id><content type="html" xml:base="/jekyll-boilerplate/blog/2017/09/02/build-process/">&lt;h2 id=&quot;commit-ablauf&quot;&gt;Commit Ablauf&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;/jekyll-boilerplate/uml/aee04b6bb4302c85992aa6e34c7e9a74.svg&quot; data-toggle=&quot;lightbox&quot;&gt;&lt;img src=&quot;/jekyll-boilerplate/uml/aee04b6bb4302c85992aa6e34c7e9a74.svg&quot; alt=&quot;PlantUML SVG diagram&quot; class=&quot;plantuml img-fluid&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -40,6 +40,7 @@ Die generierte Blog version vom &lt;strong&gt;Master Branche&lt;/strong&gt; ist 
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://ashleydw.github.io/lightbox/&quot;&gt;lightbox&lt;/a&gt; (js lib für Image Resizeing)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://afeld.github.io/bootstrap-toc/&quot;&gt;bootstrap-toc&lt;/a&gt; Table of Content lib&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;/td&gt;
@@ -74,4 +75,4 @@ Durch &lt;a href=&quot;http://asciiflow.com/&quot;&gt;asciiflow.com&lt;/a&gt; la
       &lt;/tr&gt;
     
     &lt;/tbody&gt;
-  &lt;/table&gt;</content><author><name></name></author><summary type="html">Ein neues “Kopier” Projekt für jekyll Blogs. :+1: Addons Plugin Description Java Script Stuff JavaScripts Addons lightbox (js lib für Image Resizeing) Plantuml Plantuml dient zum generieren von UML Diagram ditaa Ditaa ist eine nette Möglichkeit einfach Diagramme als markdown zu speichern. Durch asciiflow.com lassen sich die Diagramme recht einfach erstellen. jekyll-categories Generiere Kategorie Seiten auf basis der Blogeinträge. jemoji Netter Spielkram und den Blog Bunter zu gestalten :neckbeard:, Mögliche emoji.</summary></entry></feed>
+  &lt;/table&gt;</content><author><name></name></author><summary type="html">Ein neues “Kopier” Projekt für jekyll Blogs. :+1: Addons Plugin Description Java Script Stuff JavaScripts Addons lightbox (js lib für Image Resizeing) bootstrap-toc Table of Content lib Plantuml Plantuml dient zum generieren von UML Diagram ditaa Ditaa ist eine nette Möglichkeit einfach Diagramme als markdown zu speichern. Durch asciiflow.com lassen sich die Diagramme recht einfach erstellen. jekyll-categories Generiere Kategorie Seiten auf basis der Blogeinträge. jemoji Netter Spielkram und den Blog Bunter zu gestalten :neckbeard:, Mögliche emoji.</summary></entry></feed>
