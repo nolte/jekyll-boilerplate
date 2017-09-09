@@ -5,8 +5,9 @@ set -o errexit
 git config --global user.email "nobody@nobody.org"
 git config --global user.name "Travis CI"
 
-
-git clone -b gh-pages https://github.com/$TRAVIS_REPO_SLUG.git $GITHUB_PAGE_DIR
+git clone --quiet --branch=gh-pages https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git $GITHUB_PAGE_DIR > /dev/null
+echo "checked out"
+#git clone -b gh-pages https://github.com/$TRAVIS_REPO_SLUG.git $GITHUB_PAGE_DIR
 cd $GITHUB_PAGE_DIR
 
 git rm -rf .
