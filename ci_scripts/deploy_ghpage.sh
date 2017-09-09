@@ -19,4 +19,4 @@ cp -r $GENERATED_FILE_BRANCH_DIR\/* $GITHUB_PAGE_DIR
 git add --all
 git commit -am $GENERATED_FILE_BRANCH_COMMIT_MSG
 echo "branch with generated files created"
-git push --force --quiet "https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" gh-pages:gh-pages > /dev/null 2>&1
+git push --force --quiet "https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" gh-pages:gh-pages # > /dev/null 2>&1
