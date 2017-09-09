@@ -25,6 +25,14 @@
     font-size: ($blog-post-header-size - 0.3);
 }
 
+.blog-posts .h3, h3 {
+    font-size: ($blog-post-header-size - 0.4);
+}
+
+.blog-posts .h4, h4 {
+    font-size: ($blog-post-header-size - 0.5);
+}
+
 .blog-posts hr {
 		border: 1px solid $brand-primary;
 }
@@ -37,4 +45,17 @@
 
 .unstyled > li {
 	display: inline;
+}
+
+// toc css stuff
+
+nav[data-toggle='toc'] {
+	margin-top: 30px;
+}
+
+nav[data-toggle='toc'] ul {
+	display: block;
+}
+nav[data-toggle='toc'] .nav .nav {
+	display: block;
 }

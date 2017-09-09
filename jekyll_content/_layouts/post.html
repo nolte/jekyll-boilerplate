@@ -12,7 +12,7 @@ layout: site
 	<div class="col-sm-4">
 		<nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="toc" data-spy="affix" data-toggle="toc"></nav>
 	</div>
-	
+
 </div>
 
 {% if site.disqus_short_name and page.comments == true %}
@@ -21,9 +21,3 @@ layout: site
   <div id="disqus_thread" aria-live="polite">{% include blog/post/disqus_thread.html %}</div>
 </section>
 {% endif %}
-    
-<script>
-  $( document ).ready(function() {
-	  $( '<div class="divider"></div>' ).insertAfter( "h1,h2,h3" );
-    });
-</script>
