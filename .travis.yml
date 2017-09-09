@@ -12,60 +12,55 @@ env:
   - GENERATED_FILE_BRANCH_NAME=tmp_generated
   - GENERATED_FILE_BRANCH_COMMIT_MSG=travisBuild
   - GENERATED_FILE_BRANCH_DIR=/tmp/heroku_app
-  - secure: peLlECy2+N7subxhwH27QheMV+nJlmlAyh7Q2DbhhPlgSM5S8tQbmNKJ9JPYioSnqlqao9FFktXmnOXPG5bWGhyfcJP/wce5Pt0In6e7JlfhOlRxxC4y2xQw6VL61a6PhyeBYJfaD1uRSCNdXCgW+WRfDx7RTgT/cOaT7aTbFYGV5dGhNlHR76tASoFvoGEZVfjAb5QVKudNxEVtxgX2zTfsTLcfL1ex8T3u6HqyLXb+JilO67FF+45b1bb4ib2TrFOcg+/5/zuuBluvra21wq8FWNQKQXQY+FATI7kA4vR48S6dIUWnke+U6ZG5dnZLf3QDNfFXMpZLab7ngYuvG0oN1bsuZujim9/QSOmmIpIYqAY6GBTCtQHoJ5ifImr+rQSFZMEuNUS3UJTDAhNq7ceHlG4/ygWuwirY71Ounw/zMVvmJxIpaF/Qr3qpLT8BVbp0QDN4o/ToxIqZ0m9tgxLO0CBM7z8fIPMi35D2c6nYdt2sajxN+d58sJilNAhkQ5ZydRYOUVKPthzPr5xgDDgKtsPl8asnQx9kFwPpNQ41o28MQAl4KvBgJ1V8cH7q2/M5APzGkyksaA75S61Usakz41bycvAsmyeStJCq1+YrCHne0IH2i8nwGCZf2MIFW4UZYHfNY/36pgGgF3Yh0H142Gb6PfA1jodwNWb+gV0=
+  - secure: nbjOqHDSS0kxigXy1qAto8letpVqj2L9AezaZnwgndUW4D1zyv/57ajX3U0SPzRP+FS1MjzvjWJsWuqcLvNWNeWeme4ZxtqPQw7UGUYpfunoHLgbmG2rCjJicvAUVZbLK3wtfe0qPJvcetgpV7bOUsfS+M+QOJvnCHvoTD1Lx5be8zWYn3ZPX2nydq/EVatJM9ctqDY6BSgiqFVulYseeaeEnsMbPnPIh7CDBIu9za1skiS81ouq4PkXR6rWdf+Ppix7H9WilMCndtOTY6//XuMx54ofRpnCjAPZCdHJmNlXfrgSiEUcIaxbju6WyMVaNd/OuwnNez/CtMnkH6I9a+ETN7S6FIwkJNvGAKQjAnbRZDO2ItovRc36vEASm6xpEIJLM/2W/4496jjFaGawb7PiTaMwW35OD7FMg1/8DWXQVyaTHleS7oGrL9uTvDKSQvIOK6q8I8Z2plQleVgJXiv/rAPOctrwnGLbyrDHeND07Mss9nPPFEcrdKeTOaCJazO9U7GjUE0ngCkPzqI1owY+ES9NuksSm2bhjrbp4gEPij8sX2dysbL5CGV95CHQg7t+a2LZ9WEiKvHX0DUHqwR++G/78BGsYrrQaq4MSvv18WKahMBs0yhkxfBmJHIFzzDJzpawrY7L0hHSvpiA9mCaJRI658ESrWCywZ2Fjhs=
 before_install:
-- mkdir -p $TRAVISCI_SCRIPT_DIR
-- cp -r $TRAVIS_BUILD_DIR/ci_scripts/* $TRAVISCI_SCRIPT_DIR
-- chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_system_dependency.sh
-- chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_generated_files_branch.sh
-- chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_heroku_deployment.sh
-- chmod u+x $TRAVISCI_SCRIPT_DIR/deploy_ghpage.sh
-- "$TRAVISCI_SCRIPT_DIR/prepare_system_dependency.sh"
+  - mkdir -p $TRAVISCI_SCRIPT_DIR
+  - cp -r $TRAVIS_BUILD_DIR/ci_scripts/* $TRAVISCI_SCRIPT_DIR
+  - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_system_dependency.sh
+  - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_generated_files_branch.sh
+  - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_heroku_deployment.sh
+  - chmod u+x $TRAVISCI_SCRIPT_DIR/deploy_ghpage.sh
+  - "$TRAVISCI_SCRIPT_DIR/prepare_system_dependency.sh"
 install:
-- bundle install --gemfile=$TRAVIS_BUILD_DIR/jekyll_content/Gemfile
+  - bundle install --gemfile=$TRAVIS_BUILD_DIR/jekyll_content/Gemfile
 script:
-- cd $TRAVIS_BUILD_DIR/jekyll_content
-- bundle exec rake html_proofer
-- cd $TRAVIS_BUILD_DIR
+  - cd $TRAVIS_BUILD_DIR/jekyll_content
+  - bundle exec rake html_proofer
+  - cd $TRAVIS_BUILD_DIR
 after_success:
-- "$TRAVISCI_SCRIPT_DIR/prepare_generated_files_branch.sh"
+  - "$TRAVISCI_SCRIPT_DIR/prepare_generated_files_branch.sh"
 after_deploy:
-- cd $TRAVIS_BUILD_DIR
-- git checkout $TRAVIS_BRANCH
-- cd $TRAVIS_BUILD_DIR/integration_test
-- bundle install
-- bundle exec rake test
+  - cd $TRAVIS_BUILD_DIR
+  - git checkout $TRAVIS_BRANCH
+  - cd $TRAVIS_BUILD_DIR/integration_test
+  - bundle install
+  - bundle exec rake test
 jobs:
   include:
   - stage: build the blog
     env:
-    - JEKYLL_BASEURL=
-    - BLOG_DEPLOY_TEST_URL=https://noltarium-blog-test.herokuapp.com/
+      - JEKYLL_BASEURL=
+      - BLOG_DEPLOY_TEST_URL=https://noltarium-blog-test.herokuapp.com/
     before_deploy:
-    - "$TRAVISCI_SCRIPT_DIR/prepare_heroku_deployment.sh"
-    - git checkout herokuapp
+      - "$TRAVISCI_SCRIPT_DIR/prepare_heroku_deployment.sh"
+      - git checkout herokuapp
     deploy:
-    - provider: heroku
-      api_key:
-        secure: a8xZ6u2CYdRSoUc/pEo5XX0XLwpAWZofCvt0fxmPHUehUWy/3Z3qi2TC+ogToizJpTgOATN8yv6FV/TQliynj6DGLPE3rODh2wL1exgqevTXkz8LcySmQleAD2C1RnX2PA5z36P9bqDBNUdtMN2nwykgGyGUyg1ZhgIdosCudQ7czww44MTvSHFgf6M7l4d/2ZqOiNTzEmNXs3WWILl58Rw57sxlH/kWBLNs7L49z2MUsuWQFvdl8J+Dsm0S5tTJZfcjPlx8wNKpA8QtIacZV/oTpq6KAebzo20f6wrsVnNSeETDpkZNbz/P2jWuTe5p3Ck5oaDzf/HokvfXBdEnuteUvDnh1uQt388xw2Qndmwcf3PBA/JXUbhRwp61bbDFRkX/ALjit1K/bpr98c77dFQ2980E/9NyNroG3poxVY5o1B38M3AUCsXCrlW89rJ/TPAYwV5ypds2xU73OQP23t35KHb3kdYUqbplygkLqAO0mWfXFDdOpVgVY0cxV7fglMNXkV3shXNqv+R3wvA2yWpDlVTrWseR+lxLoSuSeto3xsFSQNg2CpBuTuCQG+Ajmo0uSNUbVNI3sW96cs5DTNfYScye8NYpnMiscL1b3Q7dKKsKrjrTBX12H5kMWrrqhy6IM/MiQmvNou26Uo+2SIcAdsk4Kr+WlG3GxaQuYes=
-      app: noltarium-blog-test
-      on:
-        repo: nolte/jekyll-boilerplate
-        all_branches: true
+      - provider: heroku
+        api_key:
+          secure: a8xZ6u2CYdRSoUc/pEo5XX0XLwpAWZofCvt0fxmPHUehUWy/3Z3qi2TC+ogToizJpTgOATN8yv6FV/TQliynj6DGLPE3rODh2wL1exgqevTXkz8LcySmQleAD2C1RnX2PA5z36P9bqDBNUdtMN2nwykgGyGUyg1ZhgIdosCudQ7czww44MTvSHFgf6M7l4d/2ZqOiNTzEmNXs3WWILl58Rw57sxlH/kWBLNs7L49z2MUsuWQFvdl8J+Dsm0S5tTJZfcjPlx8wNKpA8QtIacZV/oTpq6KAebzo20f6wrsVnNSeETDpkZNbz/P2jWuTe5p3Ck5oaDzf/HokvfXBdEnuteUvDnh1uQt388xw2Qndmwcf3PBA/JXUbhRwp61bbDFRkX/ALjit1K/bpr98c77dFQ2980E/9NyNroG3poxVY5o1B38M3AUCsXCrlW89rJ/TPAYwV5ypds2xU73OQP23t35KHb3kdYUqbplygkLqAO0mWfXFDdOpVgVY0cxV7fglMNXkV3shXNqv+R3wvA2yWpDlVTrWseR+lxLoSuSeto3xsFSQNg2CpBuTuCQG+Ajmo0uSNUbVNI3sW96cs5DTNfYScye8NYpnMiscL1b3Q7dKKsKrjrTBX12H5kMWrrqhy6IM/MiQmvNou26Uo+2SIcAdsk4Kr+WlG3GxaQuYes=
+        app: noltarium-blog-test
+        on:
+          repo: nolte/jekyll-boilerplate
+          all_branches: true
   - stage: deploy as gh-page
     env:
-    - PROJECT=$(basename $TRAVIS_BUILD_DIR)
-    - JEKYLL_BASEURL=\/$PROJECT
-    - BLOG_DEPLOY_TEST_URL=https://nolte.github.io/jekyll-boilerplate/
-    - GITHUB_PAGE_DIR=/tmp/ghpage
-    before_deploy:
-    - "$TRAVISCI_SCRIPT_DIR/deploy_ghpage.sh"
+      - PROJECT=$(basename $TRAVIS_BUILD_DIR)
+      - JEKYLL_BASEURL=\/$PROJECT
+      - BLOG_DEPLOY_TEST_URL=https://nolte.github.io/jekyll-boilerplate/
+      - GITHUB_PAGE_DIR=/tmp/ghpage
     deploy:
-    - provider: pages
-      skip_cleanup: false
-      local_dir: $GITHUB_PAGE_DIR
-      github_token:
-        secure: "S5/FSI0IM8lV/N+/unnnLFD0CdRoHEXPp0KIsFb8cbZ8iyBDxkBRDEG0G4AnZNTtZfA0E6ZzURe796Wq7lD/e+uJRgu5WHnSNwBy7wlCUPFyRdgJsRmpVbouNWizWmoCMRy6HRMCk2LFJyWUUgrydjNeY0fqDaqLflEOj3wgCtWOgyDF5PSvIu55pdpQnUJTYrRGnWZFXDPyjQLxXEPB997Cy9Sra9ZZ5qW8xLNkVcJwCyR9eRlrfmHwF5OK0BdqY93myBgDwQFXi4DuyKUCKgyzNHcqTbwI2HCZbqUPTTjeij3WkkVnr+rKd8gYOARlkm7fe7nBl82VKubZA3lQWnFmSEh7idelV7EGoeJSukG7W+OlHM+J9j/pLKJ29G1Jz6bzimN+pw6dQDmzzmIBmhfeHmzVxo57novA+mpiiSa0iHHjfzKnxpfPq2dCWLxlW5N3i2t5OKSZjX8l5CWwAZyu65bcgq5mTqowutPFtBUjmhxkPtzHvNwtzm0pdkG3slpg1Sxj+eRA3/lyyit+PdYMcI2ydv62353UQNtdCwxrz0fi6JEJNp1S0tprY5knwuuYdk2WmNc9uZoEvbGCFP0Sd525h2+0nkEgTyblfC6NiZM0BUAghLOw7JNm2rYSL6GDz+a6SfucTZuI7jh7XGHfNiB6MItu/jERUGvgw3o="
-      on:
-        repo: nolte/jekyll-boilerplate
-        all_branches: true
+      - provider: script
+        script: $TRAVISCI_SCRIPT_DIR/deploy_ghpage.sh
+        on:
+          repo: nolte/jekyll-boilerplate
+          all_branches: true
