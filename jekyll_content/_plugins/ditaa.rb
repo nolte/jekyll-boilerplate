@@ -92,7 +92,7 @@ module Jekyll
           @@generated_files << st
           site.static_files << st
           # return ''
-          return '<a href="' + web_path + '" data-toggle="lightbox"><img src="'+web_path+'" class="img-fluid"></a>'
+          return '<a href="' + web_path + '" data-toggle="lightbox"><img src="'+web_path+'" class="img-fluid" alt="'+png_name+'"></a>'
         else
           # return the code if failure
           return '<pre><code>' + source + '</code></pre>'

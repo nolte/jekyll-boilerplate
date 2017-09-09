@@ -5,6 +5,8 @@ links:
 
 ---
 
+**JavaScripts Addons**
+
 * [lightbox][lightbox] (js lib für Image Resizeing)
 
-[lightbox]: http://ashleydw.github.io/lightbox/
+[lightbox]: https://ashleydw.github.io/lightbox/
