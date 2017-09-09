@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>Welcome to Jekyll!</title>
-  <meta name="description" content="Ein neues “Kopier” Projekt für jekyll Blogs. :+1: Addons Plugin Description Plantuml Plantuml dient zum generieren von UML Diagram ditaa Ditaa ist eine nette...">
+  <meta name="description" content="Ein neues “Kopier” Projekt für jekyll Blogs. :+1: Addons Plugin Description Java Script Stuff JavaScripts Addons lightbox (js lib für Image Resizeing) Plantu...">
 
   
   
@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/css/tether.min.css" integrity="sha256-y4TDcAD4/j5o4keZvggf698Cr9Oc7JZ+gGMax23qmVA=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.2.0/ekko-lightbox.min.css.map">
 
   <link rel="stylesheet" href="/jekyll-boilerplate/css/site/styles.css">
   <link rel="canonical" href="/jekyll-boilerplate/blog/2016/09/26/welcome-to-jekyll/">
@@ -111,6 +112,19 @@
     
         
       <tr>
+        <td><a href="/jekyll/javascript/">Java Script Stuff</a></td>
+        <td>
+<p><strong>JavaScripts Addons</strong></p>
+
+<ul>
+  <li>
+<a href="https://ashleydw.github.io/lightbox/">lightbox</a> (js lib für Image Resizeing)</li>
+</ul>
+
+</td>
+      </tr>
+        
+      <tr>
         <td><a href="/jekyll/plantuml/">Plantuml</a></td>
         <td>
 <p><a href="http://plantuml.com/">Plantuml</a> dient zum generieren von UML Diagram</p>
@@ -192,14 +206,27 @@ Durch <a href="http://asciiflow.com/">asciiflow.com</a> lassen sich die Diagramm
 
     <!-- JavaScript -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha256-gL1ibrbVcRIHKlCO5OXOPC/lZz/gpdApgQAzskqqXp8=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.3/holder.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.2.0/ekko-lightbox.min.js" integrity="sha256-JRmDZdHmGahZjoYtQActan4Leibhl+7jZOETtJT3DCY=" crossorigin="anonymous"></script>
 
+<script>
+  $( document ).ready(function() {
 
-
-
+    });
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
+    </script>
   </body>
 
 </html>
