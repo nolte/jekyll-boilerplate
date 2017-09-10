@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="194px" preserveAspectRatio="none" style="width:1379px;height:194px;" version="1.1" viewBox="0 0 1379 194" width="1379px" zoomAndPan="magnify"><defs><filter height="300%" id="fw7yffb3mcf2l" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--cluster Presentation Modes--><polygon fill="#FFFFFF" filter="url(#fw7yffb3mcf2l)" points="418,74,582,74,589,96.2969,1357,96.2969,1357,182,418,182,418,74" style="stroke: #000000; stroke-width: 2.0;"/><line style="stroke: #000000; stroke-width: 2.0;" x1="418" x2="589" y1="96.2969" y2="96.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="158" x="422" y="88.9951">Presentation Modes</text><!--entity BOOTSTAP--><rect fill="#FEFECE" filter="url(#fw7yffb3mcf2l)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="97" x="725.75" y="120"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="720.75" y="125"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="720.75" y="146.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="77" x="735.75" y="142.9951">Bootstrap4</text><!--entity REVEALJS--><rect fill="#FEFECE" filter="url(#fw7yffb3mcf2l)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="76" x="858" y="120"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="853" y="125"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="853" y="146.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="56" x="868" y="142.9951">reveal.js</text><polygon fill="#FBFB77" filter="url(#fw7yffb3mcf2l)" points="969.5,110.5,969.5,165.8984,1341.5,165.8984,1341.5,120.5,1331.5,110.5,969.5,110.5" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#FBFB77" points="969.5,110.5,969.5,134,934.192,138,969.5,142,969.5,165.8984,1341.5,165.8984,1341.5,120.5,1331.5,110.5,969.5,110.5" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="1331.5" x2="1331.5" y1="110.5" y2="120.5"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="1341.5" x2="1331.5" y1="120.5" y2="120.5"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="186" x="975.5" y="127.5669">used for html Presentation ...</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="144" x="975.5" y="142.6997">no more PowerPoint ...</text><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="91" x="975.5" y="157.8325">base layout:</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="256" x="1070.5" y="157.8325">_layouts/presentation/presentation.html</text><polygon fill="#FBFB77" filter="url(#fw7yffb3mcf2l)" points="434,118,434,158.2656,690,158.2656,690,128,680,118,434,118" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#FBFB77" points="434,118,434,158.2656,690,158.2656,690,142,725.645,138,690,134,690,128,680,118,434,118" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="680" x2="680" y1="118" y2="128"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="690" x2="680" y1="128" y2="128"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="168" x="440" y="135.0669">Classic Blog Look and Feel</text><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="91" x="440" y="150.1997">base layout:</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="140" x="535" y="150.1997">_layouts/site/site.html</text><!--entity PRE--><rect fill="#FEFECE" filter="url(#fw7yffb3mcf2l)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="108" x="291" y="120"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="286" y="125"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="286" y="146.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="301" y="142.9951">Presentation</text><polygon fill="#FBFB77" filter="url(#fw7yffb3mcf2l)" points="6.5,118,6.5,158.2656,256.5,158.2656,256.5,128,246.5,118,6.5,118" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#FBFB77" points="6.5,118,6.5,158.2656,256.5,158.2656,256.5,142,290.844,138,256.5,134,256.5,128,246.5,118,6.5,118" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="246.5" x2="246.5" y1="118" y2="128"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="256.5" x2="246.5" y1="128" y2="128"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="183" x="12.5" y="135.0669">Abstract Presentation Config</text><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="91" x="12.5" y="150.1997">base layout:</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="134" x="107.5" y="150.1997">_layouts/default.html</text><!--link PRE to BOOTSTAP--><path d="M354.618,119.7637 C368.65,95.366 397.283,53.183 435.5,36 C487.183,12.763 639.289,11.74 690.5,36 C724.962,52.325 749.938,90.612 763.176,115.3548 " fill="none" id="PRE-BOOTSTAP" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="765.511,119.8089,764.8751,109.9806,763.1895,115.3805,757.7896,113.695,765.511,119.8089" style="stroke: #A80036; stroke-width: 1.0;"/><!--link PRE to REVEALJS--><path d="M354.618,119.7637 C368.65,95.366 397.283,53.183 435.5,36 C513.937,0.734 745.95,-3.193 822.5,36 C854.739,52.506 876.065,90.47 887.08,115.1384 " fill="none" id="PRE-REVEALJS" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="889.146,119.8846,889.2217,110.036,887.1505,115.3001,881.8864,113.2289,889.146,119.8846" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml
+
+ component "Presentation" as PRE
+ note left of [PRE]
+   Abstract Presentation Config
+   <b>base layout:</b> _layouts/default.html
+ end note
+package "Presentation Modes" {
+  component "Bootstrap4" as BOOTSTAP
+  component "reveal.js" as REVEALJS
+
+  PRE -> BOOTSTAP
+  PRE -> REVEALJS
+
+  note right of [REVEALJS]
+    used for html Presentation ...
+    no more PowerPoint ...
+    <b>base layout:</b> _layouts/presentation/presentation.html
+  end note
+  note left of [BOOTSTAP]
+    Classic Blog Look and Feel
+    <b>base layout:</b> _layouts/site/site.html
+  end note
+}
+
+
+@enduml
+
+PlantUML version 1.2017.15(Mon Jul 03 16:45:34 UTC 2017)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 1.8.0_141-8u141-b15-3~14.04-b15
+Operating System: Linux
+OS Version: 4.4.0-93-generic
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

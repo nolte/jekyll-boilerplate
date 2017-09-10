@@ -1,0 +1,10 @@
+.share-reveal {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  margin-left: -139px;
+  z-index: 20; }
+
+.emoji {
+  border: none !important;
+  box-shadow: none !important; }
