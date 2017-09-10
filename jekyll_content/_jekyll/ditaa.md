@@ -1,6 +1,6 @@
 ---
 layout: jekyll_plugin
-title:  "ditaa"
+title: ditaa
 links:
   jekyll_project:
     title: jekyll-ditaa

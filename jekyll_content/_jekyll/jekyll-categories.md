@@ -1,6 +1,6 @@
 ---
 layout: jekyll_plugin
-title:  "jekyll-categories"
+title: jekyll-categories
 links:
   jekyll_project:
     title: jekyll-categories

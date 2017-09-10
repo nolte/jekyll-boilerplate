@@ -18,8 +18,9 @@ categories:
       </tr>
     </thead>
     <tbody>
-    {% assign elements = site.jekyll | sort: 'title'  %}
-    {% for post in elements   %}    
+
+
+    {% for post in site.jekyll   %}    
       <tr>
         <td><a href="{{post.url}}">{{ post.title }}</a></td>
         <td>{{ post.excerpt }}</td>

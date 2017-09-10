@@ -1,6 +1,6 @@
 ---
 layout: jekyll_plugin
-title:  "Plantuml"
+title: Plantuml
 links:
   jekyll_project:
     title: jekyll-plantuml
