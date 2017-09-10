@@ -83,6 +83,8 @@ sass:
 
 permalink: /blog/:year/:month/:day/:title/
 
+disqus_short_name: nolte-jekyll-site
+
 
 timezone: UTC
 paginate: 5          # Posts per page on the blog index

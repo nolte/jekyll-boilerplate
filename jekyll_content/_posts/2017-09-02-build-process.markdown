@@ -5,6 +5,7 @@ date:   2017-09-02 12:31:11
 categories:
   - jekyll
   - build
+comments: true
 ---
 
 ## Commit Ablauf
