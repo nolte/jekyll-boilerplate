@@ -1,6 +1,6 @@
 ---
 layout: jekyll_plugin
-title:  "jekyll-archives"
+title: jekyll-archives
 links:
   jekyll_project:
     title: jekyll-archives
