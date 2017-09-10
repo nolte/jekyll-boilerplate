@@ -1,0 +1,19 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+@import "custom";
+
+.share-reveal {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  margin-left: -139px;
+  z-index: 20;
+}
+
+.emoji {
+  border: none !important;
+  box-shadow: none !important;
+}
