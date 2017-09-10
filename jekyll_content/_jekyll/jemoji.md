@@ -1,6 +1,6 @@
 ---
 layout: jekyll_plugin
-title:  "jemoji"
+title: jemoji
 links:
   jekyll_project:
     title: jemoji

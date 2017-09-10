@@ -1,6 +1,6 @@
 ---
 layout: jekyll_plugin
-title:  "Java Script Stuff"
+title: Java Script Stuff
 links:
 
 ---
