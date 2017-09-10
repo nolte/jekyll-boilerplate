@@ -89,7 +89,11 @@ ditaa_output_directory: /assets/images/ditaa
 
 jekyll-archives:
   enabled: all
-  layout: 'archive/archive'
+  layouts:
+    year: 'archive/year-archive'
+    month: 'archive/month-archive'
+    day: 'archive/day-archive'
+    tag: 'archive/tag-archive-layout'
   permalinks:
     year: '/blog/:year/'
     month: '/blog/:year/:month/'
