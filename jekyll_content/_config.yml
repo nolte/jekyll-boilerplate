@@ -72,7 +72,7 @@ sass:
     sass_dir: _sass
 
 
-permalink: /blog/archive/:year/:month/:day/:title/
+permalink: /blog/:year/:month/:day/:title/
 
 
 timezone: UTC
@@ -91,8 +91,8 @@ jekyll-archives:
   enabled: all
   layout: 'archive/archive'
   permalinks:
-    year: '/blog/archive/:year/'
-    month: '/blog/archive/:year/:month/'
-    day: '/blog/archive/:year/:month/:day/'
-    tag: '/blog/archive/tag/:name/'
-    category: '/blog/archive/categories/:name/'
+    year: '/blog/:year/'
+    month: '/blog/:year/:month/'
+    day: '/blog/:year/:month/:day/'
+    tag: '/blog/tag/:name/'
+    category: '/blog/categories/:name/'
