@@ -66,6 +66,7 @@ plugins:
   - jekyll-archives
   - jekyll-sass-converter
   - jekyll-coffeescript
+  - jekyll-tidy
 
 exclude:
   - Gemfile
@@ -82,6 +83,8 @@ sass:
 
 
 permalink: /blog/:year/:month/:day/:title/
+
+disqus_short_name: nolte-jekyll-site
 
 
 timezone: UTC

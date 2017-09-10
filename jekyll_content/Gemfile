@@ -32,6 +32,7 @@ group :jekyll_plugins do
 #   gem 'jekyll-categories'
    gem 'jekyll-sass-converter'
    gem 'jekyll-coffeescript'
+   gem 'jekyll-tidy'
    gem "minima", "~> 2.0"
    gem 'kramdown'
 end

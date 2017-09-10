@@ -11,5 +11,10 @@
     {% include site/blog/post/date.html %}{{ time }}
     {% include site/post/time_to_read.html %}
     {% include site/blog/post/tags.html %}
+    {% if post.comments == true  %}
+     <i class="mdi mdi-comment-text"></i>
+      <a class='comments'
+         href="{% if index %}{{  p.url | prepend: site.baseurl }}{{ post.url }}{% endif %}#disqus_thread">Comments</a>
+    {% endif %}
   </div>
 {% endunless %}
