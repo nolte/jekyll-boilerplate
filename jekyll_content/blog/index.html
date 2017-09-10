@@ -1,5 +1,5 @@
 ---
-layout: site-breadcrumb
+layout: site/site-breadcrumb
 title: Blog
 regenerate: true
 blog_index: true
@@ -11,13 +11,13 @@ breadcrumb: Blog
   		{% assign index = true %}
   		{% for post in paginator.posts %}
   		<article class="listing blog-posts">
-    		{% include blog/post/article.html %}
+    		{% include site/blog/post/article.html %}
   		</article>
   	<hr>
   	{% endfor %}
   	</div>
 	<div class="col-sm-4">
-		{% include asides/categories.html %}
+		{% include site/asides/categories.html %}
 	</div>
 </div>
 <div class="row">

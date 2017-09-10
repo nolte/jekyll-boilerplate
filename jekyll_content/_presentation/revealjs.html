@@ -1,0 +1,47 @@
+---
+title: Reveal.js
+---
+<section>
+  <h1>{{page.title}}</h1>
+  <h3>The HTML Presentation Framework</h3>
+  <h4>integrate in jekyll</h4>
+  <p>
+    {% if site.github_username %}<small>Created by <a href="{{ site.baseurl }}/">{{site.github_username}}</a> / {% include icon-github.html username=site.github_username %}</small>{% endif %}
+  </p>
+</section>
+<section>Simple Html Presentations</section>
+<section>
+  <section>
+    <h1>Jekyll Plugins</h1>
+    <div>
+      <p>plantuml</p>
+      {% plantuml %}
+      [First] - [Second]
+      {% endplantuml %}
+    </div>
+    <div>
+      <p>Ditaa</p>
+      {% ditaa %}
+      /----+  DAAP /-----+-----+ Audio  /--------+
+      | PC |<------| RPi | MPD |------->| Stereo |
+      +----+       +-----+-----+        +--------+
+         |                 ^ ^
+         |     ncmpcpp     | | mpdroid /---------+
+         +--------=--------+ +----=----| Nexus S |
+                                       +---------+
+      {% endditaa %}
+    </div>
+  </section>
+  <section>
+    <h1>Jekyll Links</h1>
+    <p> using emoji :+1: and using jekyll Features </p>
+    <div>{% include site/asides/categories.html %}</div>
+  </section>
+</section>
+<section>
+  <h1>Using Speaker Nodes</h1>
+  <p>press <code>s</code> to open the speaker nodes</p>
+  <aside class="notes">
+  		Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+  </aside>
+</section>

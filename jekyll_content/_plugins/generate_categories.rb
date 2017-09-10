@@ -105,7 +105,7 @@ module Jekyll
     #  +category_dir+ is the String path between <source> and the category folder.
     #  +category+     is the category currently being processed.
     def initialize(site, base, category_dir, category)
-      template_path = File.join(base, '_layouts', 'category_index.html')
+      template_path = File.join(base, '_layouts', 'site/category_index.html')
       super(template_path, 'index.html', site, base, category_dir, category)
     end
 
@@ -121,7 +121,7 @@ module Jekyll
     #  +category_dir+ is the String path between <source> and the category folder.
     #  +category+     is the category currently being processed.
     def initialize(site, base, category_dir, category)
-      template_path = File.join(base, '_includes', 'custom', 'category_feed.xml')
+      template_path = File.join(base, '_includes', 'custom', 'site/category_feed.xml')
       super(template_path, 'atom.xml', site, base, category_dir, category)
 
       # Set the correct feed URL.
@@ -159,7 +159,7 @@ module Jekyll
 
     # Loops through the list of category pages and processes each one.
     def write_category_indexes
-      if self.layouts.key? 'category_index'
+      if self.layouts.key? 'site/category_index'
         self.categories.keys.each do |category|
           self.write_category_index(category)
         end
