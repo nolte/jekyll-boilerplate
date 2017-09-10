@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: site/post
 title:  "Build Process"
 date:   2017-09-02 12:31:11
 categories:

@@ -1,5 +1,5 @@
 ---
-layout: site-breadcrumb
+layout: site/site-breadcrumb
 ---
  {{ content }}
 
@@ -7,7 +7,7 @@ layout: site-breadcrumb
 {% for post in page.posts %}
   <li>
     {% assign index = true %}
-      {% include blog/post/article-metadata.html %}
+      {% include site/blog/post/article-metadata.html %}
     <hr>
   </li>
 {% endfor %}

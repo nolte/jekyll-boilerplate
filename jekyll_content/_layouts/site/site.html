@@ -2,18 +2,18 @@
 layout: default
 ---
 
-  {% include head.html %}
+  {% include site/head.html %}
 
 
   <body>
 
-    {% include header.html %}
+    {% include site/header.html %}
 
     <div class="container">
       {{ content }}
     </div>
 
-    {% include footer.html %}
+    {% include site/footer.html %}
 
     <!-- JavaScript -->
 
@@ -31,12 +31,9 @@ layout: default
     <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.0/dist/bootstrap-toc.min.js"></script>
 
 <script>
-  $( document ).ready(function() {
-
-    });
     $(document).on('click', '[data-toggle="lightbox"]', function(event) {
         event.preventDefault();
         $(this).ekkoLightbox();
     });
-    </script>
+</script>
   </body>

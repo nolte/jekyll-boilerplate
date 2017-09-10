@@ -1,5 +1,5 @@
 ---
-layout: jekyll_plugin
+layout: site/jekyll_plugin
 title: Plantuml
 links:
   jekyll_project:

@@ -1,0 +1,15 @@
+  {% if index %}
+  <h1>
+    <a href="{{ site.baseurl }}{{ p.url  }}{{ post.url }}">{{ post.title }}</a>
+  </h1>
+  {% else %}
+  <h1 data-toc-skip class="title indent">{{ page.title }}</h1>
+  {% endif %}
+
+  {% unless post.meta == false %}
+  <div class="meta">
+    {% include site/blog/post/date.html %}{{ time }}
+    {% include site/post/time_to_read.html %}
+    {% include site/blog/post/tags.html %}
+  </div>
+{% endunless %}

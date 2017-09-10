@@ -1,11 +1,11 @@
 ---
-layout: site-breadcrumb
+layout: site/site-breadcrumb
 ---
 <div class="row">
 	<div class="col-sm-8" style="padding-right:20px; border-right: 1px solid #ccc;">
 		<article class="post">
 		  {% assign post = page %}
-		  {% include blog/post/article.html %}
+		  {% include site/blog/post/article.html %}
 		</article>
 	</div>
 	<div class="col-sm-4">
@@ -17,6 +17,6 @@ layout: site-breadcrumb
 {% if site.disqus_short_name and page.comments == true %}
 <section id="disqus">
   <h3 class="indent title">Comments</h3>
-  <div id="disqus_thread" aria-live="polite">{% include blog/post/disqus_thread.html %}</div>
+  <div id="disqus_thread" aria-live="polite">{% include site/blog/post/disqus_thread.html %}</div>
 </section>
 {% endif %}
