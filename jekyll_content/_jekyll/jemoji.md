@@ -1,5 +1,5 @@
 ---
-layout: jekyll_plugin
+layout: site/jekyll_plugin
 title: jemoji
 links:
   jekyll_project:

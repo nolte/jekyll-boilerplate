@@ -5,6 +5,7 @@
  develop version on https://noltarium-blog-test.herokuapp.com/   
  master version on https://nolte.github.io/jekyll-boilerplate   
 
+[Slack](https://slack.com) Activity Channel: [#publicbuilds](https://noltarium.slack.com/messages/C156TTDD4/)
 
 ## Project Structure
 

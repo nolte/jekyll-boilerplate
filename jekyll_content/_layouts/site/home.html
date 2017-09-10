@@ -1,5 +1,5 @@
 ---
-layout: site
+layout: site/site
 ---
 
 <div class="row">
@@ -17,7 +17,7 @@ layout: site
         <li class="list-group-item">
           <div >
             <div><h7><a href="{{  post.url | prepend: site.baseurl }}">{{post.title}}</a></h7></div>
-            <div><h8 class="mb-2 text-muted">{% include blog/post/date.html %}{{ time }}  {% include blog/post/tags.html %}</h8></div>
+            <div><h8 class="mb-2 text-muted">{% include site/blog/post/date.html %}{{ time }}  {% include site/blog/post/tags.html %}</h8></div>
           </div>
         </li>
 				 {% endfor %}

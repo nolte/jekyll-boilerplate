@@ -8,8 +8,8 @@
 
   {% unless post.meta == false %}
   <div class="meta">
-    {% include blog/post/date.html %}{{ time }}
-    {% include post/time_to_read.html %}
-    {% include blog/post/tags.html %}
+    {% include site/blog/post/date.html %}{{ time }}
+    {% include site/post/time_to_read.html %}
+    {% include site/blog/post/tags.html %}
   </div>
 {% endunless %}
