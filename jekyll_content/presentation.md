@@ -5,5 +5,5 @@ permalink: /presentation/
 navigation: true
 ---
   {% for post in site.presentation   %}    
-  * [{{post.title}}]({{post.url}})
+  * [{{post.title | prepend: site.baseurl }}]({{post.url}})
   {% endfor %}
