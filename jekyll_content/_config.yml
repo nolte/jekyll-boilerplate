@@ -66,6 +66,7 @@ plugins:
   - jekyll-archives
   - jekyll-sass-converter
   - jekyll-coffeescript
+  - jekyll-tidy
 
 exclude:
   - Gemfile
