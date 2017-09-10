@@ -16,36 +16,35 @@ links:
 
 ```
 .
-├── archive
-│   ├── 2016
-│   │   ├── 07
-│   │   │   ├── 19
-│   │   │   │   ├── home-automatic
-│   │   │   │   │   └── index.html
-│   │   │   │   └── index.html
-│   │   │   └── index.html
-│   │   ├── 09
-│   │   │   ├── 26
-│   │   │   │   ├── index.html
-│   │   │   │   └── welcome-to-jekyll
-│   │   │   │       └── index.html
-│   │   │   └── index.html
-│   │   └── index.html
-│   ├── 2017
-│   │   ├── 09
-│   │   │   ├── 02
-│   │   │   │   ├── build-process
-│   │   │   │   │   └── index.html
+├── 2016
+│   ├── 07
+│   │   ├── 19
+│   │   │   ├── home-automatic
 │   │   │   │   └── index.html
 │   │   │   └── index.html
 │   │   └── index.html
-│   └── categories
-│       ├── build
-│       │   └── index.html
-│       ├── iot
-│       │   └── index.html
-│       └── jekyll
-│           └── index.html
-└── index.htm
-
+│   ├── 09
+│   │   ├── 26
+│   │   │   ├── index.html
+│   │   │   └── welcome-to-jekyll
+│   │   │       └── index.html
+│   │   └── index.html
+│   └── index.html
+├── 2017
+│   ├── 09
+│   │   ├── 02
+│   │   │   ├── build-process
+│   │   │   │   └── index.html
+│   │   │   └── index.html
+│   │   └── index.html
+│   └── index.html
+├── categories
+│   ├── build
+│   │   └── index.html
+│   ├── index.html
+│   ├── iot
+│   │   └── index.html
+│   └── jekyll
+│       └── index.html
+└── index.html
 ```
