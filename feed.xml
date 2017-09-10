@@ -1,95 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="/jekyll-boilerplate/feed.xml" rel="self" type="application/atom+xml" /><link href="/jekyll-boilerplate/" rel="alternate" type="text/html" /><updated>2017-09-10T20:57:07+00:00</updated><id>/jekyll-boilerplate/</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</subtitle><entry><title type="html">Build Process</title><link href="/jekyll-boilerplate/blog/2017/09/02/build-process/" rel="alternate" type="text/html" title="Build Process" /><published>2017-09-02T12:31:11+00:00</published><updated>2017-09-10T20:53:23+00:00</updated><id>/jekyll-boilerplate/blog/2017/09/02/build-process</id><content type="html" xml:base="/jekyll-boilerplate/blog/2017/09/02/build-process/">&lt;h2 id=&quot;commit-ablauf&quot;&gt;Commit Ablauf&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;/jekyll-boilerplate/uml/aee04b6bb4302c85992aa6e34c7e9a74.svg&quot; data-toggle=&quot;lightbox&quot;&gt;&lt;img src=&quot;/jekyll-boilerplate/uml/aee04b6bb4302c85992aa6e34c7e9a74.svg&quot; alt=&quot;PlantUML SVG diagram&quot; class=&quot;plantuml img-fluid&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Jeder build wird als Heroku App deployt, dieses dient als “DevStage”.  &lt;br /&gt;
-Nur der Master wird als &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; im branch &lt;code class=&quot;highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; publiziert.&lt;br /&gt;
-Diese Trennung wurde durch die Nutzung von &lt;a href=&quot;https://docs.travis-ci.com/user/build-stages/&quot;&gt;Travis-ci Built Stages&lt;/a&gt; erreicht.  &lt;br /&gt;
-siehe: &lt;a href=&quot;https://travis-ci.org/nolte/jekyll-boilerplate&quot;&gt;&lt;img src=&quot;https://travis-ci.org/nolte/jekyll-boilerplate.svg?branch=master&quot; alt=&quot;Build Status&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;heroku-container&quot;&gt;Heroku Container&lt;/h2&gt;
-
-&lt;p&gt;Da sich der Blog nicht auf heroku Bauen lässt, durch die Plantuml &amp;amp; Ditaa Abhängigkeiten, werden nur die generierten Dateien nach Heroku übertragen.
-Der Blog läuft dann als &lt;a href=&quot;https://devcenter.heroku.com/articles/php-support&quot;&gt;Heroku PHP App&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;blog-release&quot;&gt;Blog Release&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;/jekyll-boilerplate/uml/7882a164f0cdef56739c63a0136ada5d.svg&quot; data-toggle=&quot;lightbox&quot;&gt;&lt;img src=&quot;/jekyll-boilerplate/uml/7882a164f0cdef56739c63a0136ada5d.svg&quot; alt=&quot;PlantUML SVG diagram&quot; class=&quot;plantuml img-fluid&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Der aktuell aktive &lt;strong&gt;Feature Branch&lt;/strong&gt; ist als &lt;a href=&quot;https://noltarium-blog-test.herokuapp.com/&quot;&gt;Heroku App&lt;/a&gt; einsehbar. &lt;br /&gt;
-Die generierte Blog version vom &lt;strong&gt;Master Branche&lt;/strong&gt; ist unter &lt;a href=&quot;https://nolte.github.io/jekyll-boilerplate&quot;&gt;github.io&lt;/a&gt; zu finden.&lt;/p&gt;</content><author><name></name></author><summary type="html">Commit Ablauf</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="/jekyll-boilerplate/blog/2016/09/26/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2016-09-26T12:31:11+00:00</published><updated>2017-09-10T20:53:23+00:00</updated><id>/jekyll-boilerplate/blog/2016/09/26/welcome-to-jekyll</id><content type="html" xml:base="/jekyll-boilerplate/blog/2016/09/26/welcome-to-jekyll/">&lt;p&gt;Ein neues “Kopier” Projekt für jekyll Blogs. :+1: &lt;br /&gt;
- zusätzlich zu dem Klassischen Bootstrap Layout wird eine &lt;a href=&quot;https://github.com/hakimel/reveal.js&quot;&gt;reveal.js&lt;/a&gt; Modus angeboten.
- &lt;a href=&quot;https://github.com/hakimel/reveal.js&quot;&gt;Reveal.js&lt;/a&gt; wird verwendet um einfache und &lt;strong&gt;moderne&lt;/strong&gt; Präsentationen zu erstellen.&lt;/p&gt;
-
-&lt;h2 id=&quot;addons&quot;&gt;Addons&lt;/h2&gt;
-
-&lt;table class=&quot;table table-striped&quot;&gt;
-    &lt;thead&gt;
-      &lt;tr&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="/jekyll-boilerplate/feed.xml" rel="self" type="application/atom+xml" /><link href="/jekyll-boilerplate/" rel="alternate" type="text/html" /><updated>2017-09-10T21:50:55+00:00</updated><id>/jekyll-boilerplate/</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+    </subtitle><entry><title type="html">Build Process</title><link href="/jekyll-boilerplate/blog/2017/09/02/build-process/" rel="alternate" type="text/html" title="Build Process" /><published>2017-09-02T12:31:11+00:00</published><updated>2017-09-10T21:46:11+00:00</updated><id>/jekyll-boilerplate/blog/2017/09/02/build-process</id><content type="html" xml:base="/jekyll-boilerplate/blog/2017/09/02/build-process/">&lt;h2 id=&quot;commit-ablauf&quot;&gt;Commit Ablauf&lt;/h2&gt;
+        &lt;p&gt;&lt;a href=&quot;/jekyll-boilerplate/uml/aee04b6bb4302c85992aa6e34c7e9a74.svg&quot; data-toggle=&quot;lightbox&quot;&gt;&lt;img src=&quot;/jekyll-boilerplate/uml/aee04b6bb4302c85992aa6e34c7e9a74.svg&quot; alt=&quot;PlantUML SVG diagram&quot; class=&quot;plantuml img-fluid&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+        &lt;!--more--&gt;
+        &lt;p&gt;Jeder build wird als Heroku App deployt, dieses dient als “DevStage”.  &lt;br /&gt;
+        Nur der Master wird als &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; im branch &lt;code class=&quot;highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; publiziert.&lt;br /&gt;
+        Diese Trennung wurde durch die Nutzung von &lt;a href=&quot;https://docs.travis-ci.com/user/build-stages/&quot;&gt;Travis-ci Built Stages&lt;/a&gt; erreicht.  &lt;br /&gt;
+        siehe: &lt;a href=&quot;https://travis-ci.org/nolte/jekyll-boilerplate&quot;&gt;&lt;img src=&quot;https://travis-ci.org/nolte/jekyll-boilerplate.svg?branch=master&quot; alt=&quot;Build Status&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+        &lt;h2 id=&quot;heroku-container&quot;&gt;Heroku Container&lt;/h2&gt;
+        &lt;p&gt;Da sich der Blog nicht auf heroku Bauen lässt, durch die Plantuml &amp;amp; Ditaa Abhängigkeiten, werden nur die generierten Dateien nach Heroku übertragen.
+        Der Blog läuft dann als &lt;a href=&quot;https://devcenter.heroku.com/articles/php-support&quot;&gt;Heroku PHP App&lt;/a&gt;.&lt;/p&gt;
+        &lt;h2 id=&quot;blog-release&quot;&gt;Blog Release&lt;/h2&gt;
+        &lt;p&gt;&lt;a href=&quot;/jekyll-boilerplate/uml/7882a164f0cdef56739c63a0136ada5d.svg&quot; data-toggle=&quot;lightbox&quot;&gt;&lt;img src=&quot;/jekyll-boilerplate/uml/7882a164f0cdef56739c63a0136ada5d.svg&quot; alt=&quot;PlantUML SVG diagram&quot; class=&quot;plantuml img-fluid&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;Der aktuell aktive &lt;strong&gt;Feature Branch&lt;/strong&gt; ist als &lt;a href=&quot;https://noltarium-blog-test.herokuapp.com/&quot;&gt;Heroku App&lt;/a&gt; einsehbar. &lt;br /&gt;
+        Die generierte Blog version vom &lt;strong&gt;Master Branche&lt;/strong&gt; ist unter &lt;a href=&quot;https://nolte.github.io/jekyll-boilerplate&quot;&gt;github.io&lt;/a&gt; zu finden.&lt;/p&gt;</content><author><name></name></author><summary type="html">Commit Ablauf</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="/jekyll-boilerplate/blog/2016/09/26/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2016-09-26T12:31:11+00:00</published><updated>2017-09-10T20:53:23+00:00</updated><id>/jekyll-boilerplate/blog/2016/09/26/welcome-to-jekyll</id><content type="html" xml:base="/jekyll-boilerplate/blog/2016/09/26/welcome-to-jekyll/">&lt;p&gt;Ein neues “Kopier” Projekt für jekyll Blogs. :+1: &lt;br /&gt;
+        zusätzlich zu dem Klassischen Bootstrap Layout wird eine &lt;a href=&quot;https://github.com/hakimel/reveal.js&quot;&gt;reveal.js&lt;/a&gt; Modus angeboten.
+        &lt;a href=&quot;https://github.com/hakimel/reveal.js&quot;&gt;Reveal.js&lt;/a&gt; wird verwendet um einfache und &lt;strong&gt;moderne&lt;/strong&gt; Präsentationen zu erstellen.&lt;/p&gt;
+        &lt;h2 id=&quot;addons&quot;&gt;Addons&lt;/h2&gt;
+        &lt;table class=&quot;table table-striped&quot;&gt;
+        &lt;thead&gt;
+        &lt;tr&gt;
         &lt;th&gt;Plugin&lt;/th&gt;
         &lt;th&gt;Description&lt;/th&gt;
-      &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-
-
-        
-      &lt;tr&gt;
+        &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+        &lt;tr&gt;
         &lt;td&gt;&lt;a href=&quot;/jekyll/ditaa/&quot;&gt;ditaa&lt;/a&gt;&lt;/td&gt;
         &lt;td&gt;&lt;p&gt;&lt;a href=&quot;http://ditaa.sourceforge.net/&quot;&gt;Ditaa&lt;/a&gt; ist eine nette Möglichkeit einfach Diagramme als markdown zu speichern. &lt;br /&gt;
-Durch &lt;a href=&quot;http://asciiflow.com/&quot;&gt;asciiflow.com&lt;/a&gt; lassen sich die Diagramme recht einfach erstellen.&lt;/p&gt;
-
-&lt;/td&gt;
-      &lt;/tr&gt;
-        
-      &lt;tr&gt;
+        Durch &lt;a href=&quot;http://asciiflow.com/&quot;&gt;asciiflow.com&lt;/a&gt; lassen sich die Diagramme recht einfach erstellen.&lt;/p&gt;
+        &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
         &lt;td&gt;&lt;a href=&quot;/jekyll/javascript/&quot;&gt;Java Script Stuff&lt;/a&gt;&lt;/td&gt;
         &lt;td&gt;&lt;p&gt;&lt;strong&gt;JavaScripts Addons&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://ashleydw.github.io/lightbox/&quot;&gt;lightbox&lt;/a&gt; (js lib für Image Resizeing)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://afeld.github.io/bootstrap-toc/&quot;&gt;bootstrap-toc&lt;/a&gt; Table of Content lib&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/td&gt;
-      &lt;/tr&gt;
-        
-      &lt;tr&gt;
+        &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;https://ashleydw.github.io/lightbox/&quot;&gt;lightbox&lt;/a&gt; (js lib für Image Resizeing)&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;https://afeld.github.io/bootstrap-toc/&quot;&gt;bootstrap-toc&lt;/a&gt; Table of Content lib&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
         &lt;td&gt;&lt;a href=&quot;/jekyll/jekyll-archives/&quot;&gt;jekyll-archives&lt;/a&gt;&lt;/td&gt;
         &lt;td&gt;&lt;p&gt;Generiert die Blog Posts in eine Archive Struktur.&lt;/p&gt;
-
-&lt;p&gt;Es wurde ein kleiner Teil des Original Plugins überschrieben, um eine breadcrumb zu ermöglichen. &lt;br /&gt;
- siehe: &lt;code class=&quot;highlighter-rouge&quot;&gt;_plugins/jekyll-archives/archive.rb&lt;/code&gt;&lt;/p&gt;
-
-&lt;/td&gt;
-      &lt;/tr&gt;
-        
-      &lt;tr&gt;
+        &lt;p&gt;Es wurde ein kleiner Teil des Original Plugins überschrieben, um eine breadcrumb zu ermöglichen. &lt;br /&gt;
+        siehe: &lt;code class=&quot;highlighter-rouge&quot;&gt;_plugins/jekyll-archives/archive.rb&lt;/code&gt;&lt;/p&gt;
+        &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
         &lt;td&gt;&lt;a href=&quot;/jekyll/jekyll-categories/&quot;&gt;jekyll-categories&lt;/a&gt;&lt;/td&gt;
         &lt;td&gt;&lt;p&gt;Generiere Kategorie Seiten auf basis der Blogeinträge.&lt;/p&gt;
-&lt;/td&gt;
-      &lt;/tr&gt;
-        
-      &lt;tr&gt;
+        &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;&lt;a href=&quot;/jekyll/jekyll-tidy/&quot;&gt;jekyll-tidy&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;p&gt;Formatiert den generierten Html output&lt;/p&gt;
+        &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
         &lt;td&gt;&lt;a href=&quot;/jekyll/jemoji/&quot;&gt;jemoji&lt;/a&gt;&lt;/td&gt;
         &lt;td&gt;&lt;p&gt;Netter Spielkram und den Blog Bunter zu gestalten :neckbeard:, Mögliche &lt;a href=&quot;https://www.webpagefx.com/tools/emoji-cheat-sheet/&quot;&gt;emoji&lt;/a&gt;.&lt;/p&gt;
-
-&lt;/td&gt;
-      &lt;/tr&gt;
-        
-      &lt;tr&gt;
+        &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
         &lt;td&gt;&lt;a href=&quot;/jekyll/plantuml/&quot;&gt;Plantuml&lt;/a&gt;&lt;/td&gt;
         &lt;td&gt;&lt;p&gt;&lt;a href=&quot;http://plantuml.com/&quot;&gt;Plantuml&lt;/a&gt; dient zum generieren von UML Diagram&lt;/p&gt;
-
-&lt;/td&gt;
-      &lt;/tr&gt;
-    
-    &lt;/tbody&gt;
-  &lt;/table&gt;
-
-&lt;h2 id=&quot;presentation-struktur&quot;&gt;Presentation Struktur&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;/jekyll-boilerplate/uml/7970b98157580791cd0945848db0fc9f.svg&quot; data-toggle=&quot;lightbox&quot;&gt;&lt;img src=&quot;/jekyll-boilerplate/uml/7970b98157580791cd0945848db0fc9f.svg&quot; alt=&quot;PlantUML SVG diagram&quot; class=&quot;plantuml img-fluid&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Ein neues “Kopier” Projekt für jekyll Blogs. :+1: zusätzlich zu dem Klassischen Bootstrap Layout wird eine reveal.js Modus angeboten. Reveal.js wird verwendet um einfache und moderne Präsentationen zu erstellen. Addons Plugin Description ditaa Ditaa ist eine nette Möglichkeit einfach Diagramme als markdown zu speichern. Durch asciiflow.com lassen sich die Diagramme recht einfach erstellen. Java Script Stuff JavaScripts Addons lightbox (js lib für Image Resizeing) bootstrap-toc Table of Content lib jekyll-archives Generiert die Blog Posts in eine Archive Struktur. Es wurde ein kleiner Teil des Original Plugins überschrieben, um eine breadcrumb zu ermöglichen. siehe: _plugins/jekyll-archives/archive.rb jekyll-categories Generiere Kategorie Seiten auf basis der Blogeinträge. jemoji Netter Spielkram und den Blog Bunter zu gestalten :neckbeard:, Mögliche emoji. Plantuml Plantuml dient zum generieren von UML Diagram Presentation Struktur</summary></entry></feed>
+        &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/tbody&gt;
+        &lt;/table&gt;
+        &lt;h2 id=&quot;presentation-struktur&quot;&gt;Presentation Struktur&lt;/h2&gt;
+        &lt;p&gt;&lt;a href=&quot;/jekyll-boilerplate/uml/7970b98157580791cd0945848db0fc9f.svg&quot; data-toggle=&quot;lightbox&quot;&gt;&lt;img src=&quot;/jekyll-boilerplate/uml/7970b98157580791cd0945848db0fc9f.svg&quot; alt=&quot;PlantUML SVG diagram&quot; class=&quot;plantuml img-fluid&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Ein neues “Kopier” Projekt für jekyll Blogs. :+1: zusätzlich zu dem Klassischen Bootstrap Layout wird eine reveal.js Modus angeboten. Reveal.js wird verwendet um einfache und moderne Präsentationen zu erstellen. Addons Plugin Description ditaa Ditaa ist eine nette Möglichkeit einfach Diagramme als markdown zu speichern. Durch asciiflow.com lassen sich die Diagramme recht einfach erstellen. Java Script Stuff JavaScripts Addons lightbox (js lib für Image Resizeing) bootstrap-toc Table of Content lib jekyll-archives Generiert die Blog Posts in eine Archive Struktur. Es wurde ein kleiner Teil des Original Plugins überschrieben, um eine breadcrumb zu ermöglichen. siehe: _plugins/jekyll-archives/archive.rb jekyll-categories Generiere Kategorie Seiten auf basis der Blogeinträge. jekyll-tidy Formatiert den generierten Html output jemoji Netter Spielkram und den Blog Bunter zu gestalten :neckbeard:, Mögliche emoji. Plantuml Plantuml dient zum generieren von UML Diagram Presentation Struktur</summary></entry></feed>

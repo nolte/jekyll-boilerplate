@@ -1,101 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>/jekyll-boilerplate/jekyll/ditaa/</loc>
-<lastmod>2017-09-10T20:53:23+00:00</lastmod>
-</url>
-<url>
-<loc>/jekyll-boilerplate/jekyll/javascript/</loc>
-<lastmod>2017-09-10T20:53:23+00:00</lastmod>
-</url>
-<url>
-<loc>/jekyll-boilerplate/jekyll/jekyll-archives/</loc>
-<lastmod>2017-09-10T20:53:23+00:00</lastmod>
-</url>
-<url>
-<loc>/jekyll-boilerplate/jekyll/jekyll-categories/</loc>
-<lastmod>2017-09-10T20:53:23+00:00</lastmod>
-</url>
-<url>
-<loc>/jekyll-boilerplate/jekyll/jemoji/</loc>
-<lastmod>2017-09-10T20:53:23+00:00</lastmod>
-</url>
-<url>
-<loc>/jekyll-boilerplate/jekyll/plantuml/</loc>
-<lastmod>2017-09-10T20:53:23+00:00</lastmod>
-</url>
-<url>
-<loc>/jekyll-boilerplate/blog/2016/09/26/welcome-to-jekyll/</loc>
-<lastmod>2017-09-10T20:53:23+00:00</lastmod>
-</url>
-<url>
-<loc>/jekyll-boilerplate/blog/2017/09/02/build-process/</loc>
-<lastmod>2017-09-10T20:53:23+00:00</lastmod>
-</url>
-<url>
-<loc>/jekyll-boilerplate/presentation/revealjs/</loc>
-<lastmod>2017-09-10T20:53:23+00:00</lastmod>
-</url>
-<url>
-<loc>/jekyll-boilerplate/about/</loc>
-<lastmod>2017-09-10T20:53:23+00:00</lastmod>
-</url>
-<url>
-<loc>/jekyll-boilerplate/blog/categories/</loc>
-<lastmod>2017-09-10T20:53:23+00:00</lastmod>
-</url>
-<url>
-<loc>/jekyll-boilerplate/blog/</loc>
-<lastmod>2017-09-10T20:53:23+00:00</lastmod>
-</url>
-<url>
-<loc>/jekyll-boilerplate/</loc>
-<lastmod>2017-09-10T20:53:23+00:00</lastmod>
-</url>
-<url>
-<loc>/jekyll-boilerplate/links/</loc>
-<lastmod>2017-09-10T20:53:23+00:00</lastmod>
-</url>
-<url>
-<loc>/jekyll-boilerplate/presentation/</loc>
-<lastmod>2017-09-10T20:53:23+00:00</lastmod>
-</url>
-<url>
-<loc>/jekyll-boilerplate/blog/categories/jekyll/</loc>
-</url>
-<url>
-<loc>/jekyll-boilerplate/blog/categories/build/</loc>
-</url>
-<url>
-<loc>/jekyll-boilerplate/blog/2016/</loc>
-</url>
-<url>
-<loc>/jekyll-boilerplate/blog/2016/09/</loc>
-</url>
-<url>
-<loc>/jekyll-boilerplate/blog/2016/09/26/</loc>
-</url>
-<url>
-<loc>/jekyll-boilerplate/blog/2017/</loc>
-</url>
-<url>
-<loc>/jekyll-boilerplate/blog/2017/09/</loc>
-</url>
-<url>
-<loc>/jekyll-boilerplate/blog/2017/09/02/</loc>
-</url>
-<url>
-<loc>/jekyll-boilerplate/blog/categories/jekyll/</loc>
-</url>
-<url>
-<loc>/jekyll-boilerplate/blog/categories/build/</loc>
-</url>
-<url>
-<loc>/jekyll-boilerplate/js/presentation/revealjs/plugin/notes-server/notes.html</loc>
-<lastmod>2017-09-10T20:56:29+00:00</lastmod>
-</url>
-<url>
-<loc>/jekyll-boilerplate/js/presentation/revealjs/plugin/notes/notes.html</loc>
-<lastmod>2017-09-10T20:56:29+00:00</lastmod>
-</url>
-</urlset>
+  <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+      <loc>/jekyll-boilerplate/jekyll/ditaa/</loc>
+      <lastmod>2017-09-10T20:53:23+00:00</lastmod>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/jekyll/javascript/</loc>
+      <lastmod>2017-09-10T20:53:23+00:00</lastmod>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/jekyll/jekyll-archives/</loc>
+      <lastmod>2017-09-10T20:53:23+00:00</lastmod>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/jekyll/jekyll-categories/</loc>
+      <lastmod>2017-09-10T20:53:23+00:00</lastmod>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/jekyll/jekyll-tidy/</loc>
+      <lastmod>2017-09-10T21:46:11+00:00</lastmod>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/jekyll/jemoji/</loc>
+      <lastmod>2017-09-10T20:53:23+00:00</lastmod>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/jekyll/plantuml/</loc>
+      <lastmod>2017-09-10T20:53:23+00:00</lastmod>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/blog/2016/09/26/welcome-to-jekyll/</loc>
+      <lastmod>2017-09-10T20:53:23+00:00</lastmod>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/blog/2017/09/02/build-process/</loc>
+      <lastmod>2017-09-10T21:46:11+00:00</lastmod>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/presentation/revealjs/</loc>
+      <lastmod>2017-09-10T20:53:23+00:00</lastmod>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/about/</loc>
+      <lastmod>2017-09-10T20:53:23+00:00</lastmod>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/blog/categories/</loc>
+      <lastmod>2017-09-10T20:53:23+00:00</lastmod>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/blog/</loc>
+      <lastmod>2017-09-10T20:53:23+00:00</lastmod>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/</loc>
+      <lastmod>2017-09-10T20:53:23+00:00</lastmod>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/links/</loc>
+      <lastmod>2017-09-10T20:53:23+00:00</lastmod>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/presentation/</loc>
+      <lastmod>2017-09-10T21:46:11+00:00</lastmod>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/blog/categories/jekyll/</loc>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/blog/categories/build/</loc>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/blog/2016/</loc>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/blog/2016/09/</loc>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/blog/2016/09/26/</loc>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/blog/2017/</loc>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/blog/2017/09/</loc>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/blog/2017/09/02/</loc>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/blog/categories/jekyll/</loc>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/blog/categories/build/</loc>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/js/presentation/revealjs/plugin/notes-server/notes.html</loc>
+      <lastmod>2017-09-10T21:50:16+00:00</lastmod>
+    </url>
+    <url>
+      <loc>/jekyll-boilerplate/js/presentation/revealjs/plugin/notes/notes.html</loc>
+      <lastmod>2017-09-10T21:50:16+00:00</lastmod>
+    </url>
+  </urlset>
