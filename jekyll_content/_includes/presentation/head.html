@@ -1,0 +1,14 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  {% assign custom_url = "/" | append: site.baseurl %}
+  {% assign full_base_url = site.baseurl %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.min.css" integrity="sha256-vPN+adnQKmyGqQAeBNs9+GBYVx8uQETV+DAdAXG0XBg=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/theme/white.min.css" integrity="sha256-MSaRqLdPgTn4rLxlpYpogRMKlHDIHPFL8bn1o0AbZuA=" crossorigin="anonymous" />
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: full_base_url }}">
+</head>

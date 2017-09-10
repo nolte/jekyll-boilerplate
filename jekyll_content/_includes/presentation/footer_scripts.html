@@ -1,0 +1,23 @@
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js" integrity="sha256-+09kLhwACKXFPDvqo4xMMvi4+uXFsRZ2uYGbeN1U8sI=" crossorigin="anonymous"></script>
+{% assign custom_url = "/" | append: site.baseurl %}
+{% assign full_base_url = site.baseurl %}
+
+<script src="{{ "/js/presentation/revealjs/reveal.js" | prepend: full_base_url }}"></script>
+
+<script>
+  Reveal.initialize({
+    pdfMaxPagesPerSlide: 1,
+
+    dependencies: [
+    		// Speaker notes
+        { src: '{{ "/js/presentation/revealjs/plugin/notes/notes.js" | prepend: full_base_url }}', async: true },
+        // Interpret Markdown in <section> elements
+    		{ src: '{{ "/js/presentation/revealjs/plugin/markdown/marked.js" | prepend: full_base_url }}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    		{ src: '{{ "/js/presentation/revealjs/plugin/markdown/markdown.js" | prepend: full_base_url }}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+    		// Zoom in and out with Alt+click
+    		{ src: '{{ "/js/presentation/revealjs/plugin/zoom-js/zoom.js" | prepend: full_base_url }}', async: true }
+    	]
+  });
+</script>

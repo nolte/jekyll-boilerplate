@@ -28,12 +28,21 @@ collections:
     output: true
   posts:
     output:   true
+  presentation:
+    output:   true
 
 defaults:
   - scope:
       path: "_jekyll/elements"
       type: jekyll
     values:
+      categories:
+        - 'jekyll'
+        - 'element'
+  - scope:
+      type: presentation
+    values:
+      layout: presentation/presentation
       categories:
         - 'jekyll'
         - 'element'
