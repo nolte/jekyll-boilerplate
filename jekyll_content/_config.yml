@@ -71,7 +71,10 @@ exclude:
 sass:
     sass_dir: _sass
 
-permalink: /blog/:year/:month/:day/:title/
+
+permalink: /blog/archive/:year/:month/:day/:title/
+
+
 timezone: UTC
 paginate: 5          # Posts per page on the blog index
 paginate_path: "blog/posts/:num"  # Directory base for pagination URLs eg. /posts/2/
@@ -88,8 +91,8 @@ jekyll-archives:
   enabled: all
   layout: 'archive/archive'
   permalinks:
-    year: '/archives/:year/'
-    month: '/archives/:year/:month/'
-    day: '/archives/:year/:month/:day/'
-    tag: '/archives/tag/:name/'
-    category: '/archives/category/:name/'
+    year: '/blog/archive/:year/'
+    month: '/blog/archive/:year/:month/'
+    day: '/blog/archive/:year/:month/:day/'
+    tag: '/blog/archive/tag/:name/'
+    category: '/blog/archive/categories/:name/'
