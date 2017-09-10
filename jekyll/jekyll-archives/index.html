@@ -9,8 +9,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Your awesome title</title>
-  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search resu...">
+  <title>jekyll-archives</title>
+  <meta name="description" content="Generiert die Blog Posts in eine Archive Struktur. Es wurde ein kleiner Teil des Original Plugins überschrieben, um eine breadcrumb zu ermöglichen. siehe: _p...">
 
   
   
@@ -25,7 +25,7 @@
 
 
   <link rel="stylesheet" href="/jekyll-boilerplate/css/site/styles.css">
-  <link rel="canonical" href="/jekyll-boilerplate/archives/2016/09/">
+  <link rel="canonical" href="/jekyll-boilerplate/jekyll/jekyll-archives/">
   <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="/jekyll-boilerplate/feed.xml">
 
 </head>
@@ -58,47 +58,63 @@
 
 
     <div class="container">
-       
-
-<ul class="unstyled">
-
-  <li>
-    
-        
-  <h1>
-    <a href="/blog/2016/09/26/welcome-to-jekyll/">Welcome to Jekyll!</a>
-  </h1>
-  
-
-  
-  <div class="meta">
-    
-
-
-
-<time datetime="2016-09-26T12:31:11+00:00" pubdate><i class="mdi mdi-calendar"></i> September 26, 2016</time>
-    <span><i class='mdi mdi-timer'></i> Less than one minute reading time</span>
-    
-
-  <span>
-    <i class="mdi mdi-tag-multiple"></i>
-    <ul class="tags unstyled">
-    
-      
-        <li><a href ="/jekyll-boilerplate/blog/categories/jekyll">jekyll</a>,</li>
-      
-    
-    </ul>
-  </span>
-
-
+      <div class="container">
+  <h1>Plugin Overview:</h1>
+  <div class="row">
+    <div class="col col-md-2">
+      Jekyll Project:
+    </div>
+    <div class="col col-md-10">
+      <a href="https://github.com/jekyll/jekyll-archives">jekyll-archives</a>
+    </div>
   </div>
+  <hr>
+</div>
+<div class="container">
+  <h1>Description:</h1>
+  <p>Generiert die Blog Posts in eine Archive Struktur.</p>
 
+<p>Es wurde ein kleiner Teil des Original Plugins überschrieben, um eine breadcrumb zu ermöglichen. <br />
+ siehe: <code class="highlighter-rouge">_plugins/jekyll-archives/archive.rb</code></p>
 
-    <hr>
-  </li>
+<!--more-->
 
-</ul>
+<div class="highlighter-rouge"><pre class="highlight"><code>.
+├── 2016
+│   ├── 07
+│   │   ├── 19
+│   │   │   ├── home-automatic
+│   │   │   │   └── index.html
+│   │   │   └── index.html
+│   │   └── index.html
+│   ├── 09
+│   │   ├── 26
+│   │   │   ├── index.html
+│   │   │   └── welcome-to-jekyll
+│   │   │       └── index.html
+│   │   └── index.html
+│   └── index.html
+├── 2017
+│   ├── 09
+│   │   ├── 02
+│   │   │   ├── build-process
+│   │   │   │   └── index.html
+│   │   │   └── index.html
+│   │   └── index.html
+│   └── index.html
+├── categories
+│   ├── build
+│   │   └── index.html
+│   ├── index.html
+│   ├── iot
+│   │   └── index.html
+│   └── jekyll
+│       └── index.html
+└── index.html
+</code></pre>
+</div>
+
+</div>
 
     </div>
 
