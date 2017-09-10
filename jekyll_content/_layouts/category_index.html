@@ -1,11 +1,7 @@
 ---
-layout: site
+layout: site-breadcrumb
 ---
-<div class="row">
-	<div class="col-sm-12" >
-	{% include nav-breadcrumbs.html %}
-	</div>
-</div>
+<h1>{{page.title}}</h1>
 
 <div id="archive-list">
   {% for post in site.categories[page.category] %}
