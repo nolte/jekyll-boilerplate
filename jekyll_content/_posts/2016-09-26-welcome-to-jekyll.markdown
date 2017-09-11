@@ -24,7 +24,7 @@ categories:
 
     {% for post in site.jekyll   %}    
       <tr>
-        <td><a href="{{post.url}}">{{ post.title }}</a></td>
+        <td><a href="{{ site.baseurl }}{{post.url}}">{{ post.title }}</a></td>
         <td>{{ post.excerpt }}</td>
       </tr>
     {% endfor %}
