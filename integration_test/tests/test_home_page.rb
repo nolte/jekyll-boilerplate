@@ -16,7 +16,7 @@ module Test
     end
 
     def test_home_page_title
-      assert_equal('Your awesome title', @driver.title)
+      assert_equal('Jekyll Boilerplate', @driver.title)
     end
   end
 end
