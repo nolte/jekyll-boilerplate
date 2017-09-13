@@ -68,6 +68,15 @@ jobs:
           repo: nolte/jekyll-boilerplate
           all_branches: true
 
+- stage: build in docker
+  env:
+    - JEKYLL_BASEURL=
+  services:
+    - docker
+  before_install: skip
+  install: docker build -t jekyllBlog .
+
+
   # Build the blog as GithHub Page
   - stage: deploy as gh-page
     env:
