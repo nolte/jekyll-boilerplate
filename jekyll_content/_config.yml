@@ -53,12 +53,9 @@ theme: minima
 plugins:
   - jekyll-feed
   - bootstrap
-  - jekyll-assets
   - jekyll-feed
   - jekyll-last-modified-at
-  - jekyll-mentions
   - jemoji
-  - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-time-to-read
