@@ -53,7 +53,6 @@ theme: minima
 plugins:
   - jekyll-feed
   - bootstrap
-  - autoprefixer-rails
   - jekyll-assets
   - jekyll-feed
   - jekyll-last-modified-at
