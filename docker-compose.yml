@@ -3,10 +3,9 @@ version: "3"
 services:
   blog:
     build: .
-    #command: install
     command: exec rake show
     volumes:
-      - "./jekyll_content:/jekyll_content"
+      - ./jekyll_content:/jekyll_content
       - "jekyllgeneratedcontent:/jekyll_content/_site"
     network_mode: "host"
     ports:
