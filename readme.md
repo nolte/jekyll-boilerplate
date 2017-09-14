@@ -25,3 +25,9 @@
 cd ./jekyll_content
 bundle exec jekyll serve
 ```
+
+## Docker Build
+
+[Dockerfile](https://hub.docker.com/r/nolte/jekyll-build-env)
+
+For develop in a preconfigured docker container use the docker compose file.
