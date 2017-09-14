@@ -74,7 +74,7 @@ jobs:
     services:
       - docker
     before_install: skip
-    install: docker build -t jekyllBlog .
+    install: docker build -t nolte/jekyll-boilerplate .
 
 
   # Build the blog as GithHub Page
