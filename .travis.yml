@@ -75,7 +75,7 @@ jobs:
       - docker
     before_install: skip
     install: docker build -t nolte/jekyll-boilerplate .
-    script: docker run nolte/jekyll-boilerplate -v ./jekyll_content:/jekyll_content exec rake build
+    script: docker run -v ./jekyll_content:/jekyll_content nolte/jekyll-boilerplate exec rake build
     before_deploy: skip
     deploy: skip
     after_success: skip
