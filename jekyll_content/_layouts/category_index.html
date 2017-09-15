@@ -1,0 +1,16 @@
+---
+layout: site-breadcrumb
+---
+<h1>{{page.title}}</h1>
+
+<div id="archive-list">
+  {% for post in site.categories[page.category] %}
+  {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+  {% unless year == this_year %}
+    {% assign year = this_year %}
+    <h2>{{ year }}</h2>
+  {% endunless %}
+  {% assign index = true %}
+	{% include blog/post/article-metadata.html %}
+  {% endfor %}
+</div>

@@ -1,0 +1,17 @@
+{% capture category %}{% if post %}{{ post.categories | category_links | size }}{% else %}{{ page.categories | category_links | size }}{% endif %}{% endcapture %}
+{% unless category == '0' %}
+  <span>
+    <i class="mdi mdi-tag-multiple"></i>
+    <ul class="tags unstyled">
+    {% if post %}
+      {% for item in post.categories %}
+        <li><a href ="{{site.category_dir | prepend: site.baseurl }}/{{item}}">{{ item | category_links }}</a>,</li>
+      {% endfor %}
+    {% else %}
+      {% for item in page.categories %}
+        <li>{{ item | category_links }},</li>
+      {% endfor %}
+    {% endif %}
+    </ul>
+  </span>
+{% endunless %}

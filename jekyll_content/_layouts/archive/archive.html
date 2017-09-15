@@ -1,0 +1,14 @@
+---
+layout: site-breadcrumb
+---
+ {{ content }}
+
+<ul class="unstyled">
+{% for post in page.posts %}
+  <li>
+    {% assign index = true %}
+      {% include blog/post/article-metadata.html %}
+    <hr>
+  </li>
+{% endfor %}
+</ul>

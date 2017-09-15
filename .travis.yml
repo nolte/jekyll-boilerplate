@@ -14,12 +14,11 @@ env:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 
 before_install:
+  - cd jekyll_content
   - gem install bundler
   - sudo apt-get -qq update
   - sudo apt-get install -y curl dirmngr build-essential openssl
   - sudo update-ca-certificates
-
-
 
 install:
   - bundle install

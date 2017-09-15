@@ -1,0 +1,11 @@
+buying:
+  css: mdi mdi-cash-usd
+datasheet:
+  css: mdi mdi-book-open-page-variant
+fritzing:
+  css: mdi mdi-border-none  
+doku: 
+  css: mdi mdi-code-not-equal  
+factory:
+  css: mdi mdi-factory
+  

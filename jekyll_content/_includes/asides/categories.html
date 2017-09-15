@@ -1,0 +1,14 @@
+<section id="categories">
+  <h1>Categories</h1>
+  <ul>
+    {% assign categories = site.categories | sort %}
+    {% for category in categories %}
+      <li>
+      	<a href="{{ p.url | prepend: site.baseurl }}/blog/categories/{{ category | first | downcase }}/">
+      		<i class="mdi mdi-tag"></i>
+      		{{ category | first | replace: '-', ' '}} ({{ category[1].size }})
+      	</a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

@@ -1,0 +1,102 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Your awesome title
+#email: nolte07@googlemail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  nolte
+#categories: [jekyll,element]
+collections:
+  jekyll:
+    output: true
+  posts:
+    output:   true
+
+defaults:
+  - scope:
+      path: "_jekyll/elements"
+      type: jekyll
+    values:
+      categories:
+        - 'jekyll'
+        - 'element'
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - bootstrap
+  - autoprefixer-rails
+  - jekyll-assets
+  - jekyll-feed
+  - jekyll-last-modified-at
+  - jekyll-mentions
+  - jemoji
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-time-to-read
+  - jekyll-archives
+  - jekyll-sass-converter
+  - jekyll-coffeescript
+
+exclude:
+  - Gemfile
+  - Rakefile
+  - Gemfile.lock
+  - vendor
+  - Procfile
+  - Rakefile
+  - config.ru
+  - test
+
+sass:
+    sass_dir: _sass
+
+
+permalink: /blog/:year/:month/:day/:title/
+
+
+timezone: UTC
+paginate: 5          # Posts per page on the blog index
+paginate_path: "blog/posts/:num"  # Directory base for pagination URLs eg. /posts/2/
+recent_posts: 5       # Posts in the sidebar Recent Posts section
+excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
+excerpt_separator: "<!--more-->"
+category_dir: /blog/categories
+
+emptyArray: []
+
+ditaa_output_directory: /assets/images/ditaa
+
+jekyll-archives:
+  enabled: all
+  layouts:
+    year: 'archive/year-archive'
+    month: 'archive/month-archive'
+    day: 'archive/day-archive'
+    tag: 'archive/tag-archive-layout'
+  permalinks:
+    year: '/blog/:year/'
+    month: '/blog/:year/:month/'
+    day: '/blog/:year/:month/:day/'
+    tag: '/blog/tag/:name/'
+    category: '/blog/categories/:name/'

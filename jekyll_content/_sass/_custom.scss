@@ -1,0 +1,16 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+// See https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+
+// Colours
+
+// Uncomment and customise as required
+$brand-primary:             #049cdb;
+$gray-base:                 #000;
+$gray:                      lighten($gray-base, 33.5%);
+$gray-light:                lighten($gray-base, 46.7%);
+$blog-post-header-size:     1.35em;
+// Options

@@ -1,0 +1,21 @@
+  <nav class="site-header navbar navbar-expand-md navbar-light">
+        <a class="navbar-brand" href="{{ site.baseurl }}">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+
+            <li {% if page.title == "Blog" %}class="active nav-item"{% else %}class="nav-item" {% endif %}>
+                <a class="nav-link"  href="{{ p.url | prepend: site.baseurl }}/blog">Blog</a>
+            </li>
+            {% assign sorted_pages = site.pages | where: "navigation",true | sort:"name" %}
+            {% for p in sorted_pages %}
+
+              <li {% if page.title == p.title %}class="active nav-item"{% else %}class="nav-item" {% endif %}>
+                  <a class="nav-link" href="{{ p.url | prepend: site.baseurl }}">{{p.title}}</a>
+              </li>
+              {% endfor %}
+        </div>
+      </nav>
