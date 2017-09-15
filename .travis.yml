@@ -63,7 +63,6 @@ jobs:
           secure: OE/OiyViWWiyun0R0Fov5g4/RTPxNqSmV03YpWnD2KTVAsSXxkfsDIyUzzPLTpkhINDC0QY1QvHS9My76+ncPhBI8WlgH+KEy6enDkGAFof2ofFEG0a20o622wVIdPncndhstsVkoCezeU2oceuMPYnTRqcpUEUrsjHxA1Z8g1WIE5GygagobMcUf+xlX338IrraICimoYfNqCn1Yw5DDwYKchnjymb8matJzipSWK8X40vT0S8nUjMudXqXlE9YeOzIBCM+rGt5GsJUE0mhDIilC7vVUVI7L54fv4L7GeWlXngsRsyCtJbgW10BYB2p+rqDnUFiHaCUwnubewQxp8iB/IR3VrH4x7K0ANy/jr+Dr7OCU21ERBEjzg/mYZkBNShsaSgMj4ZKex5dFvySDNyOEiJUGgOubab/iMhaFACzZ5QEBMxnvZ76BrE3QKKF5sK4z8JTNDA1PXXNi1eYybmowrBhlex4unoRAVSXMnnE9iq/Rvw/UdNvViZU1Pg5U2CwkKyLhaIbO+ewBse7gAXLZSzEqfeQtzxbGkvNdnAhMAWrSYbBx8EE4vABzTjOxvYOA3O72vgpD9FQYjsiq3DJPyXGNGP3aAXjLPJ6DyxMl40pETjOIckJrCSTw/Ixd01goB+xtD3PsE2smmIWOsmwEH2O2y7FOk8lnrbPsn8=
         app: noltarium-blog-test
         on:
-          repo: nolte/jekyll-boilerplate
           all_branches: true
   - env:
       - secure: "LVHQeVckgLfgnqeXEwdDxIM3j4R8MZp7XD3rIs3ImDK6sP2maUzHrvq0PqOu6EYW5OGiQb2nNE8qFGEZK3IgRtAE532HOIBOuQASATuqArAgq5mnfOt/nEz1gkZ5FWZFdn9fbucfkagdozC2QVkzimV5t41TMqan4s2VLxxMMcbNQIuSgMaMv+/rJ1fzT2K2SoiWte6vgCLBaGC32Dh2JN/ectbsKGf7fRxSVF0V0z112eC4mqURDb6aWZcLZENH2xYUHynXIK7e0q0N9dvg4kMHSXjsfKSdZisNuFXVLjhOh3X0qCEe+a6gTaWhcvp3iZRR3XWGIRYL5tA4E9np4PQ1y/G6Q7O+4lGPW/5Wt0K92l3+hhD2r0zLIoh6i847Gcyi8IpA0ULIVQ70vq7FN32XfWSJaOWI31ViW0YfW27NZUShgA+pPGwrQZpt8K4rpbhX6BMB/QJRAY5jmtYHzI8px3R5U6D5zC0ev0xDa7DkPd76xvanPnEAAJwHPXepvcGgSwAq9/qnefP4kv8iHMgRK8ftaH6JdBHnG1hYHNLtJHTfP7A8MC0wY7/R3D3w+CyzBa5IB2oHO+PBpwWwWJhTgvI6D1cQ1AERxwCg8yUdJTx/zwPATZe7cH5Y/Yu0BQGQI0kD7YNUNg3k8gad6yIOY/mVQaRdXoiXtFJOwTw="
@@ -77,12 +76,10 @@ jobs:
           - provider: script
             script: $TRAVISCI_SCRIPT_DIR/deploy_to_dockerhub.sh latest
             on:
-              repo: nolte/jekyll-boilerplate
               branch: master
           - provider: script
             script: $TRAVISCI_SCRIPT_DIR/deploy_to_dockerhub.sh development
             on:
-              repo: nolte/jekyll-boilerplate
               branch: development
 
   - stage: build in docker
@@ -91,8 +88,8 @@ jobs:
     services:
       - docker
     before_install: skip
-    install: docker build -t nolte/jekyll-boilerplate .
-    script: docker run -v $(pwd)/jekyll_content:/jekyll_content nolte/jekyll-boilerplate exec rake build
+    install: docker build -t jekyll-boilerplate .
+    script: docker run -v $(pwd)/jekyll_content:/jekyll_content jekyll-boilerplate exec rake build
     before_deploy: skip
     deploy: skip
     after_success: skip
