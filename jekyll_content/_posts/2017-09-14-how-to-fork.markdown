@@ -46,6 +46,7 @@ endif
 
 {% endplantuml %}
 
+<!--more-->
 
 ## Externe Systeme
 
@@ -55,6 +56,8 @@ Secrets sollten mit hilfe von [Travis-ci](travisci-encryption-keys) verschlüsse
 ### Deploy heroku
 
 Auf heroku kann mit den [Travis Deployment Provier][travisci-deploy-heroku] deployt werden.
+
+Ändern den Applikationsnamen ```- HEROKU_APP_NAME=noltarium-blog-test``` auf dass gewünschte [Heroku](https://heroku.com/) Ziel.
 
 #### Files
 ```
