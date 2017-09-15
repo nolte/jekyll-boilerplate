@@ -73,6 +73,13 @@ jobs:
       - "$TRAVISCI_SCRIPT_DIR/prepare_docker_nginx_deployment.sh"
       - git checkout dockernginx
       - docker build .
+    deploy:
+          - provider: script
+            script: echo fooo
+            on:
+              repo: nolte/jekyll-boilerplate
+              all_branches: true
+    
   - stage: build in docker
     env:
       - JEKYLL_BASEURL=
