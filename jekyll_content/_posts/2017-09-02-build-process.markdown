@@ -47,30 +47,71 @@ Der Blog läuft dann als [Heroku PHP App][Heroku-PHP-Support].
 ## Blog Release
 
 {% plantuml %}
+skinparam ParticipantPadding 20
+skinparam BoxPadding 10
 
 actor user
-database github_master
-database github_feature_branch
-collections heroku
-database github_gh_pages
+
+box "GitHub Branches" #LightGreen
+  database "master" as github_master
+  database "development" as github_development
+  database "feature" as github_feature_branch
+end box
+
+box "Presentation" #LightBlue
+  collections heroku
+  database dockerhub
+  database github_gh_pages
+end box
 
 activate github_master
-user -> github_master : create new\nfeature branch from master
-github_master -> github_feature_branch: new Feature Branch
+...
+github_master -> github_development
+activate github_development
+github_development -> github_feature_branch: new Feature Branch
 activate github_feature_branch
+note right
+  Develop only in featues
+end note
 user -> github_feature_branch : commit changes
-github_feature_branch -> heroku : deploy to dev stage
-github_feature_branch -> github_master: reintegrate feature
+github_feature_branch -> heroku : deploy commit
+note right
+  use heroku for quick
+  feedback, of the
+  current feature  
+end note
+github_feature_branch -> github_development: reintegrate feature
+note left
+  Merge the feature as GitPull request
+end note
 deactivate github_feature_branch
+github_development -> dockerhub : as version **:development**
+note right
+  deploy a nginx container
+  with the genearted content
+end note
+github_development -> github_master
 github_master -> github_gh_pages : deploy to production stage
+note right
+  production view
+end note
+github_master -> dockerhub : as version **:latest**
 
 {% endplantuml %}
 
 Der aktuell aktive **Feature Branch** ist als [Heroku App][stage-dev] einsehbar.   
-Die generierte Blog version vom **Master Branche** ist unter [github.io][stage-production] zu finden.
+Die generierte Blog Version vom **Master Branche** ist unter [github.io][stage-production] zu finden.
+
+Sollte man den generierten Blog lokal starten wollen kann ein [Nginx Container][stage-dockerhub] verwendet werden.
+
+```
+  docker run -p 8080:80 nolte/jekyll-boilerplate
+```
 
 [stage-dev]:https://noltarium-blog-test.herokuapp.com/   
 [stage-production]:https://nolte.github.io/jekyll-boilerplate   
+[stage-dockerhub]:https://hub.docker.com/r/nolte/jekyll-boilerplate
+
 
 [travis-ci-build-stages]:https://docs.travis-ci.com/user/build-stages/
 [github-pages]:https://pages.github.com/
