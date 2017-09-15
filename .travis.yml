@@ -74,12 +74,7 @@ jobs:
       - git checkout dockernginx
     deploy:
           - provider: script
-            script:
-              - docker build .
-              - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-              - docker build -t jekyll-boilerplate .
-              - docker tag travis-ci-build-stages-demo $DOCKER_USERNAME/jekyll-boilerplate
-              - docker push $DOCKER_USERNAME/jekyll-boilerplate
+            script: $TRAVISCI_SCRIPT_DIR/deploy_to_dockerhub.sh
             on:
               repo: nolte/jekyll-boilerplate
               all_branches: true
