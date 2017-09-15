@@ -6,11 +6,6 @@ jdk:
 rvm:
 - 2.4.1
 
-cache:
-  bundler: true
-  directories:
-    - /var/lib/gems/2.4.1
-
 env:
   global:
   - TRAVISCI_SCRIPT_DIR=/tmp/ci_scripts
