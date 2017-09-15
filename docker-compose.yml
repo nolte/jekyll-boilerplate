@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  blog:
+    build: .
+    command: exec rake show
+    volumes:
+      - ./jekyll_content:/jekyll_content
+      - "jekyllgeneratedcontent:/jekyll_content/_site"
+    network_mode: "host"
+    ports:
+      - "4000:4000"
+
+volumes:
+  jekyllgeneratedcontent:

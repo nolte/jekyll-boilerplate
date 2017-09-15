@@ -8,7 +8,7 @@
           <ul class="navbar-nav mr-auto">
 
             <li {% if page.title == "Blog" %}class="active nav-item"{% else %}class="nav-item" {% endif %}>
-                <a class="nav-link"  href="{{ p.url | prepend: site.baseurl }}/blog">Blog</a>
+                <a class="nav-link"  href="{{ p.url | prepend: site.baseurl }}/blog/">Blog</a>
             </li>
             {% assign sorted_pages = site.pages | where: "navigation",true | sort:"name" %}
             {% for p in sorted_pages %}
