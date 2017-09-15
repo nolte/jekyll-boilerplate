@@ -19,10 +19,7 @@ before_install:
   # copy build scripts to tmp folder for the tavis.yml
   - mkdir -p $TRAVISCI_SCRIPT_DIR
   - cp -r $TRAVIS_BUILD_DIR/ci_scripts/* $TRAVISCI_SCRIPT_DIR
-  - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_system_dependency.sh
-  - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_generated_files_branch.sh
-  - chmod u+x $TRAVISCI_SCRIPT_DIR/prepare_heroku_deployment.sh
-  - chmod u+x $TRAVISCI_SCRIPT_DIR/deploy_ghpage.sh
+  - chmod u+x $TRAVISCI_SCRIPT_DIR/*
   # install system build dependencies
   - "$TRAVISCI_SCRIPT_DIR/prepare_system_dependency.sh"
 
