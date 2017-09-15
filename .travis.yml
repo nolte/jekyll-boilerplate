@@ -70,7 +70,7 @@ jobs:
         app: noltarium-blog-test
         before_deploy:
           - "$TRAVISCI_SCRIPT_DIR/prepare_heroku_deployment.sh"
-         - git checkout herokuapp
+          - git checkout herokuapp
         on:
           repo: nolte/jekyll-boilerplate
           all_branches: true
