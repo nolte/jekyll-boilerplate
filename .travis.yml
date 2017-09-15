@@ -67,7 +67,9 @@ jobs:
         on:
           repo: nolte/jekyll-boilerplate
           all_branches: true
-
+  -  before_deploy:
+      - "$TRAVISCI_SCRIPT_DIR/prepare_docker_nginx_deployment.sh"
+      - git checkout dockernginx
   - stage: build in docker
     env:
       - JEKYLL_BASEURL=
