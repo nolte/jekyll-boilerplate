@@ -51,7 +51,7 @@ endif
 ## Externe Systeme
 
 Benötigte .travis.yml anpassungen
-Secrets sollten mit hilfe von [Travis-ci](travisci-encryption-keys) verschlüsselt werden.
+Secrets sollten mit hilfe von [Travis-ci][travisci-encryption-keys] verschlüsselt werden.
 
 ### Deploy heroku
 
