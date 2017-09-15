@@ -64,19 +64,26 @@ jobs:
         on:
           repo: nolte/jekyll-boilerplate
           all_branches: true
-  - services:
+  - env:
+      - secure: "LVHQeVckgLfgnqeXEwdDxIM3j4R8MZp7XD3rIs3ImDK6sP2maUzHrvq0PqOu6EYW5OGiQb2nNE8qFGEZK3IgRtAE532HOIBOuQASATuqArAgq5mnfOt/nEz1gkZ5FWZFdn9fbucfkagdozC2QVkzimV5t41TMqan4s2VLxxMMcbNQIuSgMaMv+/rJ1fzT2K2SoiWte6vgCLBaGC32Dh2JN/ectbsKGf7fRxSVF0V0z112eC4mqURDb6aWZcLZENH2xYUHynXIK7e0q0N9dvg4kMHSXjsfKSdZisNuFXVLjhOh3X0qCEe+a6gTaWhcvp3iZRR3XWGIRYL5tA4E9np4PQ1y/G6Q7O+4lGPW/5Wt0K92l3+hhD2r0zLIoh6i847Gcyi8IpA0ULIVQ70vq7FN32XfWSJaOWI31ViW0YfW27NZUShgA+pPGwrQZpt8K4rpbhX6BMB/QJRAY5jmtYHzI8px3R5U6D5zC0ev0xDa7DkPd76xvanPnEAAJwHPXepvcGgSwAq9/qnefP4kv8iHMgRK8ftaH6JdBHnG1hYHNLtJHTfP7A8MC0wY7/R3D3w+CyzBa5IB2oHO+PBpwWwWJhTgvI6D1cQ1AERxwCg8yUdJTx/zwPATZe7cH5Y/Yu0BQGQI0kD7YNUNg3k8gad6yIOY/mVQaRdXoiXtFJOwTw="
+      - secure: "NLwrC4LQUZIxHXcFlp9IrD5oAtHNuRasqGsF4ID329zSJQUGSWvtCaPdAiJqC8MkXYMLJVCceJf6qnL1YeSWR1Lt+nHJyqA4R7ygm1T0lHcalgFSJ3OP1pmhNsVlolLIUE1Xq4YrJksjqtReLeaJqwh/ED4kPFtx+SzI8Vbo2AcQqHdWho3+q5By+hyvUcfsYbsCcUUxIz6aH4y1fpAz1X5+W5OmFCoz+IflPePqv04vXJIfgsERNj5EeDqW4wIJzsK0rQiHtT8CVvHP72+hO6zpdxTgNYWmKY1Tc+vXzBTh1ZbAM2rkZAV4ub71NbO06ag5gmRisYl3fd/7X4H8XOkLbJG2Tnqm5r/c+JKNoknr/BO4UBkLTUKfWql6+17O8fFzx/d/vBiaJKsR4/EIAnnuGl7obmTDZPHnjZilMX7pf0g0a7niOr3cWquroamKWPFhKxTrauKgGd7H5A7fCDvGC/uThNICZ7JZlZxvneaWAogvj37aQruIiJasNPU7ONF8HrQWprp1o38SjrtWgkVOlDxSnntKdZ1WqJThXLR/epWT/Zb9T/PS914u9NUUmsHRFoGt7/ya6xJVpFDkStUuwSsaZqnFuLBOV8GM2eRitQS+w/yGuA3ci0eBsmzKUK2Q+LPG2csGLf/2m1DvmbsHuwlL21VTFMskVQC21zI="
+    services:
       - docker
     before_deploy:
       - "$TRAVISCI_SCRIPT_DIR/prepare_docker_nginx_deployment.sh"
       - git checkout dockernginx
-      - docker build .
     deploy:
           - provider: script
-            script: echo fooo
+            script:
+              - docker build .
+              - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+              - docker build -t jekyll-boilerplate .
+              - docker tag travis-ci-build-stages-demo $DOCKER_USERNAME/jekyll-boilerplate
+              - docker push $DOCKER_USERNAME/jekyll-boilerplate
             on:
               repo: nolte/jekyll-boilerplate
               all_branches: true
-    
+
   - stage: build in docker
     env:
       - JEKYLL_BASEURL=
