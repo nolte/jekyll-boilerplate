@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  gitRevision: f82652b6d8f7c07a080838208671a1d46043b202
+  gitRevision: e2a5af6da4be67cc44c5f8c561c5e8f0efed6646
   gitBranch: HEAD 
 -->
 <html lang="en">
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.0/dist/bootstrap-toc.min.css">
     <link rel="stylesheet" href="/jekyll-boilerplate/css/site/styles.css">
     <link rel="canonical" href="/jekyll-boilerplate/blog/2017/09/02/build-process/">
-    <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="/jekyll-boilerplate/feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="Jekyll Boilerplate" href="/jekyll-boilerplate/feed.xml">
   </head>
   <body>
     <nav class="site-header navbar navbar-expand-md navbar-light">
@@ -30,7 +30,7 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item" >
-            <a class="nav-link"  href="/jekyll-boilerplate/blog">Blog</a>
+            <a class="nav-link"  href="/jekyll-boilerplate/blog/">Blog</a>
           </li>
           <li class="nav-item" >
             <a class="nav-link" href="/jekyll-boilerplate/about/">About</a>
@@ -91,9 +91,14 @@
                 <p>Da sich der Blog nicht auf heroku Bauen lässt, durch die Plantuml &amp; Ditaa Abhängigkeiten, werden nur die generierten Dateien nach Heroku übertragen.
                   Der Blog läuft dann als <a href="https://devcenter.heroku.com/articles/php-support">Heroku PHP App</a>.</p>
                 <h2 id="blog-release">Blog Release</h2>
-                <p><a href="/jekyll-boilerplate/uml/7882a164f0cdef56739c63a0136ada5d.svg" data-toggle="lightbox"><img src="/jekyll-boilerplate/uml/7882a164f0cdef56739c63a0136ada5d.svg" alt="PlantUML SVG diagram" class="plantuml img-fluid" /></a></p>
+                <p><a href="/jekyll-boilerplate/uml/fdd09c7ce5f126f897fb6d557125a510.svg" data-toggle="lightbox"><img src="/jekyll-boilerplate/uml/fdd09c7ce5f126f897fb6d557125a510.svg" alt="PlantUML SVG diagram" class="plantuml img-fluid" /></a></p>
                 <p>Der aktuell aktive <strong>Feature Branch</strong> ist als <a href="https://noltarium-blog-test.herokuapp.com/">Heroku App</a> einsehbar. <br />
-                  Die generierte Blog version vom <strong>Master Branche</strong> ist unter <a href="https://nolte.github.io/jekyll-boilerplate">github.io</a> zu finden.</p>
+                  Die generierte Blog Version vom <strong>Master Branche</strong> ist unter <a href="https://nolte.github.io/jekyll-boilerplate">github.io</a> zu finden.</p>
+                <p>Sollte man den generierten Blog lokal starten wollen kann ein <a href="https://hub.docker.com/r/nolte/jekyll-boilerplate">Nginx Container</a> verwendet werden.</p>
+                <div class="highlighter-rouge">
+                  <pre class="highlight"><code>  docker run -p 8080:80 nolte/jekyll-boilerplate
+</code></pre>
+                </div>
               </div>
             </article>
           </div>
@@ -134,7 +139,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <span class="text-muted">&copy; Your awesome title</span>
+              <span class="text-muted">&copy; Jekyll Boilerplate</span>
             </div>
             <div class="col-md-4">
               <ul class="social-media-list">
