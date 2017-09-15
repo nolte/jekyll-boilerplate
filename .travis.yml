@@ -74,10 +74,15 @@ jobs:
       - git checkout dockernginx
     deploy:
           - provider: script
-            script: $TRAVISCI_SCRIPT_DIR/deploy_to_dockerhub.sh
+            script: $TRAVISCI_SCRIPT_DIR/deploy_to_dockerhub.sh latest
             on:
               repo: nolte/jekyll-boilerplate
-              all_branches: true
+              branch: master
+          - provider: script
+            script: $TRAVISCI_SCRIPT_DIR/deploy_to_dockerhub.sh development
+            on:
+              repo: nolte/jekyll-boilerplate
+              branch: development
 
   - stage: build in docker
     env:
