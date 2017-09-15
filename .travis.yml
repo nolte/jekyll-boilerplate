@@ -56,21 +56,14 @@ jobs:
     env:
       - JEKYLL_BASEURL=
       - BLOG_DEPLOY_TEST_URL=https://noltarium-blog-test.herokuapp.com/
+    before_deploy:
+      - "$TRAVISCI_SCRIPT_DIR/prepare_heroku_deployment.sh"
+      - git checkout herokuapp
     deploy:
-      - provider: script
-        script: echo test
-        before_deploy:
-          - "$TRAVISCI_SCRIPT_DIR/prepare_docker_nginx_deployment.sh"
-        on:
-          repo: nolte/jekyll-boilerplate
-          all_branches: true
       - provider: heroku
         api_key:
           secure: OE/OiyViWWiyun0R0Fov5g4/RTPxNqSmV03YpWnD2KTVAsSXxkfsDIyUzzPLTpkhINDC0QY1QvHS9My76+ncPhBI8WlgH+KEy6enDkGAFof2ofFEG0a20o622wVIdPncndhstsVkoCezeU2oceuMPYnTRqcpUEUrsjHxA1Z8g1WIE5GygagobMcUf+xlX338IrraICimoYfNqCn1Yw5DDwYKchnjymb8matJzipSWK8X40vT0S8nUjMudXqXlE9YeOzIBCM+rGt5GsJUE0mhDIilC7vVUVI7L54fv4L7GeWlXngsRsyCtJbgW10BYB2p+rqDnUFiHaCUwnubewQxp8iB/IR3VrH4x7K0ANy/jr+Dr7OCU21ERBEjzg/mYZkBNShsaSgMj4ZKex5dFvySDNyOEiJUGgOubab/iMhaFACzZ5QEBMxnvZ76BrE3QKKF5sK4z8JTNDA1PXXNi1eYybmowrBhlex4unoRAVSXMnnE9iq/Rvw/UdNvViZU1Pg5U2CwkKyLhaIbO+ewBse7gAXLZSzEqfeQtzxbGkvNdnAhMAWrSYbBx8EE4vABzTjOxvYOA3O72vgpD9FQYjsiq3DJPyXGNGP3aAXjLPJ6DyxMl40pETjOIckJrCSTw/Ixd01goB+xtD3PsE2smmIWOsmwEH2O2y7FOk8lnrbPsn8=
         app: noltarium-blog-test
-        before_deploy:
-          - "$TRAVISCI_SCRIPT_DIR/prepare_heroku_deployment.sh"
-          - git checkout herokuapp
         on:
           repo: nolte/jekyll-boilerplate
           all_branches: true
