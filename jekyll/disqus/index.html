@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  gitRevision: 4ef44839f153f14a4e2d9ff325f12173b2a85ac0
+  gitRevision: 8d47a6c2e0570bbaa7d6aaccc93ebea2255b4ba4
   gitBranch: HEAD 
 -->
 <html lang="en">
@@ -8,8 +8,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Jekyll Boilerplate</title>
-    <meta name="description" content="">
+    <title>disqus</title>
+    <meta name="description" content="Eine einfache möglichkeit, Nutzern eine Kommentar Funktion anzubieten.">
     <link rel="stylesheet" href="/jekyll-boilerplate/css/site/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/css/tether-theme-arrows.min.css" integrity="sha256-Kk7vb25CCBnA2YrQtZU7RXd1s8gYKKpcZUMncHmHhR4=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/css/tether.min.css" integrity="sha256-y4TDcAD4/j5o4keZvggf698Cr9Oc7JZ+gGMax23qmVA=" crossorigin="anonymous" />
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.2.0/ekko-lightbox.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.0/dist/bootstrap-toc.min.css">
     <link rel="stylesheet" href="/jekyll-boilerplate/css/site/styles.css">
-    <link rel="canonical" href="/jekyll-boilerplate/">
+    <link rel="canonical" href="/jekyll-boilerplate/jekyll/disqus/">
     <link rel="alternate" type="application/rss+xml" title="Jekyll Boilerplate" href="/jekyll-boilerplate/feed.xml">
   </head>
   <body>
@@ -44,67 +44,27 @@
         </div>
       </nav>
       <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="card">
-              <div class="card-header">
-                Recent Posts
-              </div>
-              <div class="card-block">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <div >
-                      <div><h7><a href="/jekyll-boilerplate/blog/2017/09/02/how-to-fork/">How To Fork</a></h7></div>
-                      <div><h8 class="mb-2 text-muted">
-                          <time datetime="2017-09-02T12:31:11+00:00" pubdate><i class="mdi mdi-calendar"></i> September 02, 2017</time>
-                          <span>
-                            <i class="mdi mdi-tag-multiple"></i>
-                            <ul class="tags unstyled">
-                              <li><a href ="/jekyll-boilerplate/blog/categories/jekyll">jekyll</a>,</li>
-                              <li><a href ="/jekyll-boilerplate/blog/categories/build">build</a>,</li>
-                            </ul>
-                          </span>
-                        </h8></div>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div >
-                      <div><h7><a href="/jekyll-boilerplate/blog/2017/09/02/build-process/">Build Process</a></h7></div>
-                      <div><h8 class="mb-2 text-muted">
-                          <time datetime="2017-09-02T12:31:11+00:00" pubdate><i class="mdi mdi-calendar"></i> September 02, 2017</time>
-                          <span>
-                            <i class="mdi mdi-tag-multiple"></i>
-                            <ul class="tags unstyled">
-                              <li><a href ="/jekyll-boilerplate/blog/categories/jekyll">jekyll</a>,</li>
-                              <li><a href ="/jekyll-boilerplate/blog/categories/build">build</a>,</li>
-                            </ul>
-                          </span>
-                        </h8></div>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div >
-                      <div><h7><a href="/jekyll-boilerplate/blog/2016/09/26/welcome-to-jekyll/">Welcome to Jekyll!</a></h7></div>
-                      <div><h8 class="mb-2 text-muted">
-                          <time datetime="2016-09-26T12:31:11+00:00" pubdate><i class="mdi mdi-calendar"></i> September 26, 2016</time>
-                          <span>
-                            <i class="mdi mdi-tag-multiple"></i>
-                            <ul class="tags unstyled">
-                              <li><a href ="/jekyll-boilerplate/blog/categories/jekyll">jekyll</a>,</li>
-                            </ul>
-                          </span>
-                        </h8></div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+        <div class="container">
+          <h1>Plugin Overview:</h1>
+          <div class="row">
+            <div class="col col-md-2">
+              Jekyll Project:
+            </div>
+            <div class="col col-md-10">
+              <a href="https://disqus.com/">disqus</a>
             </div>
           </div>
-          <div class="col-sm-6">
-            <div class="jumbotron">
-              second ....
-            </div>
+          <hr>
+        </div>
+        <div class="container">
+          <h1>Description:</h1>
+          <p>Eine einfache möglichkeit, Nutzern eine Kommentar Funktion anzubieten.</p>
+          <!--more-->
+          <div class="highlighter-rouge">
+            <pre class="highlight"><code>disqus_short_name: nolte-jekyll-site
+</code></pre>
           </div>
+          <p>Sollte das Feature nicht erwünscht sein einfach den Parameter aus der <code class="highlighter-rouge">_config.yml</code> von jekyll entfernen, oder auf die gewünschte <a href="https://disqus.com/">disqus</a> app anpassen.</p>
         </div>
       </div>
       <footer class="site-footer">
