@@ -57,7 +57,7 @@ Open http://localhost:4000 in your Browser. The container use ```./jekyll_conten
 **Master:**
 [![](https://images.microbadger.com/badges/image/nolte/jekyll-boilerplate.svg)](https://microbadger.com/images/nolte/jekyll-boilerplate "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/nolte/jekyll-boilerplate.svg)](https://microbadger.com/images/nolte/jekyll-boilerplate "Get your own version badge on microbadger.com")
 
-**Development: ** [![](https://images.microbadger.com/badges/image/nolte/jekyll-boilerplate:development.svg)](https://microbadger.com/images/nolte/jekyll-boilerplate:development "Get your own image badge on microbadger.com")  [![](https://images.microbadger.com/badges/version/nolte/jekyll-boilerplate:development.svg)](https://microbadger.com/images/nolte/jekyll-boilerplate:development "Get your own version badge on microbadger.com")
+**Development:** [![](https://images.microbadger.com/badges/image/nolte/jekyll-boilerplate:development.svg)](https://microbadger.com/images/nolte/jekyll-boilerplate:development "Get your own image badge on microbadger.com")  [![](https://images.microbadger.com/badges/version/nolte/jekyll-boilerplate:development.svg)](https://microbadger.com/images/nolte/jekyll-boilerplate:development "Get your own version badge on microbadger.com")
 
 [Nginx Container](https://hub.docker.com/r/nolte/jekyll-boilerplate)
 
