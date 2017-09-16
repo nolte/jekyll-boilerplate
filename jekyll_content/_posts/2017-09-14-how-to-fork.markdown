@@ -50,14 +50,17 @@ endif
 
 ## Externe Systeme
 
-Benötigte .travis.yml anpassungen
-Secrets sollten mit hilfe von [Travis-ci][travisci-encryption-keys] verschlüsselt werden.
+Der Build Prozess und die Interaktion mit den externen Systemen wird über die  ```.travis.yml``` konfiguriert.
+
+Secrets (z.B. Github Token) sollten mit Hilfe von [Travis-ci][travisci-encryption-keys] verschlüsselt sein!.
+
+Nicht benötigte Systeme sollten aus dem Travis build entfernt werden, dies verkürzt die Build dauer.
 
 ### Deploy heroku
 
-Auf heroku kann mit den [Travis Deployment Provier][travisci-deploy-heroku] deployt werden.
+Auf heroku kann mit den [Travis Deployment Provier][travisci-deploy-heroku] ausgerollt werden.
 
-Ändern den Applikationsnamen ```- HEROKU_APP_NAME=noltarium-blog-test``` auf dass gewünschte [Heroku](https://heroku.com/) Ziel.
+Das depoyment kann unter ```- HEROKU_APP_NAME=noltarium-blog-test``` auf dass gewünschte [Heroku](https://heroku.com/) Ziel geändert werden.
 
 #### Files
 ```
