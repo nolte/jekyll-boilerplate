@@ -34,3 +34,6 @@ plantuml:
 cheatsheets:
   url: http://ricostacruz.com/cheatsheets/
   description: cheatsheets collection
+microbadger:
+  url: https://microbadger.com
+  description: Untersuche Dockerimages
