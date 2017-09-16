@@ -10,6 +10,8 @@ categories:
  zusätzlich zu dem Klassischen Bootstrap Layout wird eine [reveal.js][revealjs] Modus angeboten.
  [Reveal.js][revealjs] wird verwendet um einfache und __moderne__ Präsentationen zu erstellen.
 
+<!--more-->
+
 ## Addons
 
 <table class="table table-striped">
