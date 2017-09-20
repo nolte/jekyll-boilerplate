@@ -8,6 +8,6 @@ links:
 ---
 
 
-<script src="http://gist-it.appspot.com/https://gist.github.com/nolte/aa17c8a81f3b6517803a1535f257e7e2"></script>
-
+<script src="http://gist-it.appspot.com/github/nolte/jekyll-boilerplate/blob/master/ci_scripts/deploy_ghpage.sh"></script>
+/
 
