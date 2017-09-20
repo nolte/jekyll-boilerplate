@@ -68,6 +68,7 @@ task :html_proofer do
   url_ignore.push /travis-ci.com/
   url_ignore.push /plantuml.com/
   url_ignore.push /ricostacruz.com/
+  url_ignore.push /gist-it.appspot.com/
 
   opts = { log_level: ':debug',
            url_swap: url_swap,
